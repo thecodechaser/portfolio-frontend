@@ -9,7 +9,11 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <header className="flex flex-col px-8 py-7 h-screen shadow-xl md:flex-row md:h-fit md:justify-between md:px-20">
-      <a href="/" className="text-lg"><span className="text-secondaryColor">the </span><span>code </span><span className="text-secondaryColor">chaser</span></a>
+      <a href="/" className="text-lg">
+        <span className="text-secondaryColor">the </span>
+        <span>code </span>
+        <span className="text-secondaryColor">chaser</span>
+      </a>
       <nav>
         <div className="text-secondaryColor md:hidden mobile-btns">
           <button
@@ -46,7 +50,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-      <button type="button" className={`border-2 self-center border-secondaryColor mt-24 rounded px-4 py-1 w-32 text-secondaryColor ${mobileMenu ? "block" : "hidden" } md:block md:mt-0`}>Resume</button>
+      <button type="button" className={`border-2 self-center border-secondaryColor mt-24 rounded px-4 py-1 w-32 text-secondaryColor ${mobileMenu ? 'block' : 'hidden'} md:block md:mt-0`}>Resume</button>
     </header>
   );
 };
