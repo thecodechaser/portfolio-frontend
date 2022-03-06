@@ -65,7 +65,11 @@ const HomePage = () => (
           <h3 className="text-lg text-skyColor">Front-end development</h3>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>React JS</p>
+          </div>
+          <div className="flex text-base gap-2 text-skyColor mt-2">
+            <ChevronRightIcon className="h-6" />
+            <p>JavaScript</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
@@ -73,49 +77,45 @@ const HomePage = () => (
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
-          </div>
-          <div className="flex text-base gap-2 text-skyColor mt-2">
-            <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Tailwind</p>
           </div>
         </div>
         <div>
           <h3 className="text-lg text-skyColor">Back-end development</h3>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Ruby on Rails</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Ruby</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Java</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>SQL</p>
           </div>
         </div>
         <div>
           <h3 className="text-lg text-skyColor">Tools</h3>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Github & Git</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Netflify</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>Wordpress</p>
           </div>
           <div className="flex text-base gap-2 text-skyColor mt-2">
             <ChevronRightIcon className="h-6" />
-            <p>HTML & CSS</p>
+            <p>VS Code</p>
           </div>
         </div>
       </div>
