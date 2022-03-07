@@ -37,7 +37,7 @@ const HomePage = () => (
         <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
         <div className="border-b-2 w-3/5 mb-3 border-secondaryColor md:w-2/4" />
       </div>
-      <div className="flex flex-col mt-5 ml-8 mr-5 gap-5 md:ml-72 md:mr-64 text-base text-skyColor">
+      <div className="flex flex-col mt-5 ml-8 mr-5 gap-5 lg:ml-72 lg:mr-64 text-base text-skyColor">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
@@ -60,7 +60,7 @@ const HomePage = () => (
         </p>
       </div>
       <h3 className="text-lg text-secondaryColor mt-5 mx-8 font-bold md:mx-72">Here are few of my stacks I&apos;ve been working with recently:</h3>
-      <div className="flex flex-col ml-8 gap-4 mt-2 md:flex-row md:gap-56 md:justify-center">
+      <div className="flex flex-col ml-8 gap-4 mt-2 md:flex-row md:gap-56 md:ml-6 md:justify-center">
         <div>
           <h3 className="text-lg text-skyColor">Front-end development</h3>
           <div className="flex text-base gap-2 text-skyColor mt-2">
