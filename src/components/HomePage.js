@@ -13,6 +13,8 @@ const stacks = [
     name: 'Tools', stack1: 'Wordpress', stack2: 'Netlify', stack3: 'Github & Git', stack4: 'VS Code',
   },
 ];
+const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
+
 const HomePage = () => (
   <main className="mt-40">
     {/* hero-section */}
@@ -23,22 +25,14 @@ const HomePage = () => (
       <div className="text-skyColor">
         <p className="text-secondaryColor">Hello!</p>
         <h1 className="text-secondaryColor text-4xl md:text-5xl">I&apos;m Ranjeet Singh</h1>
-        <div className="flex gap-4 mt-3">
-          <CheckCircleIcon className="h-7" />
-          <p className="m-px text-base">Full stack software developer</p>
-        </div>
-        <div className="flex gap-4 mt-3">
-          <CheckCircleIcon className="h-7" />
-          <p className="m-px text-base">UI/UX designer</p>
-        </div>
-        <div className="flex gap-4 mt-3">
-          <CheckCircleIcon className="h-7" />
-          <p className="m-px text-base">Remote work aficionado</p>
-        </div>
-        <div className="flex gap-4 mt-3">
-          <CheckCircleIcon className="h-7" />
-          <p className="m-px text-base">Amateur astronomer</p>
-        </div>
+        {
+          fields.map((field) => (
+            <div key={field} className="flex gap-4 mt-3">
+              <CheckCircleIcon className="h-7" />
+              <p className="m-px text-base">{field}</p>
+            </div>
+          ))
+        }
         <button type="button" className="bg-secondaryColor mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Get in Touch</button>
       </div>
     </div>
