@@ -5,6 +5,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
+const menuItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/' },
+  { name: 'Portfolio', path: '/' },
+  { name: 'Skiils', path: '/' },
+  { name: 'Contact', path: '/' },
+  { name: 'Blog', path: '/' },
+];
+
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
@@ -29,24 +38,13 @@ const Header = () => {
         </div>
         <div className={classNames(mobileMenu ? 'block' : 'hidden', 'md:block')}>
           <ul className="flex flex-col text-skyColor text-lg gap-8 items-center mt-24 md:flex-row md:mt-1">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Portfolio</a>
-            </li>
-            <li>
-              <a href="/">Skills</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
-            <li>
-              <a href="/">Blog</a>
-            </li>
+            {
+              menuItems.map((item) => (
+                <li>
+                  <a href={item.path}>{item.name}</a>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </nav>
