@@ -40,7 +40,7 @@ const Header = () => {
           <ul className="flex flex-col text-skyColor text-lg gap-8 items-center mt-24 md:flex-row md:mt-1">
             {
               menuItems.map((item) => (
-                <li>
+                <li key={item.name}>
                   <a href={item.path}>{item.name}</a>
                 </li>
               ))
