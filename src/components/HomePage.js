@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import profilePicture from '../assets/profilePicture.jpg';
+import Footer from './Footer';
 
 const stacks = [
   {
@@ -16,6 +17,7 @@ const stacks = [
 const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
 
 const HomePage = () => (
+  <>
   <main className="mt-40">
     {/* hero-section */}
     <div className="flex flex-col items-center gap-20 md:flex-row md:justify-center md:gap-60 md:mx-20">
@@ -90,6 +92,8 @@ const HomePage = () => (
       </div>
     </div>
   </main>
+  <Footer />
+  </>
 );
 
 export default HomePage;
