@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import profilePicture from '../assets/profilePicture.jpg';
 import Footer from './Footer';
+import Contact from './Contact';
 
 const stacks = [
   {
@@ -92,6 +93,7 @@ const HomePage = () => (
         </div>
       </div>
     </main>
+    <Contact />
     <Footer />
   </>
 );
