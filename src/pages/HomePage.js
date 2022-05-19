@@ -1,8 +1,7 @@
 import React from 'react';
 import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import profilePicture from '../assets/profilePicture.jpg';
-import Footer from './Footer';
-import Contact from './Contact';
+import Contact from '../components/Contact';
 
 const stacks = [
   {
@@ -21,7 +20,7 @@ const HomePage = () => (
   <>
     <main className="mt-40">
       {/* hero-section */}
-      <div className="flex flex-col items-center gap-20 md:flex-row md:justify-center md:gap-60 md:mx-20">
+      <div className="flex flex-col items-center gap-20 md:flex-row md:gap-60">
         <div className="md:order-1">
           <img src={profilePicture} alt="profile" className="h-80 rounded-full" />
         </div>
@@ -41,11 +40,11 @@ const HomePage = () => (
       </div>
       {/* about-section */}
       <div className="mt-14 md:mt-24">
-        <div className="flex justify-center gap-3">
+        <div className="flex gap-3 ml-5 md:ml-0">
           <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
-          <div className="border-b-2 w-3/5 mb-3 border-secondaryColor md:w-2/4" />
+          <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
         </div>
-        <div className="flex flex-col mt-5 ml-8 mr-5 gap-5 lg:ml-32 lg:mr-32 xl:ml-72 xl:mr-64 text-base text-skyColor">
+        <div className="flex flex-col mt-5 ml-6 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
@@ -67,8 +66,8 @@ const HomePage = () => (
             versions of Lorem Ipsu
           </p>
         </div>
-        <h3 className="text-lg text-secondaryColor mt-5 mx-8 font-bold md:mx-72">Here are few of my stacks I&apos;ve been working with recently:</h3>
-        <div className="flex flex-col ml-8 gap-4 mt-2 md:flex-row md:gap-56 md:ml-6 md:justify-center">
+        <h3 className="text-lg text-secondaryColor mt-5 ml-6 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
+        <div className="flex flex-col ml-6 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
           { stacks.map((stack) => (
             <div key={stack.name}>
               <h3 className="text-lg text-skyColor">{stack.name}</h3>
@@ -94,7 +93,6 @@ const HomePage = () => (
       </div>
     </main>
     <Contact />
-    <Footer />
   </>
 );
 
