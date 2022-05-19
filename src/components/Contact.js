@@ -26,7 +26,7 @@ const Contact = () => (
         <p className="text-skyColor">Email</p>
       </div>
       <div className="md:w-1/5">
-      <h4 className="mb-4 text-2xl">Sicial Media</h4>
+        <h4 className="mb-4 text-2xl">Sicial Media</h4>
         <p className="text-skyColor">Social</p>
         <p className="text-skyColor">Social</p>
         <p className="text-skyColor">Social</p>

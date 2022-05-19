@@ -9,12 +9,12 @@ function App() {
     <>
       <Header />
       <div className="inner-body">
-      <Routes>
-        <Route
-          path="/"
-          element={(<HomePage />)}
-        />
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={(<HomePage />)}
+          />
+        </Routes>
       </div>
       <Footer />
     </>
