@@ -3,16 +3,16 @@ import microverseLogo from '../../assets/microverse_logo.png';
 import freelanceLogo from '../../assets/freelance-logo.jpg';
 
 const Experience = () => (
-  <div className="mt-14 md:mt-24">
+  <div className="mt-14 md:mt-24 md:ml-1">
     <div className="flex gap-3 ml-5 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Experience</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
     </div>
 
-    <div className="mt-8">
+    <div className="mt-8 md:ml-1">
       <div className="flex mt-4 text-lg text-secondaryColor ml-5 gap-16 md:gap-96 md:ml-0">
         <h3>
-          Technical Support Enginner
+          Technical Support Engineer
           <span className="block text-sm ml-1 text-skyColor">January 2022 – Present</span>
         </h3>
         <p>

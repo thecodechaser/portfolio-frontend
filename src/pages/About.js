@@ -1,5 +1,6 @@
 import AboutMe from '../components/About/AboutMe';
 import Experience from '../components/About/Experience';
+import Education from '../components/About/Education';
 
 const About = () => (
   <div className="mt-40">
@@ -7,6 +8,8 @@ const About = () => (
     <AboutMe />
     {/* experience-section */}
     <Experience />
+    {/* education-section */}
+    <Education />
   </div>
 );
 
