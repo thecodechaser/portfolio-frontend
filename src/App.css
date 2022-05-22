@@ -34,6 +34,10 @@
   .edu-tmu {
     gap: 355px;
   }
+
+  .edu-bhag {
+    gap: 375px;
+  }
 }
 
 @media screen and (min-width: 1024px) {

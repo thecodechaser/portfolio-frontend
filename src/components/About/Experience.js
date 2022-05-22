@@ -69,7 +69,7 @@ const Experience = () => (
       </ul>
     </div>
 
-    <div className="mt-14">
+    <div className="mt-14 ml-1 md:ml-0">
       <div className="flex mt-4 text-lg text-secondaryColor ml-5 gap-16 md:gap-96 md:ml-2">
         <h3>
           Freelance Developer

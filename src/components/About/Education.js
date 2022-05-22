@@ -1,11 +1,12 @@
 import microverseLogo from '../../assets/microverse_logo.png';
 import tmuLogo from '../../assets/tmu-logo.png';
+import bhagwantUniversity from '../../assets/bhagwant-university-logo.jpg'
 import { ChevronRightIcon } from '@heroicons/react/solid';
 
 const Education = () => {
   return (
-    <div className="mt-14 md:mt-24 md:ml-2">
-    <div className="flex gap-3 ml-8 md:ml-0">
+    <div className="mt-14 md:mt-24 md:ml-3">
+    <div className="flex gap-3 ml-4 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Education</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
     </div>
@@ -66,6 +67,30 @@ const Education = () => {
           <ChevronRightIcon className="h-6" />
           <p>
           Worked as a back-end Java developer for 3 months for the university internship.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div className="mt-8 ml-2 md:ml-4">
+      <div className="flex mt-4 text-lg text-secondaryColor ml-5 gap-5 edu-bhag edu-tmu md:ml-0">
+        <h3>
+        Bachlor of computer science
+          <span className="block text-sm ml-1 text-skyColor">July 2021 – Present</span>
+        </h3>
+        <p>
+          <img src={bhagwantUniversity} alt="microverse-logo" className="inline w-8" />
+          {' '}
+          Bhagwant University
+          <span className="block text-sm text-skyColor">Part-Time</span>
+        </p>
+      </div>
+      <ul className="ml-4 md:ml-0">
+        <li className="flex text-base gap-2 text-skyColor mt-4 md:w-9/12">
+          <ChevronRightIcon className="h-6" />
+          <p>
+          Studying Computer science engineering for 4 years and learning about computer fundamentals 
+          and software development lifecycle.
           </p>
         </li>
       </ul>
