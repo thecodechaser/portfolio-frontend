@@ -14,61 +14,59 @@ const stacks = [
   },
 ];
 
-const AboutMe = () => {
-  return (
-    <div className="mt-14 md:mt-24">
-        <div className="flex gap-3 ml-5 md:ml-0">
-          <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
-          <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
-        </div>
-        <div className="flex flex-col md:flex-row mt-5 ml-6 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
-          <div className="flex flex-col gap-5 md:mt-3">
-            <p>
-              Hello! My name is Ranjeet Singh, commonly known as
-              {' '}
-              <span className="text-secondaryColor">thecodechaser</span>
-              . I love building web
-              applications using many technologies some of them are React, JavaScript, and Rails.
-              Before diving into web development I have worked for one year as a freelance developer
-              where I built desktop apps, Wordpress, and Shopify websites for my clients.
-            </p>
-            <p>
-              I love getting stuck on big problems while coding that makes my life a little more
-              interesting & so I&apos;m a good problem
-              solver. In my free time, I have so much to do that I get confused about choosing
-              between solving algorithms and learning about astronomy but somehow I manage.
-              {' '}
-              <img src={personJuggling} alt="person-juggling" className=" w-16" />
-            </p>
-          </div>
-          <img src={codeSnipped} alt="code-snippet" className="md:w-1/2" />
-        </div>
-        <h3 className="text-lg text-secondaryColor mt-5 ml-6 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
-        <div className="flex flex-col ml-6 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
-          { stacks.map((stack) => (
-            <div key={stack.name}>
-              <h3 className="text-lg font-medium">{stack.name}</h3>
-              <div className="flex text-base gap-2 text-skyColor mt-2">
-                <ChevronRightIcon className="h-6" />
-                <p>{stack.stack1}</p>
-              </div>
-              <div className="flex text-base gap-2 text-skyColor mt-2">
-                <ChevronRightIcon className="h-6" />
-                <p>{stack.stack2}</p>
-              </div>
-              <div className="flex text-base gap-2 text-skyColor mt-2">
-                <ChevronRightIcon className="h-6" />
-                <p>{stack.stack3}</p>
-              </div>
-              <div className="flex text-base gap-2 text-skyColor mt-2">
-                <ChevronRightIcon className="h-6" />
-                <p>{stack.stack4}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+const AboutMe = () => (
+  <div className="mt-14 md:mt-24">
+    <div className="flex gap-3 ml-5 md:ml-0">
+      <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
+      <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
+    </div>
+    <div className="flex flex-col md:flex-row mt-5 ml-6 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
+      <div className="flex flex-col gap-5 md:mt-3">
+        <p>
+          Hello! My name is Ranjeet Singh, commonly known as
+          {' '}
+          <span className="text-secondaryColor">thecodechaser</span>
+          . I love building web
+          applications using many technologies some of them are React, JavaScript, and Rails.
+          Before diving into web development I have worked for one year as a freelance developer
+          where I built desktop apps, Wordpress, and Shopify websites for my clients.
+        </p>
+        <p>
+          I love getting stuck on big problems while coding that makes my life a little more
+          interesting & so I&apos;m a good problem
+          solver. In my free time, I have so much to do that I get confused about choosing
+          between solving algorithms and learning about astronomy but somehow I manage.
+          {' '}
+          <img src={personJuggling} alt="person-juggling" className=" w-16" />
+        </p>
       </div>
-  )
-};
+      <img src={codeSnipped} alt="code-snippet" className="md:w-1/2" />
+    </div>
+    <h3 className="text-lg text-secondaryColor mt-5 ml-6 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
+    <div className="flex flex-col ml-6 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
+      { stacks.map((stack) => (
+        <div key={stack.name}>
+          <h3 className="text-lg font-medium">{stack.name}</h3>
+          <div className="flex text-base gap-2 text-skyColor mt-2">
+            <ChevronRightIcon className="h-6" />
+            <p>{stack.stack1}</p>
+          </div>
+          <div className="flex text-base gap-2 text-skyColor mt-2">
+            <ChevronRightIcon className="h-6" />
+            <p>{stack.stack2}</p>
+          </div>
+          <div className="flex text-base gap-2 text-skyColor mt-2">
+            <ChevronRightIcon className="h-6" />
+            <p>{stack.stack3}</p>
+          </div>
+          <div className="flex text-base gap-2 text-skyColor mt-2">
+            <ChevronRightIcon className="h-6" />
+            <p>{stack.stack4}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 
 export default AboutMe;
