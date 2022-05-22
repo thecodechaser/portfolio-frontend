@@ -5,3 +5,35 @@
   top: 20px;
   right: 20px;
 }
+
+@media screen and (min-width: 768px) {
+  .inner-body {
+    padding-left: 80px;
+  }
+
+  .hr-about {
+    width: 60%;
+  }
+
+  .hr-portfolio {
+    width: 63%;
+  }
+
+  .about-hr {
+    width: 372px;
+  }
+
+  .about-text {
+    width: 75%;
+  }
+
+  .project-card {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .inner-body {
+    padding-left: 200px;
+  }
+}
