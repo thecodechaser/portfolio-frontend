@@ -3,7 +3,7 @@ import Experience from "../components/About/Experience";
 
 const About = () => {
   return (
-  <div>
+  <div className="mt-40">
     {/* about-me-section */}
     <AboutMe />
     {/* experience-section */}

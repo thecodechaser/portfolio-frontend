@@ -67,7 +67,6 @@ const AboutMe = () => {
             </div>
           ))}
         </div>
-        <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Know more</button>
       </div>
   )
 };
