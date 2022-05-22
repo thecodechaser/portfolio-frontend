@@ -1,8 +1,10 @@
 import React from 'react';
 import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import profilePicture from '../assets/profilePicture.jpg';
+import codeSnipped from '../assets/code-snippet.png';
 import Contact from '../components/Contact';
 import Project from '../components/Project';
+import personJuggling from '../assets/person_juggling.gif';
 
 const stacks = [
   {
@@ -45,33 +47,27 @@ const HomePage = () => (
           <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
           <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
         </div>
-        <div className="flex flex-col mt-5 ml-6 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
+        <div className="flex flex-col md:flex-row mt-5 ml-6 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
+          <div className="flex flex-col gap-5 md:mt-3">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsu
+           Hello! My name is Ranjeet Singh, commonly known as <span className="text-secondaryColor">thecodechaser</span>. I love building web 
+           applications using many technologies some of them are React, JavaScript, and Rails. 
+           Before diving into web development I have worked for one year as a freelance developer where I built desktop apps, Wordpress, and 
+           Shopify websites for my clients.
           </p>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsu
+          I love getting stuck on big problems while coding that makes my life a little more interesting & so I'm a good problem solver.
+          In my free time, I have so much to do that I get confused about choosing
+          between solving algorithms and learning about astronomy but somehow I manage. <img src={personJuggling} alt="person-juggling" className=" w-16"/>
           </p>
+          </div>
+          <img src={codeSnipped} alt="code-snippet" className="md:w-1/2"/>
         </div>
         <h3 className="text-lg text-secondaryColor mt-5 ml-6 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
         <div className="flex flex-col ml-6 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
           { stacks.map((stack) => (
             <div key={stack.name}>
-              <h3 className="text-lg text-skyColor">{stack.name}</h3>
+              <h3 className="text-lg font-medium">{stack.name}</h3>
               <div className="flex text-base gap-2 text-skyColor mt-2">
                 <ChevronRightIcon className="h-6" />
                 <p>{stack.stack1}</p>
@@ -91,6 +87,7 @@ const HomePage = () => (
             </div>
           ))}
         </div>
+        <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Know more</button>
       </div>
     </main>
 
