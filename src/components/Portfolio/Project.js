@@ -26,10 +26,14 @@ const Project = () => {
           <p>Ruby</p>
         </div>
         <div className={`flex ${even ? 'md:justify-start' : 'md:justify-end'} gap-5 text-skyColor mt-4 ml-2 md:ml-0`}>
-          <button type="button" className="bg-secondaryColor rounded px-5 py-2 text-md text-primaryColor">See Live 
-          <img src={serverLogo} className="w-5 inline ml-2 mb-1"/></button>
-          <button type="button" className="bg-secondaryColor rounded px-5 py-2 text-md text-primaryColor">See Source 
-          <img src={githubLogo} className="w-5 inline ml-2 mb-1"/></button>
+          <button type="button" className="bg-secondaryColor rounded px-5 py-2 text-md text-primaryColor">
+            See Live
+            <img src={serverLogo} className="w-5 inline ml-2 mb-1" alt="server-icon" />
+          </button>
+          <button type="button" className="bg-secondaryColor rounded px-5 py-2 text-md text-primaryColor">
+            See Source
+            <img src={githubLogo} className="w-5 inline ml-2 mb-1" alt="github-icon" />
+          </button>
         </div>
       </div>
     </div>
