@@ -1,10 +1,6 @@
-import React from 'react';
-import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/solid';
-import profilePicture from '../assets/profilePicture.jpg';
-import codeSnipped from '../assets/code-snippet.png';
-import Contact from '../components/Contact';
-import Project from '../components/Project';
-import personJuggling from '../assets/person_juggling.gif';
+import { ChevronRightIcon } from '@heroicons/react/solid';
+import personJuggling from '../../assets/person_juggling.gif';
+import codeSnipped from '../../assets/code-snippet.png';
 
 const stacks = [
   {
@@ -17,32 +13,10 @@ const stacks = [
     name: 'Tools', stack1: 'Wordpress', stack2: 'Netlify', stack3: 'Github & Git', stack4: 'VS Code',
   },
 ];
-const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
 
-const HomePage = () => (
-  <>
-    <main className="mt-40">
-      {/* hero-section */}
-      <div className="flex flex-col items-center gap-20 md:flex-row md:gap-60">
-        <div className="md:order-1">
-          <img src={profilePicture} alt="profile" className="h-80 rounded-full" />
-        </div>
-        <div className="text-skyColor">
-          <p className="text-secondaryColor">Hello!</p>
-          <h1 className="text-secondaryColor text-4xl md:text-5xl">I&apos;m Ranjeet Singh</h1>
-          {
-          fields.map((field) => (
-            <div key={field} className="flex gap-4 mt-3">
-              <CheckCircleIcon className="h-7" />
-              <p className="m-px text-base">{field}</p>
-            </div>
-          ))
-        }
-          <button type="button" className="bg-secondaryColor mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Get in Touch</button>
-        </div>
-      </div>
-      {/* about-section */}
-      <div className="mt-14 md:mt-24">
+const AboutMe = () => {
+  return (
+    <div className="mt-14 md:mt-24">
         <div className="flex gap-3 ml-5 md:ml-0">
           <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
           <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
@@ -95,17 +69,7 @@ const HomePage = () => (
         </div>
         <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Know more</button>
       </div>
-    </main>
+  )
+};
 
-    <div className="mt-14 md:mt-24">
-      <div className="flex gap-3 ml-5 md:ml-0 mb-6">
-        <h2 className="text-2xl md:text-4xl">Portfolio</h2>
-        <div className="border-b-2 w-4/6 mb-3 border-secondaryColor hr-portfolio" />
-      </div>
-      <Project />
-    </div>
-    <Contact />
-  </>
-);
-
-export default HomePage;
+export default AboutMe;
