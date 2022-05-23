@@ -21,7 +21,14 @@ const Home = () => (
       </div>
       <Project />
     </div>
+
+    {/* contact-section */}
+    <div>
     <ContactInfo />
+    <div className="flex flex-col items-center md:mr-48">
+    <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3 text-lg text-primaryColor">Send Me Message</button>
+    </div>
+    </div>
   </>
 );
 
