@@ -23,7 +23,7 @@ const ContactInfo = () => (
       </div>
       <div className="md:w-1/5">
         <h4 className="mb-4 text-2xl">Social Media</h4>
-        <p className="text-skyColor">Social</p>
+        <p className="text-skyColor">Social<i class="lab la-github"></i></p>
         <p className="text-skyColor">Social</p>
         <p className="text-skyColor">Social</p>
       </div>
