@@ -8,7 +8,7 @@ const ContactInfo = () => (
       <div className="border-b-2 mb-3 w-32 ml-3 about-hr md:ml-5 border-secondaryColor" />
     </div>
 
-    <div className="ml-6 md:flex mt-5 md:gap-12 md:ml-1">
+    <div className="ml-6 md:flex mt-8 md:gap-12 md:ml-1">
       <p className="md:w-1/3 text-base text-skyColor">
         {' '}
         If you have an application you are interested in developing, a feature that you need 
@@ -16,16 +16,23 @@ const ContactInfo = () => (
         I love collaborating with other developers, if you are looking for a collaborator for your 
         project let's schedule a coffee and chat.
       </p>
-      <div className="md:w-1/5">
+      <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Contacts</h4>
         <p className="text-skyColor text-base">contact@thecodechaser.com</p>
         <p className="text-skyColor mt-3 text-base">admin@thecodechaser.com</p>
       </div>
-      <div className="md:w-1/5">
+      <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Social Media</h4>
-        <p className="text-skyColor">Social<i class="lab la-github"></i></p>
-        <p className="text-skyColor">Social</p>
-        <p className="text-skyColor">Social</p>
+        <div className="flex gap-5">
+        <i class="lab la-github text-3xl text-skyColor"></i>
+        <i class="lab la-twitter text-3xl text-skyColor"></i>
+        <i class="lab la-linkedin text-3xl text-skyColor"></i>
+        </div>
+        <div className="flex gap-5 mt-4">
+        <i class="lab la-medium text-3xl text-skyColor"></i>
+        <i class="lab la-angellist text-3xl text-skyColor"></i>
+        <i class="lab la-instagram text-3xl text-skyColor"></i>
+        </div>
       </div>
     </div>
   </div>
