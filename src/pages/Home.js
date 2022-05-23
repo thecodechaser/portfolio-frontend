@@ -1,5 +1,5 @@
 import Contact from '../components/Contact';
-import Project from '../components/Project';
+import Project from '../components/Portfolio/Project';
 import AboutMe from '../components/About/AboutMe';
 import HeroSection from '../components/Home/HeroSection';
 
