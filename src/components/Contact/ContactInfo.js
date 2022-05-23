@@ -22,8 +22,8 @@ const ContactInfo = () => (
       </p>
       <div className="md:w-1/5">
         <h4 className="mb-4 text-2xl">Contacts</h4>
-        <p className="text-skyColor">Email</p>
-        <p className="text-skyColor">Email</p>
+        <p className="text-skyColor">contact@thecodechaser.com</p>
+        <p className="text-skyColor">admin@thecodechaser.com</p>
       </div>
       <div className="md:w-1/5">
         <h4 className="mb-4 text-2xl">Sicial Media</h4>

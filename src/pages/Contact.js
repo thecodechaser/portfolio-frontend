@@ -1,6 +1,12 @@
+import ContactInfo from "../components/Contact/ContactInfo";
+
 const Contact = () => {
   return (
-    <p>HEllo</p>
+
+    <div>
+      {/* contact-info */}
+    <ContactInfo />
+    </div>
   )
 }
 
