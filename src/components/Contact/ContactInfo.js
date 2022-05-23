@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = () => (
+const ContactInfo = () => (
   <div className="flex flex-col mt-20 md:ml-1">
     <div className="flex w-full ml-5 md:ml-0">
       <div className="border-b-2 mb-3 w-32 mr-3 about-hr md:mr-5 border-secondaryColor" />
@@ -35,4 +35,4 @@ const Contact = () => (
   </div>
 );
 
-export default Contact;
+export default ContactInfo;

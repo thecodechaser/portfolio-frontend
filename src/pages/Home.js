@@ -1,4 +1,4 @@
-import Contact from '../components/Contact';
+import ContactInfo from '../components/Contact/ContactInfo';
 import Project from '../components/Portfolio/Project';
 import AboutMe from '../components/About/AboutMe';
 import HeroSection from '../components/Home/HeroSection';
@@ -21,7 +21,7 @@ const Home = () => (
       </div>
       <Project />
     </div>
-    <Contact />
+    <ContactInfo />
   </>
 );
 
