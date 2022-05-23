@@ -9,24 +9,20 @@ const ContactInfo = () => (
     </div>
 
     <div className="ml-6 md:flex mt-5 md:gap-12 md:ml-1">
-      <p className="md:w-1/3 text-skyColor">
+      <p className="md:w-1/3 text-base text-skyColor">
         {' '}
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised in
-        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsu
+        If you have an application you are interested in developing, a feature that you need 
+        to be built, or a project that needs coding. I’d love to help with it.<br></br><br></br>
+        I love collaborating with other developers, if you are looking for a collaborator for your 
+        project let's schedule a coffee and chat.
       </p>
       <div className="md:w-1/5">
         <h4 className="mb-4 text-2xl">Contacts</h4>
-        <p className="text-skyColor">contact@thecodechaser.com</p>
-        <p className="text-skyColor">admin@thecodechaser.com</p>
+        <p className="text-skyColor text-base">contact@thecodechaser.com</p>
+        <p className="text-skyColor mt-3 text-base">admin@thecodechaser.com</p>
       </div>
       <div className="md:w-1/5">
-        <h4 className="mb-4 text-2xl">Sicial Media</h4>
+        <h4 className="mb-4 text-2xl">Social Media</h4>
         <p className="text-skyColor">Social</p>
         <p className="text-skyColor">Social</p>
         <p className="text-skyColor">Social</p>
