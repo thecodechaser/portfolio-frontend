@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer className="flex justify-center my-5">
+  <footer className="flex flex-col items-center my-8">
+    <button type="button" aria-label="Save" className="bg-secondaryColor rounded px-4 my-10 py-2"><i className="las la-angle-up" /></button>
     <p className="text-md">
       Build by
       <a href="https://github.com/thecodechaser" className="text-secondaryColor"> Ranjeet Singh </a>
