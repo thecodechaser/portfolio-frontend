@@ -1,6 +1,6 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
-import profilePicture from '../../assets/profilePicture.jpg';
 import { Link } from 'react-router-dom';
+import profilePicture from '../../assets/profilePicture.jpg';
 
 const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
 
@@ -20,8 +20,15 @@ const HeroSection = () => (
             </div>
           ))
         }
-      <Link to="/contact"><button type="button" className="bg-secondaryColor mt-10 rounded px-6 py-2 w-50 
-      text-lg text-primaryColor">Get in Touch</button></Link>
+      <Link to="/contact">
+        <button
+          type="button"
+          className="bg-secondaryColor mt-10 rounded px-6 py-2 w-50
+      text-lg text-primaryColor"
+        >
+          Get in Touch
+        </button>
+      </Link>
     </div>
   </div>
 );
