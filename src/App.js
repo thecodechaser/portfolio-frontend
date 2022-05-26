@@ -5,6 +5,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import Blog from './pages/Blog';
 import NotFound from './pages/404';
 import Footer from './components/Footer';
 import './App.css';
@@ -34,6 +35,10 @@ function App() {
           <Route
             path="/contact"
             element={(<Contact />)}
+          />
+          <Route
+            path="/blog"
+            element={(<Blog />)}
           />
           <Route
             path="/resume"
