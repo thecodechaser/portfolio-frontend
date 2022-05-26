@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import { Link } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 const menuItems = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/' },
-  { name: 'Portfolio', path: '/' },
-  { name: 'Skiils', path: '/' },
-  { name: 'Contact', path: '/' },
-  { name: 'Blog', path: '/' },
+  { name: 'Home', path: '/', current: true },
+  { name: 'About', path: '/about', current: false },
+  { name: 'Portfolio', path: '/portfolio', current: false },
+  { name: 'Contact', path: '/contact', current: false },
+  { name: 'Blog', path: '/blog', current: false },
 ];
 
 const Header = () => {
@@ -41,14 +41,15 @@ const Header = () => {
             {
               menuItems.map((item) => (
                 <li key={item.name}>
-                  <a href={item.path}>{item.name}</a>
+                  <Link to={item.path}><a href={item.path}>{item.name}</a></Link>
                 </li>
               ))
             }
           </ul>
         </div>
       </nav>
-      <button type="button" className={`border-2 self-center border-secondaryColor mt-24 rounded px-4 py-1 w-32 text-secondaryColor ${mobileMenu ? 'block' : 'hidden'} md:block md:mt-0`}>Resume</button>
+      <Link to="/resume" className={`self-center ${mobileMenu ? 'block' : 'hidden'} md:block`}><button type="button" className={`border-2 border-secondaryColor mt-24 rounded px-4 py-1 w-32 
+      text-secondaryColor md:mt-0`}>Resume</button></Link>
     </header>
   );
 };
