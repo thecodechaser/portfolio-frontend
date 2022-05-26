@@ -27,6 +27,7 @@ const Header = () => {
       }
     }
     setStatus(!status);
+    setMobileMenu(false);
   };
 
   return (
