@@ -15,7 +15,7 @@ function App() {
       <Header />
       <div className="inner-body">
         <Routes>
-        <Route
+          <Route
             path="*"
             element={(<NotFound />)}
           />
