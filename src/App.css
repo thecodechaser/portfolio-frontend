@@ -10,6 +10,10 @@
   height: 600px;
 }
 
+.hr-blog {
+  width: 62%;
+}
+
 @media screen and (min-width: 768px) {
   .inner-body {
     padding-left: 80px;
@@ -45,6 +49,10 @@
 
   .edu-bhag {
     gap: 375px;
+  }
+
+  .hr-blog {
+    width: 58%;
   }
 }
 
