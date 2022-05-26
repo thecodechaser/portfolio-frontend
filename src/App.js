@@ -8,6 +8,7 @@ import Resume from './pages/Resume';
 import NotFound from './pages/404';
 import Footer from './components/Footer';
 import './App.css';
+import './assets/styles/404page.scss';
 
 function App() {
   return (
