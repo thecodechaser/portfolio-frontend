@@ -14,6 +14,16 @@ const menuItems = [
   { name: 'Blog', path: '/blog', current: false },
 ];
 
+const changeCurrentStatus = (name) => {
+  for (let i = 0; i < menuItems.length; i += 1) {
+    if (menuItems[i].name === name) {
+      menuItems[i].current = true;
+    } else {
+      menuItems[i].current = false;
+    }
+  }
+};
+
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
