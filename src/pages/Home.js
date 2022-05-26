@@ -2,6 +2,7 @@ import ContactInfo from '../components/Contact/ContactInfo';
 import Project from '../components/Portfolio/Project';
 import AboutMe from '../components/About/AboutMe';
 import HeroSection from '../components/Home/HeroSection';
+import { Link } from 'react-router-dom';
 
 const Home = () => (
   <>
@@ -10,7 +11,8 @@ const Home = () => (
       <HeroSection />
       {/* about-section */}
       <AboutMe />
-      <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Know more</button>
+      <Link to="/about"><button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-2 w-50 
+      ext-lg text-primaryColor">Know more</button></Link>
     </main>
 
     {/* project-section */}
@@ -26,7 +28,8 @@ const Home = () => (
     <div>
       <ContactInfo />
       <div className="flex flex-col items-center md:mr-48">
-        <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3 text-lg text-primaryColor">Send Me Message</button>
+      <Link to="/contact"> <button type="button" className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3 
+      text-lg text-primaryColor">Send Me Message</button></Link>
       </div>
     </div>
   </>
