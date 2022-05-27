@@ -15,7 +15,7 @@ const Experience = () => (
           Technical Support Engineer
           <span className="block text-sm ml-1 text-skyColor">January 2022 – Present</span>
         </h3>
-        <p>
+        <p className="md:mr-3">
           <img src={microverseLogo} alt="microverse-logo" className="inline w-8" />
           {' '}
           Microverse

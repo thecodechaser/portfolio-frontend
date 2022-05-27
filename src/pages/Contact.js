@@ -1,13 +1,19 @@
-import ContactInfo from '../components/Contact/ContactInfo';
+import { useEffect } from 'react';
 import ContactForm from '../components/Contact/ContactForm';
 
-const Contact = () => (
+const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
 
+  return (
   <div className="mt-32">
-    {/* contact-info */}
-    <ContactInfo />
+    {/* contact-form */}
     <ContactForm />
   </div>
-);
+)
+  };
 
 export default Contact;

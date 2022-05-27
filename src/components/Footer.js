@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactInfo from './Contact/ContactInfo';
 
 const goToTop = () => {
   window.scrollTo({
@@ -8,6 +9,9 @@ const goToTop = () => {
 };
 
 const Footer = () => (
+
+  <>
+  <ContactInfo />
   <footer className="flex flex-col items-center my-8">
     <button
       type="button"
@@ -24,6 +28,7 @@ const Footer = () => (
       © 2022
     </p>
   </footer>
+  </>
 );
 
 export default Footer;
