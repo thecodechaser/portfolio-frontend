@@ -39,17 +39,17 @@ const ContactInfo = () => (
     </div>
 
     <div className="flex flex-col items-center md:mr-48">
-        <Link to="/contact">
-          {' '}
-          <button
-            type="button"
-            className="border-2 border-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3
+      <Link to="/contact">
+        {' '}
+        <button
+          type="button"
+          className="border-2 border-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3
       text-lg text-secondaryColor"
-          >
-            Send Me Message
-          </button>
-        </Link>
-      </div>
+        >
+          Send Me Message
+        </button>
+      </Link>
+    </div>
   </div>
 );
 

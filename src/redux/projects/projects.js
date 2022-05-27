@@ -16,9 +16,9 @@ const initialState = [
     live: 'https://book-appointments-frontend.netlify.app/',
     github: 'https://github.com/thecodechaser/book-appointment-frontend',
     tech: [
-      Rails, React, Tailwind
-    ]
-  }
+      'Rails', 'React', 'Tailwind',
+    ],
+  },
 ];
 
 // reducer

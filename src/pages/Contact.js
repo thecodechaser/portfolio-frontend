@@ -9,11 +9,11 @@ const Contact = () => {
   }, []);
 
   return (
-  <div className="mt-32">
-    {/* contact-form */}
-    <ContactForm />
-  </div>
-)
-  };
+    <div className="mt-32">
+      {/* contact-form */}
+      <ContactForm />
+    </div>
+  );
+};
 
 export default Contact;
