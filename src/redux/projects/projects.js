@@ -1,4 +1,6 @@
 
+// initial-state
+const initialState = [];
 
 // reducer
 const projectsReducer = (state = initialState, action) => {
