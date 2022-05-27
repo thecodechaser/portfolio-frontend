@@ -12,10 +12,10 @@ const Home = () => (
       {/* about-section */}
       <AboutMe />
       <Link to="/about">
-        <button
+      <button
           type="button"
-          className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-2 w-50
-      ext-lg text-primaryColor"
+          className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
+      text-lg text-skyColor font-medium"
         >
           Know more
         </button>
@@ -39,8 +39,8 @@ const Home = () => (
           {' '}
           <button
             type="button"
-            className="bg-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3
-      text-lg text-primaryColor"
+            className="border-2 border-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3
+      text-lg text-secondaryColor"
           >
             Send Me Message
           </button>

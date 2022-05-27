@@ -13,8 +13,8 @@ const Footer = () => (
       type="button"
       onClick={goToTop}
       aria-label="Save"
-      className="bg-secondaryColor rounded
-    px-4 my-10 py-2"
+      className="bg-lightBlueColor rounded
+    px-4 my-10 py-2 text-skyColor font-medium"
     >
       <i className="las la-angle-up" />
     </button>

@@ -7,11 +7,11 @@ const NotFound = () => (
       Sorry, we can&apos;t find that page.
     </p>
     <Link to="/">
-      <button
-        type="submit"
-        className="bg-secondaryColor mt-5 ml-2 rounded px-4 py-3 text-base
-      text-primaryColor"
-      >
+    <button
+          type="button"
+          className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
+      text-lg text-skyColor font-medium"
+        >
         Go Home
       </button>
     </Link>

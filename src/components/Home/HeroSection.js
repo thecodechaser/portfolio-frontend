@@ -23,8 +23,8 @@ const HeroSection = () => (
       <Link to="/contact">
         <button
           type="button"
-          className="bg-secondaryColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-primaryColor"
+          className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
+      text-lg text-skyColor font-medium"
         >
           Get in Touch
         </button>
