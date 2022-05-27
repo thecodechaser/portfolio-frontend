@@ -12,7 +12,7 @@ const Project = () => {
       />
       <div>
         <h3 className={`text-skyColor ${even ? 'md:text-left' : 'md:text-right'} mb-4 text-2xl ml-2 md:ml-0`}>Project name</h3>
-        <p className="bg-lightBlueColor text-skyColor font-medium p-5 rounded mr-6 ml-2 md:ml-0 md:mr-0">
+        <p className="bg-lightBlueColor text-skyColor text-base font-medium p-5 rounded mr-6 ml-2 md:ml-0 md:mr-0">
           {' '}
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
@@ -20,10 +20,10 @@ const Project = () => {
           specimen book.
         </p>
         <div className={`flex ${even ? 'md:justify-start' : 'md:justify-end'} gap-2 text-skyColor mt-4 ml-2 md:ml-0`}>
-          <p className="">HTML</p>
-          <p>CSS</p>
-          <p>JavaScript</p>
-          <p>Ruby</p>
+          <p className="border border-lightBlueColor py-1 px-2 rounded text-skyColor">HTML</p>
+          <p className="border border-lightBlueColor py-1 px-2 rounded text-skyColor">CSS</p>
+          <p className="border border-lightBlueColor py-1 px-2 rounded text-skyColor">JavaScript</p>
+          <p className="border border-lightBlueColor py-1 px-2 rounded text-skyColor">Ruby</p>
         </div>
         <div className={`flex ${even ? 'md:justify-start' : 'md:justify-end'} gap-5 text-skyColor mt-4 ml-2 md:ml-0`}>
           <button type="button" className="bg-lightBlueColor rounded px-5 py-2 text-md text-skyColor font-medium">
