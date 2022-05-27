@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import rocketGif from '../../assets/rocket.gif';
+import rocketGif from '../../assets/images/rocket.gif';
 
 const Blog = () => (
   <section className="flex flex-col items-center mt-10 md:mr-52">

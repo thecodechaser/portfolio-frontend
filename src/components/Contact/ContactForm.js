@@ -28,7 +28,7 @@ const ContactForm = () => (
         className="w-72 md:w-80 p-2 rounded text-primaryColor
           focus:border-2 focus:border-secondaryColor focus:outline-none"
       />
-      <button type="submit" className="bg-secondaryColor ml-24 mt-5 rounded w-28 px-4 py-2 text-base text-primaryColor">Submit</button>
+      <button type="submit" className="bg-lightBlueColor ml-24 mt-5 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
     </form>
   </div>
 );

@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import microverseLogo from '../../assets/microverse_logo.png';
-import freelanceLogo from '../../assets/freelance-logo.jpg';
+import microverseLogo from '../../assets/images/microverse_logo.png';
+import freelanceLogo from '../../assets/images/freelance-logo.jpg';
 
 const Experience = () => (
   <div className="mt-14 md:mt-24 md:ml-1">

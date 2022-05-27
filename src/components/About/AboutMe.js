@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import personJuggling from '../../assets/person_juggling.gif';
-import codeSnipped from '../../assets/code-snippet.png';
+import personJuggling from '../../assets/images/person_juggling.gif';
+import codeSnipped from '../../assets/images/code-snippet.png';
 
 const stacks = [
   {

@@ -1,6 +1,6 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
-import profilePicture from '../../assets/profilePicture.jpg';
+import profilePicture from '../../assets/images/profilePicture.jpg';
 
 const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
 
