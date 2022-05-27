@@ -7,11 +7,11 @@ const Blog = () => (
     <p className="text-lg ml-4 mt-4 md:ml-0">Next time you come back I will be live here.</p>
     <img src={rocketGif} alt="rocket-gif" />
     <Link to="/">
-    <button
-          type="button"
-          className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
+      <button
+        type="button"
+        className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
       text-lg text-skyColor font-medium"
-        >
+      >
         Go Home
       </button>
     </Link>
