@@ -1,9 +1,13 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Project from '../components/Portfolio/Project';
 import AboutMe from '../components/About/AboutMe';
 import HeroSection from '../components/Home/HeroSection';
 
-const Home = () => (
+const Home = () => {
+  
+  const projects = useSelector((state) => state.projectsReducer);
+  return (
   <>
     <main className="mt-40">
       {/* hero-section */}
@@ -30,6 +34,7 @@ const Home = () => (
       <Project />
     </div>
   </>
-);
+)
+  };
 
 export default Home;
