@@ -5,7 +5,8 @@ import AboutMe from '../components/About/AboutMe';
 import HeroSection from '../components/Home/HeroSection';
 
 const Home = () => {
-  const projects = useSelector((state) => state.projectsReducer);
+  const portfolio = useSelector((state) => state.projectsReducer);
+  const projects = portfolio.slice(0, 3);
   return (
     <>
       <main className="mt-40">
@@ -30,7 +31,11 @@ const Home = () => {
           <h2 className="text-2xl md:text-4xl">Portfolio</h2>
           <div className="border-b-2 w-4/6 mb-3 border-secondaryColor hr-portfolio" />
         </div>
-        <Project data={projects[0]} />
+        {
+      projects.map((data) =>(
+        <Project data={data}/>
+      ))
+    }
       </div>
     </>
   );
