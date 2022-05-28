@@ -1,15 +1,16 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
-import profilePicture from '../../assets/profilePicture.jpg';
+import { Link } from 'react-router-dom';
+import profilePicture from '../../assets/images/profilePicture.jpg';
 
-const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
+const fields = ['Full Stack web developer', 'Love for clean code', 'Remote work aficionado', 'Amateur astronomer'];
 
 const HeroSection = () => (
-  <div className="flex flex-col items-center gap-20 md:flex-row md:gap-60">
+  <div className="flex flex-col items-center gap-10 md:flex-row md:gap-60">
     <div className="md:order-1">
-      <img src={profilePicture} alt="profile" className="h-80 rounded-full" />
+      <img src={profilePicture} alt="profile" className="h-64 md:h-80 rounded-full" />
     </div>
     <div className="text-skyColor">
-      <p className="text-secondaryColor">Hello!</p>
+      <p className="text-base text-secondaryColor">Hello!</p>
       <h1 className="text-secondaryColor text-4xl md:text-5xl">I&apos;m Ranjeet Singh</h1>
       {
           fields.map((field) => (
@@ -19,7 +20,15 @@ const HeroSection = () => (
             </div>
           ))
         }
-      <button type="button" className="bg-secondaryColor mt-10 rounded px-6 py-2 w-50 text-lg text-primaryColor">Get in Touch</button>
+      <Link to="/contact">
+        <button
+          type="button"
+          className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
+      text-lg text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
+        >
+          Get in Touch
+        </button>
+      </Link>
     </div>
   </div>
 );

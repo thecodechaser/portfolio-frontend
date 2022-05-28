@@ -1,7 +1,7 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import microverseLogo from '../../assets/microverse_logo.png';
-import tmuLogo from '../../assets/tmu-logo.png';
-import bhagwantUniversity from '../../assets/bhagwant-university-logo.jpg';
+import microverseLogo from '../../assets/images/microverse_logo.png';
+import tmuLogo from '../../assets/images/tmu-logo.png';
+import bhagwantUniversity from '../../assets/images/bhagwant-university-logo.jpg';
 
 const Education = () => (
   <div className="mt-14 md:mt-24 md:ml-3">

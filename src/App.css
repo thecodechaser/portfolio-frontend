@@ -10,8 +10,16 @@
   height: 600px;
 }
 
+.hr-blog {
+  width: 62%;
+}
+
 @media screen and (min-width: 768px) {
   .inner-body {
+    padding-left: 80px;
+  }
+
+  .contact-info {
     padding-left: 80px;
   }
 
@@ -46,10 +54,26 @@
   .edu-bhag {
     gap: 375px;
   }
+
+  .hr-blog {
+    width: 58%;
+  }
+
+  .card-img {
+    width: 50%;
+  }
+
+  .code-snippet {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .inner-body {
+    padding-left: 200px;
+  }
+
+  .contact-info {
     padding-left: 200px;
   }
 }

@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import microverseLogo from '../../assets/microverse_logo.png';
-import freelanceLogo from '../../assets/freelance-logo.jpg';
+import microverseLogo from '../../assets/images/microverse_logo.png';
+import freelanceLogo from '../../assets/images/freelance-logo.jpg';
 
 const Experience = () => (
   <div className="mt-14 md:mt-24 md:ml-1">
@@ -15,7 +15,7 @@ const Experience = () => (
           Technical Support Engineer
           <span className="block text-sm ml-1 text-skyColor">January 2022 – Present</span>
         </h3>
-        <p>
+        <p className="md:mr-3">
           <img src={microverseLogo} alt="microverse-logo" className="inline w-8" />
           {' '}
           Microverse

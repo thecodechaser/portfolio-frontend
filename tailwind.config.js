@@ -9,6 +9,8 @@ module.exports = {
       secondaryColor: '#06C1FF',
       skyColor: '#addbea',
       darkSkyColor: '#608297',
+      blueColor: '#013F70',
+      lightBlueColor: '#118AB2',
     },
   },
   plugins: [],
