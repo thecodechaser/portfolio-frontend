@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/thecodechaser-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Frontend
 
-## Available Scripts
+> Portfolio Frontend is a React application for my Portfolio website. It gives a brief description of myself and showcases some of my works and my past experiences.
 
-In the project directory, you can run:
+## Link to the backend
 
-### `npm start`
+[Portfolio Backend]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preview:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Home Page
 
-### `npm test`
+![screenshot](./src/assets/images/previews/preview1.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Portfolio Page
 
-### `npm run build`
+![screenshot](./src/assets/images/previews/preview2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Blogs Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![screenshot](./src/assets/images/previews/preview3.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `npm run eject`
+- HTML
+- CSS
+- Tailwind
+- JavaScript
+- REACT
+- Redux
+- Webpack
+- Jest
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Live version
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Portfolio]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get a local copy up and running follow these simple example steps.
 
-## Learn More
+### Prerequisites
+- A text editor(preferably Visual Studio Code)
+- Node
+- Web browser
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install
+- [Git](https://git-scm.com/downloads)
+- [Node](https://nodejs.org/en/download/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Using it Locally
 
-### Code Splitting
+- Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash 
+git clone git@github.com:thecodechaser/portfolio-frontend.git
 
-### Analyzing the Bundle Size
+cd portfolio-frontend
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Install dependencies
 
-### Making a Progressive Web App
+```bash
+npm i 
+or
+npm install
+```
+- To Start the development server
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- To test the project
+```bash
+npm run test
+```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Visit And Open Files
 
-### Deployment
+[Visit Repo](https://github.com/thecodechaser/portfolio-frontend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Download Repo
 
-### `npm run build` fails to minify
+[Download Repo](https://github.com/thecodechaser/portfolio-frontend/archive/refs/heads/dev.zip)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+
+👤 **Ranjeet Singh**
+
+- GitHub: [@thecodechaser](https://github.com/thecodechaser)
+- Twitter: [@thecodechaser](https://twitter.com/thecodechaser)
+- LinkedIn: [thecodechaser](https://linkedin.com/in/thecodechaser)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/thecodechaser/portfolio-frontend/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Inspiration: Microverse
+
+## 📝 License
+
+This project is [MIT](./LICENSE.md) licensed.
