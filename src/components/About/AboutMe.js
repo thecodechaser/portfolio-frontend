@@ -37,10 +37,10 @@ const AboutMe = () => (
           solver. In my free time, I have so much to do that I get confused about choosing
           between solving algorithms and learning about astronomy but somehow I manage.
           {' '}
-          <img src={personJuggling} alt="person-juggling" className=" w-16" />
+          <img src={personJuggling} alt="person-juggling" className="w-16 mt-4" />
         </p>
       </div>
-      <img src={codeSnipped} alt="code-snippet" className="md:w-1/2" />
+      <img src={codeSnipped} alt="code-snippet" className="code-snippet rounded-md" />
     </div>
     <h3 className="text-lg text-secondaryColor mt-5 ml-6 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
     <div className="flex flex-col ml-6 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">

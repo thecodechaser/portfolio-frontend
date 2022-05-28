@@ -15,11 +15,11 @@ const Project = (props) => {
     odd = true;
   }
   return (
-    <div className={`md:flex project-card ${id === 0 ? 'mt-16' : 'mt-32'} mx-2 md:mx-0 p-3 shadow shadow-lightBlueColor md:gap-5`}>
+    <div className={`md:flex project-card ${id === 0 ? 'mt-16' : 'mt-32'} mx-2 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}>
       <img
         src={image}
         alt="project preview"
-        className={`w-11/12 ml-2 ${odd ? 'md:order-1' : 'md:order-0'} card-img md:ml-0 `}
+        className={`w-11/12 ml-2 ${odd ? 'md:order-1' : 'md:order-0'} rounded-md card-img md:ml-0 `}
       />
       <div>
         <h3 className={`text-skyColor ${odd ? 'md:text-left' : 'md:text-right'} mb-4 text-2xl ml-2 md:ml-0`}>{title}</h3>
