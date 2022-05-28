@@ -20,20 +20,20 @@ const ContactInfo = () => (
       </p>
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Contacts</h4>
-        <a href = "mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">contact@thecodechaser.com</a>
-        <a href = "mailto: contact@thecodechaser.com" className="text-skyColor block mt-3 text-base hover:text-secondaryColor">admin@thecodechaser.com</a>
+        <a href="mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">contact@thecodechaser.com</a>
+        <a href="mailto: contact@thecodechaser.com" className="text-skyColor block mt-3 text-base hover:text-secondaryColor">admin@thecodechaser.com</a>
       </div>
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Social Media</h4>
         <div className="flex gap-5">
-          <a target="_blank" href="https://github.com/thecodechaser"><i className="lab la-github text-3xl text-skyColor hover:text-secondaryColor" /></a>
-          <a target="_blank" href="https://twitter.com/thecodechaser"><i className="lab la-twitter text-3xl text-skyColor hover:text-secondaryColor" /></a>
-          <a target="_blank" href="https://www.linkedin.com/in/thecodechaser/"><i className="lab la-linkedin text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a aria-label="Save" target="_blank" href="https://github.com/thecodechaser" rel="noreferrer"><i className="lab la-github text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a aria-label="Save" target="_blank" href="https://twitter.com/thecodechaser" rel="noreferrer"><i className="lab la-twitter text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a aria-label="Save" target="_blank" href="https://www.linkedin.com/in/thecodechaser/" rel="noreferrer"><i className="lab la-linkedin text-3xl text-skyColor hover:text-secondaryColor" /></a>
         </div>
         <div className="flex gap-5 mt-4">
-        <a target="_blank" href="https://medium.com/@thecodechaser"><i className="lab la-medium text-3xl text-skyColor hover:text-secondaryColor" /></a>
-        <a target="_blank" href="https://angel.co/u/thecodechaser"><i className="lab la-angellist text-3xl text-skyColor hover:text-secondaryColor" /></a>
-        <a target="_blank" href="https://www.instagram.com/the_code_chaser/"><i className="lab la-instagram text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a aria-label="Save" target="_blank" href="https://medium.com/@thecodechaser" rel="noreferrer"><i className="lab la-medium text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a aria-label="Save" target="_blank" href="https://angel.co/u/thecodechaser" rel="noreferrer"><i className="lab la-angellist text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a aria-label="Save" target="_blank" href="https://www.instagram.com/the_code_chaser/" rel="noreferrer"><i className="lab la-instagram text-3xl text-skyColor hover:text-secondaryColor" /></a>
         </div>
       </div>
     </div>

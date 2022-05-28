@@ -5,17 +5,17 @@ import githubLogo from '../../assets/images/github-logo.svg';
 const Project = (props) => {
   const {
     data: {
-      index, image, title, details, tech, live, github,
+      id, image, title, details, tech, live, github,
     },
   } = props;
   let odd;
-  if(index === 0 || index%2 == 0){
+  if (id === 0 || id % 2 === 0) {
     odd = false;
   } else {
-    odd =true;
+    odd = true;
   }
   return (
-    <div className={`md:flex project-card ${index === 0 ? 'mt-16' : 'mt-32'} mx-2 md:mx-0 p-3 shadow shadow-lightBlueColor md:gap-5`}>
+    <div className={`md:flex project-card ${id === 0 ? 'mt-16' : 'mt-32'} mx-2 md:mx-0 p-3 shadow shadow-lightBlueColor md:gap-5`}>
       <img
         src={image}
         alt="project preview"
@@ -48,6 +48,7 @@ const Project = (props) => {
 
 Project.propTypes = {
   data: PropTypes.shape({
+    id: PropTypes.number,
     title: PropTypes.string,
     details: PropTypes.string,
     live: PropTypes.string,

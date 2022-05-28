@@ -32,17 +32,17 @@ const Home = () => {
           <div className="border-b-2 w-4/6 mb-3 border-secondaryColor hr-portfolio" />
         </div>
         {
-      projects.map((data) =>(
-        <Project key={data.name} data={data}/>
+      projects.map((data) => (
+        <Project key={data.id} data={data} />
       ))
     }
-    <Link to="/portfolio">
+        <Link to="/portfolio">
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-8 py-2
       text-lg text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
           >
-           See All
+            See All
           </button>
         </Link>
       </div>
