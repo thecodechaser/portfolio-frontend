@@ -2,7 +2,7 @@ import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
 import profilePicture from '../../assets/images/profilePicture.jpg';
 
-const fields = ['Full Stack web developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
+const fields = ['Full Stack web developer', 'Love for clean code', 'Remote work aficionado', 'Amateur astronomer'];
 
 const HeroSection = () => (
   <div className="flex flex-col items-center gap-20 md:flex-row md:gap-60">
