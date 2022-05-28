@@ -2,7 +2,7 @@ import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
 import profilePicture from '../../assets/images/profilePicture.jpg';
 
-const fields = ['Full stack software developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
+const fields = ['Full Stack web developer', 'UI/UX designer', 'Remote work aficionado', 'Amateur astronomer'];
 
 const HeroSection = () => (
   <div className="flex flex-col items-center gap-20 md:flex-row md:gap-60">
@@ -24,7 +24,7 @@ const HeroSection = () => (
         <button
           type="button"
           className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-skyColor font-medium"
+      text-lg text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
         >
           Get in Touch
         </button>

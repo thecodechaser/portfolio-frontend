@@ -80,7 +80,7 @@ const Header = () => {
         <button
           type="button"
           className={`border-2 border-secondaryColor mt-24 rounded px-4 py-1 w-32 
-      text-secondaryColor md:mt-0`}
+      text-secondaryColor hover:text-skyColor hover:border-skyColor md:mt-0`}
         >
           Resume
         </button>

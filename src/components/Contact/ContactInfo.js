@@ -26,14 +26,14 @@ const ContactInfo = () => (
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Social Media</h4>
         <div className="flex gap-5">
-          <i className="lab la-github text-3xl text-skyColor hover:text-secondaryColor" />
-          <i className="lab la-twitter text-3xl text-skyColor hover:text-secondaryColor" />
-          <i className="lab la-linkedin text-3xl text-skyColor hover:text-secondaryColor" />
+          <a target="_blank" href="https://github.com/thecodechaser"><i className="lab la-github text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a target="_blank" href="https://twitter.com/thecodechaser"><i className="lab la-twitter text-3xl text-skyColor hover:text-secondaryColor" /></a>
+          <a target="_blank" href="https://www.linkedin.com/in/thecodechaser/"><i className="lab la-linkedin text-3xl text-skyColor hover:text-secondaryColor" /></a>
         </div>
         <div className="flex gap-5 mt-4">
-          <i className="lab la-medium text-3xl text-skyColor hover:text-secondaryColor" />
-          <i className="lab la-angellist text-3xl text-skyColor hover:text-secondaryColor" />
-          <i className="lab la-instagram text-3xl text-skyColor hover:text-secondaryColor" />
+        <a target="_blank" href="https://medium.com/@thecodechaser"><i className="lab la-medium text-3xl text-skyColor hover:text-secondaryColor" /></a>
+        <a target="_blank" href="https://angel.co/u/thecodechaser"><i className="lab la-angellist text-3xl text-skyColor hover:text-secondaryColor" /></a>
+        <a target="_blank" href="https://www.instagram.com/the_code_chaser/"><i className="lab la-instagram text-3xl text-skyColor hover:text-secondaryColor" /></a>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ const ContactInfo = () => (
         <button
           type="button"
           className="border-2 border-secondaryColor ml-4 md:ml-0 mt-10 rounded px-6 py-3
-      text-lg text-secondaryColor"
+      text-lg text-secondaryColor hover:text-skyColor hover:border-skyColor"
         >
           Send Me Message
         </button>
