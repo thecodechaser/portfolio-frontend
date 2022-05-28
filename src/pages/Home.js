@@ -36,6 +36,15 @@ const Home = () => {
         <Project data={data}/>
       ))
     }
+    <Link to="/portfolio">
+          <button
+            type="button"
+            className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
+      text-lg text-skyColor font-medium"
+          >
+           See All
+          </button>
+        </Link>
       </div>
     </>
   );

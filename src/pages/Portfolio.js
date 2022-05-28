@@ -1,8 +1,14 @@
+import { useEffect } from 'react';
 import Project from '../components/Portfolio/Project';
 import { useSelector } from 'react-redux';
 
 const Portfolio = () => {
   const projects = useSelector((state) => state.projectsReducer);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
   return (
   <div className="mt-20 md:mt-40">
     <div className="flex gap-3 ml-5 md:ml-0 mb-6">

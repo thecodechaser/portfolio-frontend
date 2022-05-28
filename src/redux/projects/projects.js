@@ -10,6 +10,7 @@ import budgetTracker from '../../assets/images/projects/budget-tracker.png';
 // initial-state
 const initialState = [
   {
+    index: 0,
     title: 'Book Appoinments',
     image: bookAppoinments,
     details: 'Book Appointments is an application to book doctors appointments. This application is responsive and users can load, create, and delete doctors and reservations. Users need to sign up or sign in to access the application.',
@@ -20,6 +21,7 @@ const initialState = [
     ],
   },
   {
+    index: 1,
     title: 'Covid19 Metrics',
     image: covid19Metrics,
     details: 'Covid19 Metrics is a web application that fetches covid data from API. It shows all countries with the confirmed covid cases on the homepage, users can select any country and go to the details page. The details page shows other details for that specific country like recovered cases, confirmed cases, and deaths.',
@@ -30,6 +32,7 @@ const initialState = [
     ],
   },
   {
+    index: 2,
     title: 'Disney Characters',
     image: disneyCharacters,
     details: 'Disney Character is a web application that shows data of Disney characters from the Disney API. Users can like the character and users can also leave comments on any character on the comment popup. It shows the comments left by other people and gives an idea of what people think about Disney characters.',
@@ -40,6 +43,7 @@ const initialState = [
     ],
   },
   {
+    index: 3,
     title: 'Space Travelers',
     image: spaceTravelers,
     details: 'Space Travelers Hub is a React web application that fetches rockets, and missions from the SpaceX API. Users can book and cancel their reservations for rockets and missions. The application has three pages Rockets/Missions/MY Profile, My Profile page shows the list of reserved rockets and missions.',
@@ -50,6 +54,7 @@ const initialState = [
     ],
   },
   {
+    index: 4,
     title: 'Thecodechaser BootCamp',
     image: bootCamp,
     details: 'ThecodeChaser Bootcamp is a web development boot camp website, responsive for desktop and mobile screens. It delivers all related information and user can submit their query and questions using the mentioned form.',
@@ -60,6 +65,7 @@ const initialState = [
     ],
   },
   {
+    index: 5,
     title: 'Recipe App',
     image: recipeApp,
     details: 'The Recipe app is a classic example of a recipe website. Its a functional website that shows the list of foods and recipes and empowers readers to interact with them by adding new foods and recipes. Users can access the services of the application by creating a new account or by login in if they already have an account.',
@@ -70,6 +76,7 @@ const initialState = [
     ],
   },
   {
+    index: 6,
     title: 'Book Store',
     image: bookStore,
     details: 'Book Store is a web application to add favorite books by the user, users can add and remove books, This website is built using REACT and JavaScript libraries.',
@@ -80,6 +87,7 @@ const initialState = [
     ],
   },
   {
+    index: 7,
     title: 'Budget Tracker',
     image: budgetTracker,
     details: 'The Budget tracker app is a full-stack application. Its a functional website that shows the list of categories and transactions and empowers readers to interact with them by adding new categories and transactions. Users can access the services of the application by creating a new account or by login in if they already have an account.',

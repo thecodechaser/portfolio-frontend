@@ -5,16 +5,21 @@ import githubLogo from '../../assets/images/github-logo.svg';
 const Project = (props) => {
   const {
     data: {
-      image, title, details, tech, live, github,
+      index, image, title, details, tech, live, github,
     },
   } = props;
-  const even = false;
+  let even;
+  if(index === 0 || index%2 == 0){
+    even = false;
+  } else {
+    even =true;
+  }
   return (
     <div className="md:flex project-card mt-24 mx-2 md:mx-0 p-3 shadow shadow-lightBlueColor md:gap-5">
       <img
         src={image}
         alt="project preview"
-        className={`w-11/12 ml-2 ${even ? 'md:order-1' : 'md:order-0'} md:w-2/4 md:ml-0 `}
+        className={`w-11/12 ml-2 ${even ? 'md:order-1' : 'md:order-0'} card-img md:ml-0 `}
       />
       <div>
         <h3 className={`text-skyColor ${even ? 'md:text-left' : 'md:text-right'} mb-4 text-2xl ml-2 md:ml-0`}>{title}</h3>
