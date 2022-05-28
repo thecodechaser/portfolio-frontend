@@ -32,9 +32,9 @@ const Header = () => {
 
   return (
     <header className={`flex flex-col bg-primaryColor px-8 py-7 ${mobileMenu ? 'h-screen' : 'h-fit'} fixed top-0 w-screen shadow-xl md:flex-row md:justify-between md:px-20 md:h-fit`}>
-      <a href="/" className="text-lg">
-        <span className="text-secondaryColor">the </span>
-        <span>code </span>
+      <a href="/" className="text-xl">
+        <span className="text-secondaryColor">the</span>
+        <span>code</span>
         <span className="text-secondaryColor">chaser</span>
       </a>
       <nav>
@@ -44,10 +44,10 @@ const Header = () => {
             className={classNames(!mobileMenu ? 'block' : 'hidden')}
             onClick={() => setMobileMenu(true)}
           >
-            <MenuIcon className="h-8" />
+            <MenuIcon className="h-8 mr-2" />
           </button>
           <button type="button" className={classNames(mobileMenu ? 'block' : 'hidden')} onClick={() => setMobileMenu(false)}>
-            <XIcon className="h-8" />
+            <XIcon className="h-8 mr-2" />
           </button>
         </div>
         <div className={classNames(mobileMenu ? 'block' : 'hidden', 'md:block')}>

@@ -18,7 +18,7 @@ const Home = () => {
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-skyColor font-medium md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
+      text-lg text-skyColor font-medium ml-5 md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
           >
             Know more
           </button>
@@ -40,7 +40,7 @@ const Home = () => {
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-8 py-2
-      text-lg text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
+      text-lg text-skyColor font-medium ml-5 md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
           >
             See All
           </button>
