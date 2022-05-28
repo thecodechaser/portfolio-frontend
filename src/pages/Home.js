@@ -18,7 +18,7 @@ const Home = () => {
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-skyColor font-medium"
+      text-lg text-skyColor font-medium md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
           >
             Know more
           </button>
@@ -33,14 +33,14 @@ const Home = () => {
         </div>
         {
       projects.map((data) =>(
-        <Project data={data}/>
+        <Project key={data.name} data={data}/>
       ))
     }
     <Link to="/portfolio">
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-skyColor font-medium"
+      text-lg text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
           >
            See All
           </button>

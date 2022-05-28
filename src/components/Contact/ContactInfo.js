@@ -20,20 +20,20 @@ const ContactInfo = () => (
       </p>
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Contacts</h4>
-        <p className="text-skyColor text-base">contact@thecodechaser.com</p>
-        <p className="text-skyColor mt-3 text-base">admin@thecodechaser.com</p>
+        <a href = "mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">contact@thecodechaser.com</a>
+        <a href = "mailto: contact@thecodechaser.com" className="text-skyColor block mt-3 text-base hover:text-secondaryColor">admin@thecodechaser.com</a>
       </div>
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Social Media</h4>
         <div className="flex gap-5">
-          <i className="lab la-github text-3xl text-skyColor" />
-          <i className="lab la-twitter text-3xl text-skyColor" />
-          <i className="lab la-linkedin text-3xl text-skyColor" />
+          <i className="lab la-github text-3xl text-skyColor hover:text-secondaryColor" />
+          <i className="lab la-twitter text-3xl text-skyColor hover:text-secondaryColor" />
+          <i className="lab la-linkedin text-3xl text-skyColor hover:text-secondaryColor" />
         </div>
         <div className="flex gap-5 mt-4">
-          <i className="lab la-medium text-3xl text-skyColor" />
-          <i className="lab la-angellist text-3xl text-skyColor" />
-          <i className="lab la-instagram text-3xl text-skyColor" />
+          <i className="lab la-medium text-3xl text-skyColor hover:text-secondaryColor" />
+          <i className="lab la-angellist text-3xl text-skyColor hover:text-secondaryColor" />
+          <i className="lab la-instagram text-3xl text-skyColor hover:text-secondaryColor" />
         </div>
       </div>
     </div>
