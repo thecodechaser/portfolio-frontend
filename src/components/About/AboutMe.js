@@ -16,11 +16,11 @@ const stacks = [
 
 const AboutMe = () => (
   <div className="mt-14 md:mt-24">
-    <div className="flex gap-3 ml-5 md:ml-0">
+    <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
     </div>
-    <div className="flex flex-col md:flex-row mt-5 ml-6 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
+    <div className="flex flex-col md:flex-row mt-5 ml-4 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
       <div className="flex flex-col gap-5 md:mt-3">
         <p>
           Hello! My name is Ranjeet Singh, commonly known as
@@ -42,8 +42,8 @@ const AboutMe = () => (
       </div>
       <img src={codeSnipped} alt="code-snippet" className="code-snippet rounded-md" />
     </div>
-    <h3 className="text-lg text-secondaryColor mt-5 ml-6 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
-    <div className="flex flex-col ml-6 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
+    <h3 className="text-lg text-secondaryColor mt-5 ml-4 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
+    <div className="flex flex-col ml-4 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
       { stacks.map((stack) => (
         <div key={stack.name}>
           <h3 className="text-lg font-medium">{stack.name}</h3>

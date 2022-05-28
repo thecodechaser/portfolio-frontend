@@ -5,13 +5,13 @@ import bhagwantUniversity from '../../assets/images/bhagwant-university-logo.jpg
 
 const Education = () => (
   <div className="mt-14 md:mt-24 md:ml-3">
-    <div className="flex gap-3 ml-4 md:ml-0">
+    <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Education</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
     </div>
 
     <div className="mt-8 md:ml-2">
-      <div className="flex mt-4 text-lg text-secondaryColor ml-5 gap-5 md:gap-52 md:ml-0">
+      <div className="flex mt-4 text-lg text-secondaryColor ml-4 gap-5 md:gap-52 md:ml-0">
         <h3>
           Full-stack Web Development Program, Full Time
           <span className="block text-sm ml-1 text-skyColor">October 2021 – May 2022</span>
@@ -44,7 +44,7 @@ const Education = () => (
     </div>
 
     <div className="mt-8 ml-1 md:ml-3">
-      <div className="flex mt-4 text-lg text-secondaryColor ml-5 gap-5 edu-tmu md:ml-0">
+      <div className="flex mt-4 text-lg text-secondaryColor ml-3 gap-5 edu-tmu md:ml-0">
         <h3>
           Diploma Polytechnic, Full-Time
           <span className="block text-sm ml-1 text-skyColor">July 2016 – June 2019</span>
@@ -74,7 +74,7 @@ const Education = () => (
     </div>
 
     <div className="mt-8 ml-2 md:ml-4">
-      <div className="flex mt-4 text-lg text-secondaryColor ml-5 gap-5 edu-bhag edu-tmu md:ml-0">
+      <div className="flex mt-4 text-lg text-secondaryColor ml-3 gap-5 edu-bhag edu-tmu md:ml-0">
         <h3>
           Bachlor of computer science
           <span className="block text-sm ml-1 text-skyColor">July 2021 – Present</span>

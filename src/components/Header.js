@@ -78,6 +78,7 @@ const Header = () => {
       </nav>
       <Link to="/resume" className={`self-center ${mobileMenu ? 'block' : 'hidden'} md:block`}>
         <button
+          onClick={() => setMobileMenu(false)}
           type="button"
           className={`border-2 border-secondaryColor mt-24 rounded px-4 py-1 w-32 
       text-secondaryColor hover:text-skyColor hover:border-skyColor md:mt-0`}

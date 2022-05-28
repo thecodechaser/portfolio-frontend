@@ -26,8 +26,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col mt-10 ml-6 md:ml-0 md:items-center md:mr-52">
-      <h3 className="text-xl font-bold text-skyColor ml-24 md:ml-0  mb-4">Let&apos;s Chat</h3>
+    <div className="flex flex-col mt-10 items-center md:mr-52">
+      <h3 className="text-xl font-bold text-skyColor  mb-4">Let&apos;s Chat</h3>
       <form className="flex flex-col gap-4" action="https://formspree.io/f/meqnnlpy" method="post">
         <input
           type="text"

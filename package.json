@@ -1,5 +1,6 @@
 {
-  "name": "portfolio-react",
+  "name": "portfolio",
+  "homepage":"https://thecodechaser.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

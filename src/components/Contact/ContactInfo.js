@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const ContactInfo = () => (
   <div className="flex flex-col mt-20 md:ml-1 contact-info">
-    <div className="flex w-full ml-5 md:ml-0">
+    <div className="flex w-full ml-3 md:ml-0">
       <div className="border-b-2 mb-3 w-32 mr-3 about-hr md:mr-5 border-secondaryColor" />
       <h3 className="text-2xl md:text-4xl">Get in touch</h3>
       <div className="border-b-2 mb-3 w-32 ml-3 about-hr md:ml-5 border-secondaryColor" />
     </div>
-    <div className="ml-6 md:flex mt-8 md:gap-12 md:ml-1">
+    <div className="ml-4 md:flex mt-8 md:gap-12 md:ml-1">
       <p className="md:w-1/3 text-base text-skyColor">
         {' '}
         If you have an application you are interested in developing, a feature that you need
