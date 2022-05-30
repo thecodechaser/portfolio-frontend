@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactInfo from './Contact/ContactInfo';
+import { motion } from "framer-motion"
 
 const goToTop = () => {
   window.scrollTo({
@@ -12,7 +13,12 @@ const Footer = () => (
 
   <>
     <ContactInfo />
-    <footer className="flex flex-col items-center my-8">
+    <motion.footer  
+    initial={{ x: '-100vw' }}
+    animate={{ x: -0 }}
+  whileInView={{ x: -0 }} 
+  transition={{ delay: 0.2, duration: 0.8 }}
+  className="flex flex-col items-center my-8">
       <button
         type="button"
         onClick={goToTop}
@@ -27,7 +33,7 @@ const Footer = () => (
         <a href="https://github.com/thecodechaser" className="text-secondaryColor"> Ranjeet Singh </a>
         © 2022
       </p>
-    </footer>
+    </motion.footer>
   </>
 );
 
