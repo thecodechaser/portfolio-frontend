@@ -26,6 +26,8 @@
 
 - HTML
 - CSS
+- Framer Animation
+- EmailJS
 - Tailwind
 - JavaScript
 - REACT
