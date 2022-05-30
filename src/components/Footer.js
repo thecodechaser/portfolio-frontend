@@ -13,10 +13,7 @@ const Footer = () => (
 
   <>
     <ContactInfo />
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.2, duration: 0.8 }}
+    <footer
       className="flex flex-col items-center my-8"
     >
       <button
@@ -33,7 +30,7 @@ const Footer = () => (
         <a href="https://github.com/thecodechaser" className="text-secondaryColor"> Ranjeet Singh </a>
         © 2022
       </p>
-    </motion.footer>
+    </footer>
   </>
 );
 

@@ -19,7 +19,7 @@ const AboutMe = () => (
   <motion.div
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.5, duration: 1 }}
+    transition={{ delay: 0.5, duration: 0.8 }}
     className="mt-14 md:mt-24"
   >
     <div className="flex gap-3 ml-3 md:ml-0">
@@ -49,11 +49,12 @@ const AboutMe = () => (
       <img src={codeSnipped} alt="code-snippet" className="code-snippet rounded-md" />
     </div>
     <h3 className="text-lg text-secondaryColor mt-5 ml-4 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
-    <motion.div 
-     initial={{ opacity: 0 }}
-     whileInView={{ opacity: 1 }}
-     transition={{ delay: 0.2, duration: 0.8 }}
-     className="flex flex-col ml-4 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.8 }}
+      className="flex flex-col ml-4 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2"
+    >
       { stacks.map((stack) => (
         <div key={stack.name}>
           <h3 className="text-lg font-medium">{stack.name}</h3>

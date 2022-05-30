@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import serverLogo from '../../assets/images/server-solid.svg';
 import { motion } from 'framer-motion';
+import serverLogo from '../../assets/images/server-solid.svg';
 import githubLogo from '../../assets/images/github-logo.svg';
 
 const Project = (props) => {
@@ -16,11 +16,12 @@ const Project = (props) => {
     odd = true;
   }
   return (
-    <motion.div 
+    <motion.div
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.5, duration: 1 }}
-    className={`md:flex project-card ${id === 0 ? 'mt-16' : 'mt-32'} mx-2 ml-4 md:ml-0 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}>
+    transition={{ delay: 0.2, duration: 0.8 }}
+      className={`md:flex project-card ${id === 0 ? 'mt-16' : 'mt-32'} mx-2 ml-4 md:ml-0 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}
+    >
       <img
         src={image}
         alt="project preview"
