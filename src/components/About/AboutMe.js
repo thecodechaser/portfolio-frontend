@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
+import { motion } from 'framer-motion';
 import personJuggling from '../../assets/images/person_juggling.gif';
 import codeSnipped from '../../assets/images/code-snippet.png';
 
@@ -15,7 +16,12 @@ const stacks = [
 ];
 
 const AboutMe = () => (
-  <div className="mt-14 md:mt-24">
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.5, duration: 1 }}
+    className="mt-14 md:mt-24"
+  >
     <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
@@ -66,7 +72,7 @@ const AboutMe = () => (
         </div>
       ))}
     </div>
-  </div>
+  </motion.div>
 );
 
 export default AboutMe;

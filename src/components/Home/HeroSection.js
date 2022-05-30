@@ -7,9 +7,9 @@ const fields = ['Full Stack web developer', 'Love for clean code', 'Remote work 
 
 const HeroSection = () => (
   <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.2, duration: 0.8 }}
+    initial={{ x: '-100vw' }}
+    animate={{ x: -0 }}
+    transition={{ duration: 1 }}
     className="flex flex-col items-center gap-10 md:flex-row md:gap-60"
   >
     <div className="md:order-1">
