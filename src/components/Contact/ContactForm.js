@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com'
+
+const serviceId = 'service_bcx8qxm';
+ const templateId = 'template_mta27zr';
+ const userId = 'I3beIEx7C9ULngUoR';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -18,6 +23,16 @@ const ContactForm = () => {
       return;
     }
 
+  const templateParams = {
+  name,
+  email,
+  message
+};
+
+emailjs.send(serviceId, templateId, templateParams, userId)
+                .then(response => console.log(response))
+                .then(error => console.log(error));
+
     setSuccessNotice(true);
     setTimeout(() => {
       setEmail('');
@@ -34,7 +49,7 @@ const ContactForm = () => {
       className="flex flex-col mt-10 items-center md:mr-52"
     >
       <h3 className="text-xl font-bold text-skyColor  mb-4">Let&apos;s Chat</h3>
-      <form className="flex flex-col gap-4" action="https://formspree.io/f/meqnnlpy" method="post">
+      <form className="flex flex-col gap-4">
         <input
           type="text"
           name="user_name"
