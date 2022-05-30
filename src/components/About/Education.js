@@ -1,15 +1,16 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import microverseLogo from '../../assets/images/microverse_logo.png';
 import { motion } from 'framer-motion';
+import microverseLogo from '../../assets/images/microverse_logo.png';
 import tmuLogo from '../../assets/images/tmu-logo.png';
 import bhagwantUniversity from '../../assets/images/bhagwant-university-logo.jpg';
 
 const Education = () => (
-  <motion.div 
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ delay: 0.2, duration: 0.8 }}
-  className="mt-14 md:mt-24 md:ml-3">
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, duration: 0.8 }}
+    className="mt-14 md:mt-24 md:ml-3"
+  >
     <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Education</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
