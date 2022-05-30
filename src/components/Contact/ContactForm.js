@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -26,7 +27,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col mt-10 items-center md:mr-52">
+    <motion.div 
+    initial={{ x: '-100vw' }}
+    animate={{ x: -0 }}
+    transition={{ duration: 1 }}
+    className="flex flex-col mt-10 items-center md:mr-52">
       <h3 className="text-xl font-bold text-skyColor  mb-4">Let&apos;s Chat</h3>
       <form className="flex flex-col gap-4" action="https://formspree.io/f/meqnnlpy" method="post">
         <input
@@ -68,7 +73,7 @@ const ContactForm = () => {
       }
         <button onClick={submission} type="submit" className="bg-lightBlueColor ml-24 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

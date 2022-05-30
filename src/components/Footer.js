@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import ContactInfo from './Contact/ContactInfo';
 
 const goToTop = () => {
