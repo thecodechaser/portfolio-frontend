@@ -31,7 +31,9 @@ const Header = () => {
   };
 
   return (
-    <header className={`flex flex-col z-10  bg-primaryColor px-8 py-7 ${mobileMenu ? 'h-screen' : 'h-fit'} fixed top-0 w-full shadow-xl md:flex-row md:justify-between md:px-20 md:h-fit`}>
+    <header
+      className={`flex flex-col z-10  bg-primaryColor px-8 py-7 ${mobileMenu ? 'h-screen' : 'h-fit'} fixed top-0 w-full shadow-xl md:flex-row md:justify-between md:px-20 md:h-fit`}
+    >
       <a href="/" className="text-xl">
         <span className="text-secondaryColor">the</span>
         <span>code</span>
