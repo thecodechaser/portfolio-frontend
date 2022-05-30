@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 import Blog from '../components/Blog/Blog';
 
-const Blogs = () => (
+const Blogs = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
+  return (
   <div className="mt-32 md:mt-40">
     <div className="flex gap-3 ml-5 md:ml-0 mb-6">
       <h2 className="text-2xl md:text-4xl">Latest Blogs</h2>
@@ -9,6 +18,7 @@ const Blogs = () => (
     {/* blog-section */}
     <Blog />
   </div>
-);
+)
+  };
 
 export default Blogs;
