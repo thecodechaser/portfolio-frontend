@@ -1,8 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const ContactInfo = () => (
-  <div className="flex flex-col mt-20 md:ml-1 contact-info">
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, duration: 0.8 }}
+    className="flex flex-col mt-20 md:ml-1 contact-info"
+  >
     <div className="flex w-full ml-3 md:ml-0">
       <div className="border-b-2 mb-3 w-32 mr-3 about-hr md:mr-5 border-secondaryColor" />
       <h3 className="text-2xl md:text-4xl">Get in touch</h3>
@@ -20,7 +26,8 @@ const ContactInfo = () => (
       </p>
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Contacts</h4>
-        <a href="mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">contact@thecodechaser.com</a>
+        <a href="mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">ranjeet@thecodechaser.com</a>
+        <a href="mailto: contact@thecodechaser.com" className="text-skyColor block mt-3 text-base hover:text-secondaryColor">contact@thecodechaser.com</a>
         <a href="mailto: contact@thecodechaser.com" className="text-skyColor block mt-3 text-base hover:text-secondaryColor">admin@thecodechaser.com</a>
       </div>
       <div className="md:w-1/5 mt-4 md:mt-0">
@@ -50,7 +57,7 @@ const ContactInfo = () => (
         </button>
       </Link>
     </div>
-  </div>
+  </motion.div>
 );
 
 export default ContactInfo;

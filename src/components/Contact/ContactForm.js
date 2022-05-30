@@ -1,34 +1,64 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
+
+const serviceId = 'service_bcx8qxm';
+const templateId = 'template_mta27zr';
+const userId = 'I3beIEx7C9ULngUoR';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [fieldsNotice, setFieldsNotice] = useState(false);
+  const [emailNotice, setEmailNotice] = useState(false);
   const [successNotice, setSuccessNotice] = useState(false);
+
+  const navigate = useNavigate();
 
   const submission = () => {
     const pattern = /\S+@\S+\.\S+/;
 
     if (name === '' || email === '' || message === '') {
+      setFieldsNotice(true);
       return;
     }
 
+    setFieldsNotice(false);
+
     if (!pattern.test(email)) {
+      setEmailNotice(true);
       return;
     }
+
+    setEmailNotice(false);
+
+    const templateParams = {
+      name,
+      email,
+      message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => console.log(response))
+      .then((error) => console.log(error));
 
     setSuccessNotice(true);
     setTimeout(() => {
-      setEmail('');
-      setMessage('');
-      setName('');
-    }, 1000);
+      navigate('../messageSent');
+    }, 2000);
   };
 
   return (
-    <div className="flex flex-col mt-10 items-center md:mr-52">
+    <motion.div
+      initial={{ x: '-100vw' }}
+      animate={{ x: -0 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col mt-10 items-center md:mr-52"
+    >
       <h3 className="text-xl font-bold text-skyColor  mb-4">Let&apos;s Chat</h3>
-      <form className="flex flex-col gap-4" action="https://formspree.io/f/meqnnlpy" method="post">
+      <div className="flex flex-col gap-4">
         <input
           type="text"
           name="user_name"
@@ -62,13 +92,23 @@ const ContactForm = () => {
           focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
         {
-        successNotice && (
-          <span className="text-skyColor">Thank you for your message, I will get back to you soon!</span>
+        fieldsNotice && (
+          <span className="text-skyColor text-center text-base">Please fill all fields</span>
         )
       }
-        <button onClick={submission} type="submit" className="bg-lightBlueColor ml-24 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
-      </form>
-    </div>
+        {
+        emailNotice && (
+          <span className="text-skyColor text-center text-base">Please enter a valid email</span>
+        )
+      }
+        {
+        successNotice && (
+          <span className="text-skyColor text-center text-base">Sending message...</span>
+        )
+      }
+        <button onClick={submission} type="button" className="bg-lightBlueColor ml-24 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
+      </div>
+    </motion.div>
   );
 };
 

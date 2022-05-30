@@ -6,6 +6,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Blogs from './pages/Blogs';
+import SuccessNotice from './components/Contact/SucessNotice';
 import NotFound from './pages/404';
 import Footer from './components/Footer';
 import './App.css';
@@ -43,6 +44,10 @@ function App() {
           <Route
             path="/resume"
             element={(<Resume />)}
+          />
+          <Route
+            path="/messageSent"
+            element={(<SuccessNotice />)}
           />
         </Routes>
       </div>

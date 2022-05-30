@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Project from '../components/Portfolio/Project';
@@ -7,6 +8,12 @@ import HeroSection from '../components/Home/HeroSection';
 const Home = () => {
   const portfolio = useSelector((state) => state.projectsReducer);
   const projects = portfolio.slice(0, 3);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   return (
     <>
       <main className="mt-40">

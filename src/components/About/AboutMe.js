@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
+import { motion } from 'framer-motion';
 import personJuggling from '../../assets/images/person_juggling.gif';
 import codeSnipped from '../../assets/images/code-snippet.png';
 
@@ -15,7 +16,12 @@ const stacks = [
 ];
 
 const AboutMe = () => (
-  <div className="mt-14 md:mt-24">
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.1, duration: 0.8 }}
+    className="mt-14 md:mt-24"
+  >
     <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Aboute Me</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
@@ -40,10 +46,22 @@ const AboutMe = () => (
           <img src={personJuggling} alt="person-juggling" className="w-16 mt-4" />
         </p>
       </div>
-      <img src={codeSnipped} alt="code-snippet" className="code-snippet rounded-md" />
+      <motion.img
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.1, duration: 0.8 }}
+        src={codeSnipped}
+        alt="code-snippet"
+        className="code-snippet rounded-md"
+      />
     </div>
     <h3 className="text-lg text-secondaryColor mt-5 ml-4 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
-    <div className="flex flex-col ml-4 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.1, duration: 0.8 }}
+      className="flex flex-col ml-4 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2"
+    >
       { stacks.map((stack) => (
         <div key={stack.name}>
           <h3 className="text-lg font-medium">{stack.name}</h3>
@@ -65,8 +83,8 @@ const AboutMe = () => (
           </div>
         </div>
       ))}
-    </div>
-  </div>
+    </motion.div>
+  </motion.div>
 );
 
 export default AboutMe;

@@ -1,9 +1,15 @@
 import { ChevronRightIcon } from '@heroicons/react/solid';
+import { motion } from 'framer-motion';
 import microverseLogo from '../../assets/images/microverse_logo.png';
 import freelanceLogo from '../../assets/images/freelance-logo.jpg';
 
 const Experience = () => (
-  <div className="mt-14 md:mt-24 md:ml-1">
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, duration: 0.8 }}
+    className="mt-14 md:mt-24 md:ml-1"
+  >
     <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Experience</h2>
       <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
@@ -97,7 +103,7 @@ const Experience = () => (
       </ul>
     </div>
 
-  </div>
+  </motion.div>
 );
 
 export default Experience;
