@@ -1,18 +1,17 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion';
 import profilePicture from '../../assets/images/profilePicture.jpg';
 
 const fields = ['Full Stack web developer', 'Love for clean code', 'Remote work aficionado', 'Amateur astronomer'];
 
-const HeroSection = () => {
-  
-  return (
-  <motion.div 
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ delay: 0.2, duration: 0.8 }}
-   className="flex flex-col items-center gap-10 md:flex-row md:gap-60">
+const HeroSection = () => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 0.2, duration: 0.8 }}
+    className="flex flex-col items-center gap-10 md:flex-row md:gap-60"
+  >
     <div className="md:order-1">
       <img src={profilePicture} alt="profile" className="h-64 md:h-80 rounded-full" />
     </div>
@@ -38,7 +37,6 @@ const HeroSection = () => {
       </Link>
     </div>
   </motion.div>
-)
-      };
+);
 
 export default HeroSection;
