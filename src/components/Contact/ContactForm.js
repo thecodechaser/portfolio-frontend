@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 
 const serviceId = 'service_bcx8qxm';
- const templateId = 'template_mta27zr';
- const userId = 'I3beIEx7C9ULngUoR';
+const templateId = 'template_mta27zr';
+const userId = 'I3beIEx7C9ULngUoR';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [fieldsNotice, setFieldsNotice] =  useState(false);
-  const [emailNotice, setEmailNotice] =  useState(false);
+  const [fieldsNotice, setFieldsNotice] = useState(false);
+  const [emailNotice, setEmailNotice] = useState(false);
   const [successNotice, setSuccessNotice] = useState(false);
 
   const navigate = useNavigate();
@@ -34,19 +34,18 @@ const ContactForm = () => {
 
     setEmailNotice(false);
 
-  const templateParams = {
-  name,
-  email,
-  message
-};
+    const templateParams = {
+      name,
+      email,
+      message,
+    };
 
-emailjs.send(serviceId, templateId, templateParams, userId)
-                .then(response => console.log(response))
-                .then(error => console.log(error));
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => console.log(response))
+      .then((error) => console.log(error));
 
     setSuccessNotice(true);
     setTimeout(() => {
-
       navigate('../messageSent');
     }, 2000);
   };
@@ -97,12 +96,12 @@ emailjs.send(serviceId, templateId, templateParams, userId)
           <span className="text-skyColor text-center text-base">Please fill all fields</span>
         )
       }
-      {
+        {
         emailNotice && (
           <span className="text-skyColor text-center text-base">Please enter a valid email</span>
         )
       }
-      {
+        {
         successNotice && (
           <span className="text-skyColor text-center text-base">Sending message...</span>
         )
