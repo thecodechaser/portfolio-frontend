@@ -26,6 +26,7 @@ const ContactInfo = () => (
       </p>
       <div className="md:w-1/5 mt-4 md:mt-0">
         <h4 className="mb-4 text-2xl">Contacts</h4>
+        <a href="mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">ranjeet@thecodechaser.com</a>
         <a href="mailto: contact@thecodechaser.com" className="text-skyColor text-base hover:text-secondaryColor">contact@thecodechaser.com</a>
         <a href="mailto: contact@thecodechaser.com" className="text-skyColor block mt-3 text-base hover:text-secondaryColor">admin@thecodechaser.com</a>
       </div>
