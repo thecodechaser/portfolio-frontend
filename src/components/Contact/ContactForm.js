@@ -27,11 +27,12 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div 
-    initial={{ x: '-100vw' }}
-    animate={{ x: -0 }}
-    transition={{ duration: 1 }}
-    className="flex flex-col mt-10 items-center md:mr-52">
+    <motion.div
+      initial={{ x: '-100vw' }}
+      animate={{ x: -0 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col mt-10 items-center md:mr-52"
+    >
       <h3 className="text-xl font-bold text-skyColor  mb-4">Let&apos;s Chat</h3>
       <form className="flex flex-col gap-4" action="https://formspree.io/f/meqnnlpy" method="post">
         <input

@@ -46,11 +46,14 @@ const AboutMe = () => (
           <img src={personJuggling} alt="person-juggling" className="w-16 mt-4" />
         </p>
       </div>
-      <motion.img 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.1, duration: 0.8 }}
-      src={codeSnipped} alt="code-snippet" className="code-snippet rounded-md" />
+      <motion.img
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.1, duration: 0.8 }}
+        src={codeSnipped}
+        alt="code-snippet"
+        className="code-snippet rounded-md"
+      />
     </div>
     <h3 className="text-lg text-secondaryColor mt-5 ml-4 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
     <motion.div
