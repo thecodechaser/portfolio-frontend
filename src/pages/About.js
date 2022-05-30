@@ -11,15 +11,15 @@ const About = () => {
   }, []);
 
   return (
-  <div className="mt-40">
-    {/* about-me-section */}
-    <AboutMe />
-    {/* experience-section */}
-    <Experience />
-    {/* education-section */}
-    <Education />
-  </div>
-)
-  };
+    <div className="mt-40">
+      {/* about-me-section */}
+      <AboutMe />
+      {/* experience-section */}
+      <Experience />
+      {/* education-section */}
+      <Education />
+    </div>
+  );
+};
 
 export default About;

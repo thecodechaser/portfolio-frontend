@@ -13,7 +13,7 @@ const Home = () => {
       top: 0,
     });
   }, []);
-  
+
   return (
     <>
       <main className="mt-40">
