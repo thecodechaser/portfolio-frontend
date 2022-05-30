@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com'
 
@@ -11,6 +12,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [successNotice, setSuccessNotice] = useState(false);
+
+  const navigate = useNavigate();
 
   const submission = () => {
     const pattern = /\S+@\S+\.\S+/;
@@ -34,11 +37,12 @@ emailjs.send(serviceId, templateId, templateParams, userId)
                 .then(error => console.log(error));
 
     setSuccessNotice(true);
-    setTimeout(() => {
-      setEmail('');
-      setMessage('');
-      setName('');
-    }, 1000);
+    navigate('/');
+    // setTimeout(() => {
+    //   setEmail('');
+    //   setMessage('');
+    //   setName('');
+    // }, 1000);
   };
 
   return (
