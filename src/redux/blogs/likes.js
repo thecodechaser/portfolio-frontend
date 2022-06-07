@@ -2,11 +2,11 @@
 const initialState = []
 
 // reducer
-const commentsReducer = (state = initialState, action) => {
+const likesReducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default commentsReducer;
+export default likesReducer;
