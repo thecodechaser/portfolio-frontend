@@ -1,3 +1,8 @@
+import { API_TOKEN, POST_URL } from "../../helpers/api/endPoints";
+
+// actions
+const FETCH_POST = 'PORTFOLIO/BLOGS/POSTS'
+
 // initial-state
 const initialState = []
 
