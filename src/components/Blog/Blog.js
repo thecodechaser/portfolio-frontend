@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import rocketGif from '../../assets/images/rocket.gif';
 import { fetchPostsApi } from '../../redux/blogs/posts';
@@ -11,7 +11,8 @@ const Blog = () => {
   useEffect(() => {
     dispatch(fetchPostsApi());
   }, [dispatch]);
-  
+
+  console.log(posts)
   return(
   <motion.section
     initial={{ x: '-100vw' }}
