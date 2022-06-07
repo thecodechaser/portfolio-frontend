@@ -1,8 +1,18 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
 import rocketGif from '../../assets/images/rocket.gif';
+import { fetchPostsApi } from '../../redux/blogs/posts';
 
-const Blog = () => (
+const Blog = () => {
+  const posts = useSelector((state) => state.postsReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPostsApi());
+  }, [dispatch]);
+  
+  return(
   <motion.section
     initial={{ x: '-100vw' }}
     animate={{ x: -0 }}
@@ -22,6 +32,7 @@ const Blog = () => (
       </button>
     </Link>
   </motion.section>
-);
+)
+  };
 
 export default Blog;
