@@ -3,3 +3,5 @@ const Post = () => {
     <p>Hello</p>
   )
 }
+
+export default Post;
