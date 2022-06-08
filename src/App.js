@@ -43,7 +43,7 @@ function App() {
             element={(<Blogs />)}
           />
           <Route
-            path="/blogs/:title"
+            path="/blogs/:id/:title"
             element={(<Posts />)}
           />
           <Route

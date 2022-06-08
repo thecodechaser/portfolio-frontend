@@ -1,16 +1,32 @@
+import { useEffect } from 'react';
 import Post from '../components/Posts/Post'
-import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useLocation, useParams } from 'react-router-dom';
+import { fetchPostsApi } from '../redux/blogs/posts';
 
 const Posts = () => {
-  const location = useLocation();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPostsApi());
+    window.scrollTo({
+      top: 0,
+    });
+  }, [dispatch]);
 
-  const { state } = location;
+  const posts = useSelector((state) => state.postsReducer);
+  const { id } = useParams();
+  const post = posts.find((item) => item.id == id);
+  console.log(id);
+  
+
+ 
 
   return (
     <div className="mt-40">
-    <p>Below is my post{state.title}</p>
-    <Post />
+    <p>Below is my post</p>
+    { post &&
+    <Post data={post}/>
+}
     </div>
     
   )

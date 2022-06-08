@@ -1,6 +1,7 @@
-const Post = () => {
+const Post = (props) => {
+  const {data} = props;
   return (
-    <p>Hello</p>
+    <p>Hello{data.title}</p>
   )
 }
 
