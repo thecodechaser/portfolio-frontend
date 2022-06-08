@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Post from '../components/Posts/Post'
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation, useParams } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 import { fetchPostsApi } from '../redux/blogs/posts';
 
 const Posts = () => {
