@@ -1,9 +1,10 @@
+/* eslint-disable eqeqeq */
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import { motion } from 'framer-motion';
 
-const Blog = (props) => {
+const BlogCard = (props) => {
   const { data } = props;
 
   return (
@@ -52,7 +53,7 @@ const Blog = (props) => {
   );
 };
 
-Blog.propTypes = {
+BlogCard.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
@@ -64,4 +65,4 @@ Blog.propTypes = {
   }).isRequired,
 };
 
-export default Blog;
+export default BlogCard;

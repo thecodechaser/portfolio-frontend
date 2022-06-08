@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Blog from '../components/Blog/Blog';
+import BlogCard from '../components/Blogs/BlogCard';
 import { fetchPostsApi } from '../redux/blogs/posts';
 
 const Blogs = () => {
@@ -23,7 +23,7 @@ const Blogs = () => {
       {/* blog-section */}
       {
       posts.map((data) => (
-        <Blog key={data.id} data={data} />
+        <BlogCard key={data.id} data={data} />
       ))
     }
     </div>
