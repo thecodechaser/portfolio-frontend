@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector, } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Blog from '../components/Blog/Blog';
-import { fetchPostsApi } from '../redux/blogs/posts'
+import { fetchPostsApi } from '../redux/blogs/posts';
 
 const Blogs = () => {
   const posts = useSelector((state) => state.postsReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPostsApi())
+    dispatch(fetchPostsApi());
     window.scrollTo({
       top: 0,
     });

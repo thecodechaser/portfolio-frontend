@@ -1,5 +1,5 @@
 // initial-state
-const initialState = []
+const initialState = [];
 
 // reducer
 const likesReducer = (state = initialState, action) => {

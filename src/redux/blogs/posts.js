@@ -1,8 +1,8 @@
 import Axios from 'axios';
-import { API_TOKEN, POST_URL } from "../../helpers/api/endPoints";
+import { API_TOKEN, POST_URL } from '../../helpers/api/endPoints';
 
 // constants
-const FETCH_POSTS = 'PORTFOLIO/BLOGS/POSTS'
+const FETCH_POSTS = 'PORTFOLIO/BLOGS/POSTS';
 
 // actions
 const fetchPosts = (payload) => ({
@@ -11,7 +11,7 @@ const fetchPosts = (payload) => ({
 });
 
 // initial-state
-const initialState = []
+const initialState = [];
 
 // API-functions
 export const fetchPostsApi = () => async (dispatch) => {
