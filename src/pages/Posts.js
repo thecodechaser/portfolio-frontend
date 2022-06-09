@@ -16,14 +16,9 @@ const Posts = () => {
   const posts = useSelector((state) => state.postsReducer);
   const { id } = useParams();
   const post = posts.find((item) => item.id == id);
-  console.log(id);
-  
-
  
-
   return (
     <div className="mt-40">
-    <p>Below is my post</p>
     { post &&
     <Post data={post}/>
 }
