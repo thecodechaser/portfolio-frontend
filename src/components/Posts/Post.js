@@ -3,6 +3,7 @@ const Post = (props) => {
   return (
     <article className="about-text">
     <h1 className="ml-2 md:ml-0 text-xl md:text-3xl">{data.title}</h1>
+    <div className="border-b-2 mb-3 mt-4 border-secondaryColor mr-4 ml-2 md:mr-0 md:ml-0" />
     <img src={data.photo_one} alt="first" className="mt-10 ml-2 pr-10 md:mr-0 md:ml-10"/>
     <h3 className="mt-6 text-lg ml-2">{data.h_one}</h3>
     <p className="mt-6 text-lg ml-2 text-skyColor">{data.p_one}</p>
