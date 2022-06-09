@@ -18,7 +18,7 @@ const Posts = () => {
   const post = posts.find((item) => item.id == id);
  
   return (
-    <div className="mt-40">
+    <div className="mt-28 md:mt-40">
     { post &&
     <Post data={post}/>
 }
