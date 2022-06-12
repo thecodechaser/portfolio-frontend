@@ -12,14 +12,14 @@ const BlogCard = (props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.8 }}
-      className={`md:flex project-card ${data.id == 9 ? 'mt-16' : 'mt-32'} mx-2 ml-4 md:ml-0 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}
+      className={`md:flex project-card ${data.id == 10 ? 'mt-16' : 'mt-32'} mx-2 ml-4 md:ml-0 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}
     >
       <div className="w-11/12 post-img">
         <Link to={`/blogs/${data.id}/${data.title.replace(/\s+/g, '-')}`}>
           <img
             src={data.photo_one}
             alt="project preview"
-            className=" ml-2 rounded-md  md:ml-0 "
+            className="ml-2 rounded-md md:ml-0 "
           />
         </Link>
       </div>
