@@ -22,12 +22,14 @@ const Posts = () => {
       top: 0,
     });
   }, [dispatch]);
-
-  // console.log(user)
+  console.log(post)
   return (
     <div className="mt-28 md:mt-40">
       { post
-    && <Post data={post} />}
+    && <Post data={post} />
+    }
+    { post
+    && <p className="mt-10 ml-4 text-skyColor text-base">Posted on {post.created_at.substring(0, 10)} by</p> }
     { user
     && <User data={user} />}
     </div>
