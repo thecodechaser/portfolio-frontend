@@ -14,14 +14,14 @@ const fetchUsers = (payload) => ({
 const initialState = [];
 
 // API-functions
-export const fetchUsersApi = () => async (dispatch) => {
-  const returnValue = await Axios.post(`${USER_URL}/load`, {
+export const fetchUsersApi = (data) => async (dispatch) => {
+  const returnValue = await Axios.post(`${USER_URL}/load`, data, {
     headers: {
       Authorization: API_TOKEN,
     },
   });
-  const { users } = returnValue.data.data;
-  dispatch(fetchUsers(users));
+  const { user } = returnValue.data.data;
+  dispatch(fetchUsers(user));
 };
 
 // reducer

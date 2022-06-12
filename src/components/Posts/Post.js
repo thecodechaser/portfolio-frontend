@@ -33,7 +33,7 @@ Post.propTypes = {
     photo_one: PropTypes.string,
     photo_two: PropTypes.string,
     conclusion: PropTypes.string,
-    comments_counter: PropTypes.arrayOf(PropTypes.string),
+    comments_counter: PropTypes.number,
   }).isRequired,
 };
 

@@ -61,8 +61,8 @@ BlogCard.propTypes = {
     title: PropTypes.string,
     h_one: PropTypes.string,
     p_one: PropTypes.string,
-    likes_counter: PropTypes.string,
-    comments_counter: PropTypes.arrayOf(PropTypes.string),
+    likes_counter: PropTypes.number,
+    comments_counter: PropTypes.number,
     photo_one: PropTypes.string,
   }).isRequired,
 };
