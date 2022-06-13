@@ -44,7 +44,7 @@ const Posts = () => {
     <div className="flex gap-20 md:gap-96">
       { user
     && <User data={user} />}
-    { likes && <Like data={likes} /> }
+    { likes && <Like data={likes} postId={id} /> }
     </div>
     </div>
 

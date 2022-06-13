@@ -37,8 +37,8 @@ export const createLikeApi = (data) => async (dispatch) => {
       Authorization: API_TOKEN,
     },
   });
-  const { likes } = returnValue.data.data;
-  dispatch(fetchLikes(like));
+  const { like } = returnValue.data.data;
+  dispatch(createLikes(like));
 }
 
 // reducer
