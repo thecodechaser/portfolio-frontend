@@ -14,6 +14,17 @@ const fetchLikes = (payload) => ({
 // initial-state
 const initialState = [];
 
+// API-functions
+export const fetchLikesApi = (data) => async (dispatch) => {
+  const returnValue = await Axios.post(`${LIKE_URL}/load`, data, {
+    headers: {
+      Authorization: API_TOKEN,
+    },
+  });
+  const { likes } = returnValue.data.data;
+  dispatch(fetchUsers(likes));
+};
+
 // reducer
 const likesReducer = (state = initialState, action) => {
   switch (action.type) {
