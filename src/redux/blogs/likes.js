@@ -28,7 +28,7 @@ export const fetchLikesApi = (data) => async (dispatch) => {
 // reducer
 const likesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_Likes:
+    case FETCH_LIKES:
       return action.payload;
     default:
       return state;

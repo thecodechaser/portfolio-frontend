@@ -7,10 +7,12 @@ import User from '../components/Posts/User';
 import Like from '../components/Posts/Like';
 import { fetchPostsApi } from '../redux/blogs/posts';
 import { fetchUsersApi } from '../redux/blogs/users';
+import { fetchLikesApi } from '../redux/blogs/likes';
 
 const Posts = () => {
   const posts = useSelector((state) => state.postsReducer);
   const user = useSelector((state) => state.usersReducer);
+  const likes = useSelector((state) => state.likesReducer);
   const { id } = useParams();
   const post = posts.find((item) => item.id == id);
 
@@ -18,10 +20,13 @@ const Posts = () => {
   useEffect(() => {
     dispatch(fetchPostsApi());
     dispatch(fetchUsersApi({ post_id: parseInt(id, 10) }));
+    dispatch(fetchLikesApi({ post_id: parseInt(id, 10) }));
     window.scrollTo({
       top: 0,
     });
   }, [dispatch]);
+
+  console.log(likes.length);
 
   return (
     <div className="mt-28 md:mt-40">
