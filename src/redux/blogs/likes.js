@@ -22,7 +22,7 @@ export const fetchLikesApi = (data) => async (dispatch) => {
     },
   });
   const { likes } = returnValue.data.data;
-  dispatch(fetchUsers(likes));
+  dispatch(fetchLikes(likes));
 };
 
 // reducer
