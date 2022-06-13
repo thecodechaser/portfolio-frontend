@@ -1,3 +1,16 @@
+import Axios from 'axios';
+import { API_TOKEN, LIKE_URL } from '../../helpers/api/endPoints';
+
+// constants
+const FETCH_LIKES = 'PORTFOLIO/BLOGS/LIKES';
+
+// actions
+const fetchLikes = (payload) => ({
+  type: FETCH_LIKES,
+  payload,
+});
+
+
 // initial-state
 const initialState = [];
 
