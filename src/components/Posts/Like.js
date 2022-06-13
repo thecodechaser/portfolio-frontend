@@ -1,5 +1,5 @@
 const Like = () =>{
-  rteunr (
+  return (
     <p>Hello</p>
   )
 };

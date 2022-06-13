@@ -36,8 +36,11 @@ const Posts = () => {
       by
     </p>
     ) }
+    <div className="flex gap-96">
       { user
     && <User data={user} />}
+    <Like />
+    </div>
     </div>
 
   );
