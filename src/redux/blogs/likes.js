@@ -16,7 +16,6 @@ const createLikes = (payload) => ({
   payload,
 });
 
-
 // initial-state
 const initialState = [];
 
@@ -39,15 +38,15 @@ export const createLikeApi = (data) => async (dispatch) => {
   });
   const { like } = returnValue.data.data;
   dispatch(createLikes(like));
-}
+};
 
 // reducer
 const likesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_LIKES:
       return action.payload;
-      case CREATE_LIKES:
-        return [...state, action.payload];
+    case CREATE_LIKES:
+      return [...state, action.payload];
     default:
       return state;
   }

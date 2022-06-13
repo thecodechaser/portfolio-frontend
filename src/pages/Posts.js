@@ -26,8 +26,6 @@ const Posts = () => {
     });
   }, [dispatch]);
 
-  console.log(likes.length);
-
   return (
     <div className="mt-28 md:mt-40">
       { post
@@ -41,11 +39,11 @@ const Posts = () => {
       by
     </p>
     ) }
-    <div className="flex gap-20 md:gap-96">
-      { user
+      <div className="flex gap-20 md:gap-96">
+        { user
     && <User data={user} />}
-    { likes && <Like data={likes} postId={id} /> }
-    </div>
+        { likes && <Like data={likes} postId={id} /> }
+      </div>
     </div>
 
   );
