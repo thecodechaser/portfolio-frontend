@@ -37,7 +37,7 @@ export const createLikeApi = (data) => async (dispatch) => {
       Authorization: API_TOKEN,
     },
   });
-  const { like } = returnValue.data.data;
+  const { likes } = returnValue.data.data;
   dispatch(fetchLikes(like));
 }
 
@@ -46,6 +46,8 @@ const likesReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_LIKES:
       return action.payload;
+      case CREATE_LIKES:
+        return [...state, action.payload];
     default:
       return state;
   }
