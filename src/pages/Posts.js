@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Post from '../components/Posts/Post';
 import User from '../components/Posts/User';
+import Like from '../components/Posts/Like';
 import { fetchPostsApi } from '../redux/blogs/posts';
 import { fetchUsersApi } from '../redux/blogs/users';
 
