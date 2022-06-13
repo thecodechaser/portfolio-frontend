@@ -9,7 +9,7 @@ import repliesReducer from './blogs/replies';
 import likesReducer from './blogs/likes';
 
 const reducer = combineReducers({
-  projectsReducer, postsReducer, commentsReducer, repliesReducer, likesReducer, usersReducer
+  projectsReducer, postsReducer, commentsReducer, repliesReducer, likesReducer, usersReducer,
 });
 
 const store = createStore(
