@@ -68,7 +68,7 @@ const Posts = () => {
 
       </div>
       )}
-      <CommentForm postId={id}/>
+      <CommentForm postId={id} />
     </div>
 
   );
