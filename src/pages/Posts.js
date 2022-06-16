@@ -6,6 +6,7 @@ import Post from '../components/Posts/Post';
 import User from '../components/Posts/User';
 import Like from '../components/Posts/Like';
 import Comment from '../components/Posts/Comment';
+import CommentForm from '../components/Posts/CommentForm';
 import { fetchPostsApi } from '../redux/blogs/posts';
 import { fetchUsersApi } from '../redux/blogs/users';
 import { fetchLikesApi } from '../redux/blogs/likes';
@@ -67,6 +68,7 @@ const Posts = () => {
 
       </div>
       )}
+      <CommentForm postId={id}/>
     </div>
 
   );

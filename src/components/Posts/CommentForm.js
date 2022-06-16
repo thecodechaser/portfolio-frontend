@@ -1,28 +1,31 @@
-const CommentForm = () => {
+const CommentForm = (props) => {
+  const {postId} = props;
   return (
-    <div>
+    <div className="flex flex-col gap-4 ml-4 mt-10">
+      <h3 className="text-lg">Drop your comment</h3>
        <input
           type="text"
           name="user_name"
           required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          // value={name}
+          // onChange={(e) => setName(e.target.value)}
           maxLength="30"
           placeholder="Name"
-          className="w-72 md:w-80 p-2 rounded text-primaryColor
+          className="w-64 md:w-72 p-2 rounded text-primaryColor
       focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
          <textarea
-          rows="10"
+          rows="5"
           name="user_msg"
           required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          // value={message}
+          // onChange={(e) => setMessage(e.target.value)}
           maxLength="500"
-          placeholder="Write your message here"
-          className="w-72 md:w-80 p-2 rounded text-primaryColor
+          placeholder="Write your comment here"
+          className="w-64 md:w-72 p-2 rounded text-primaryColor
           focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
+        <button  type="button" className="bg-lightBlueColor ml-20 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
     </div>
   )
 };
