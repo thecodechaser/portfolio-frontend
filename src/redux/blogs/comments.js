@@ -1,3 +1,21 @@
+import Axios from 'axios';
+import { API_TOKEN, COMMENT_URL } from '../../helpers/api/endPoints';
+
+// constants
+const FETCH_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/LOAD';
+const CREATE_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/CREATE';
+
+// actions
+const fetchComments = (payload) => ({
+  type: FETCH_COMMENTS,
+  payload,
+});
+
+const createComments = (payload) => ({
+  type: CREATE_COMMENTS,
+  payload,
+});
+
 // initial-state
 const initialState = [];
 
