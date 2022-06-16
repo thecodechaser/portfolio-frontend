@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const CommentForm = (props) => {
   const {postId} = props;
 
@@ -43,12 +45,12 @@ const CommentForm = (props) => {
         />
          {
         fieldsNotice && (
-          <span className="text-skyColor text-center text-base">Please fill all fields</span>
+          <span className="text-skyColor ml-16 text-base">Please fill all fields</span>
         )
       }
         {
         successNotice && (
-          <span className="text-skyColor text-center text-base">Thanks for your comment!</span>
+          <span className="text-skyColor ml-10 text-base">Thanks for your comment!</span>
         )
       }
         <button onClick={submission}  type="button" className="bg-lightBlueColor ml-20 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
