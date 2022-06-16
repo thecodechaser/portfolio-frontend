@@ -6,6 +6,16 @@ const CommentForm = (props) => {
   const [fieldsNotice, setFieldsNotice] = useState(false);
   const [successNotice, setSuccessNotice] = useState(false);
 
+  const submission = () => {
+    if (name === '' || message === '') {
+      setFieldsNotice(true);
+      return;
+    }
+    setFieldsNotice(false);
+
+    setSuccessNotice(true);
+  };
+
   return (
     <div className="flex flex-col gap-4 ml-4 mt-10">
       <h3 className="text-lg">Drop your comment</h3>
@@ -24,8 +34,8 @@ const CommentForm = (props) => {
           rows="5"
           name="user_msg"
           required
-          // value={message}
-          // onChange={(e) => setMessage(e.target.value)}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           maxLength="500"
           placeholder="Write your comment here"
           className="w-64 md:w-72 p-2 rounded text-primaryColor
@@ -41,7 +51,7 @@ const CommentForm = (props) => {
           <span className="text-skyColor text-center text-base">Thanks for your comment!</span>
         )
       }
-        <button  type="button" className="bg-lightBlueColor ml-20 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
+        <button onClick={submission}  type="button" className="bg-lightBlueColor ml-20 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
     </div>
   )
 };
