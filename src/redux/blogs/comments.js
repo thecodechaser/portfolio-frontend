@@ -6,8 +6,16 @@ import { API_TOKEN, COMMENT_URL } from '../../helpers/api/endPoints';
 // constants
 const FETCH_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/LOAD';
 const CREATE_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/CREATE';
-const avatar = 'https://thecodechaser.com/blogs/users/user1-photo.jpg';
-
+const avatars = [
+  "https://thecodechaser.com/blogs/comments/avatar-one.png",
+  "https://thecodechaser.com/blogs/comments/avatar-two.png",
+  "https://thecodechaser.com/blogs/comments/avatar-three.png",
+  "https://thecodechaser.com/blogs/comments/avatar-four.png",
+  "https://thecodechaser.com/blogs/comments/avatar-five.png",
+  "https://thecodechaser.com/blogs/comments/avatar-six.png",
+  "https://thecodechaser.com/blogs/comments/avatar-seven.png",
+  "https://thecodechaser.com/blogs/comments/avatar-eight.png",
+]
 // actions
 const fetchComments = (payload) => ({
   type: FETCH_COMMENTS,
@@ -34,9 +42,10 @@ export const fetchCommentsApi = (data) => async (dispatch) => {
 };
 
 export const createCommentApi = (data) => async (dispatch) => {
+  const random = Math.floor(Math.random() * avatars.length);
   const { post_id, text, author } = data;
   const commentData = {
-    post_id, comment: text, avatar, author,
+    post_id, comment: text, avatar: avatars[random], author,
   };
   const returnValue = await Axios.post(`${COMMENT_URL}/create`, commentData, {
     headers: {
