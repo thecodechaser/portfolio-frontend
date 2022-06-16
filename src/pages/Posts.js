@@ -37,7 +37,9 @@ const Posts = () => {
       { post
     && (
     <p className="mt-10 ml-4 text-skyColor text-base">
-      Posted on {' '}
+      Posted on
+      {' '}
+      {' '}
       {post.created_at.substring(0, 10)}
       {' '}
       by
@@ -51,15 +53,20 @@ const Posts = () => {
 
       { comments && (
       <div className="mt-8 ml-4">
-        <h2 className="text-lg">Comments({comments.length})</h2>
-        
+        <h2 className="text-lg">
+          Comments(
+          {comments.length}
+          )
+        </h2>
+
         {
           comments.map((item) => (
-            <Comment data={item} />
+            <Comment key={item.id} data={item} />
           ))
         }
-       
-      </div> )}
+
+      </div>
+      )}
     </div>
 
   );
