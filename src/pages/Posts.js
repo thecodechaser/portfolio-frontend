@@ -14,7 +14,7 @@ const Posts = () => {
   const posts = useSelector((state) => state.postsReducer);
   const user = useSelector((state) => state.usersReducer);
   const likes = useSelector((state) => state.likesReducer);
-  const comments = useSelector((state) => state.commnetsReducer);
+  const comments = useSelector((state) => state.commentsReducer);
   const { id } = useParams();
   const post = posts.find((item) => item.id == id);
 
@@ -23,10 +23,13 @@ const Posts = () => {
     dispatch(fetchPostsApi());
     dispatch(fetchUsersApi({ post_id: parseInt(id, 10) }));
     dispatch(fetchLikesApi({ post_id: parseInt(id, 10) }));
+    dispatch(fetchCommentsApi({ post_id: parseInt(id, 10) }));
     window.scrollTo({
       top: 0,
     });
   }, [dispatch]);
+
+  console.log(comments)
 
   return (
     <div className="mt-28 md:mt-40">
@@ -45,6 +48,9 @@ const Posts = () => {
         { user
     && <User data={user} />}
         { likes && <Like data={likes} postId={id} /> }
+      </div>
+      <div>
+        
       </div>
     </div>
 
