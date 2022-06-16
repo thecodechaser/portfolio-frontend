@@ -4,6 +4,7 @@ import { API_TOKEN, COMMENT_URL } from '../../helpers/api/endPoints';
 // constants
 const FETCH_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/LOAD';
 const CREATE_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/CREATE';
+const avatar = "https://thecodechaser.com/blogs/users/user1-photo.jpg";
 
 // actions
 const fetchComments = (payload) => ({
@@ -21,7 +22,7 @@ const initialState = [];
 
 // API-functions
 export const fetchCommentsApi = (data) => async (dispatch) => {
-  const returnValue = await Axios.post(`${COMMENT_URL}/load`, data, {
+  const returnValue = await Axios.post(`${COMMENT_URL}/load`, commentData, {
     headers: {
       Authorization: API_TOKEN,
     },
@@ -31,7 +32,9 @@ export const fetchCommentsApi = (data) => async (dispatch) => {
 };
 
 export const createCommentApi = (data) => async (dispatch) => {
-  const returnValue = await Axios.post(`${COMMENT_URL}/create`, data, {
+  const { post_id, text, author } = data;
+  const commentData = {post_id, comment: text, avatar, author}
+  const returnValue = await Axios.post(`${COMMENT_URL}/create`, commentData, {
     headers: {
       Authorization: API_TOKEN,
     },

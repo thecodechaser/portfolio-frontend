@@ -1,20 +1,24 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createCommentApi } from "../../redux/blogs/comments";
 
 const CommentForm = (props) => {
   const {postId} = props;
 
   const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [text, setText] = useState('');
   const [fieldsNotice, setFieldsNotice] = useState(false);
   const [successNotice, setSuccessNotice] = useState(false);
 
+  const dispatch = useDispatch();
+
   const submission = () => {
-    if (name === '' || message === '') {
+    if (name === '' || text === '') {
       setFieldsNotice(true);
       return;
     }
     setFieldsNotice(false);
-
+    dispatch(createCommentApi({post_id: parseInt(postId, 10), author: name, text}));
     setSuccessNotice(true);
   };
 
@@ -34,10 +38,10 @@ const CommentForm = (props) => {
         />
          <textarea
           rows="5"
-          name="user_msg"
+          name="user_cmnt"
           required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
           maxLength="500"
           placeholder="Write your comment here"
           className="w-64 md:w-72 p-2 rounded text-primaryColor
