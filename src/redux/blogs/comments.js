@@ -22,7 +22,7 @@ const initialState = [];
 
 // API-functions
 export const fetchCommentsApi = (data) => async (dispatch) => {
-  const returnValue = await Axios.post(`${COMMENT_URL}/load`, commentData, {
+  const returnValue = await Axios.post(`${COMMENT_URL}/load`, data, {
     headers: {
       Authorization: API_TOKEN,
     },
