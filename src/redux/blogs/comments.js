@@ -30,6 +30,16 @@ export const fetchCommentsApi = (data) => async (dispatch) => {
   dispatch(fetchComments(comments));
 };
 
+export const createCommentApi = (data) => async (dispatch) => {
+  const returnValue = await Axios.post(`${COMMENT_URL}/create`, data, {
+    headers: {
+      Authorization: API_TOKEN,
+    },
+  });
+  const { comment } = returnValue.data.data;
+  dispatch(createComments(comment));
+};
+
 // reducer
 const commentsReducer = (state = initialState, action) => {
   switch (action.type) {
