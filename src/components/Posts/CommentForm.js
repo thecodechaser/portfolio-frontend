@@ -1,5 +1,11 @@
 const CommentForm = (props) => {
   const {postId} = props;
+
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [fieldsNotice, setFieldsNotice] = useState(false);
+  const [successNotice, setSuccessNotice] = useState(false);
+
   return (
     <div className="flex flex-col gap-4 ml-4 mt-10">
       <h3 className="text-lg">Drop your comment</h3>
@@ -7,8 +13,8 @@ const CommentForm = (props) => {
           type="text"
           name="user_name"
           required
-          // value={name}
-          // onChange={(e) => setName(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           maxLength="30"
           placeholder="Name"
           className="w-64 md:w-72 p-2 rounded text-primaryColor
