@@ -8,11 +8,13 @@ import Like from '../components/Posts/Like';
 import { fetchPostsApi } from '../redux/blogs/posts';
 import { fetchUsersApi } from '../redux/blogs/users';
 import { fetchLikesApi } from '../redux/blogs/likes';
+import { fetchCommentsApi } from '../redux/blogs/comments';
 
 const Posts = () => {
   const posts = useSelector((state) => state.postsReducer);
   const user = useSelector((state) => state.usersReducer);
   const likes = useSelector((state) => state.likesReducer);
+  const comments = useSelector((state) => state.commnetsReducer);
   const { id } = useParams();
   const post = posts.find((item) => item.id == id);
 
