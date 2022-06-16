@@ -27,6 +27,8 @@ export const fetchRepliesApi = (data) => async (dispatch) => {
 // reducer
 const repliesReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_REPLIES:
+      return action.payload;
     default:
       return state;
   }
