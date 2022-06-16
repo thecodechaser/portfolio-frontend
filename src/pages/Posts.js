@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import Post from '../components/Posts/Post';
 import User from '../components/Posts/User';
 import Like from '../components/Posts/Like';
+import Comment from '../components/Posts/Comment';
 import { fetchPostsApi } from '../redux/blogs/posts';
 import { fetchUsersApi } from '../redux/blogs/users';
 import { fetchLikesApi } from '../redux/blogs/likes';
@@ -29,8 +30,6 @@ const Posts = () => {
     });
   }, [dispatch]);
 
-  console.log(comments)
-
   return (
     <div className="mt-28 md:mt-40">
       { post
@@ -38,7 +37,7 @@ const Posts = () => {
       { post
     && (
     <p className="mt-10 ml-4 text-skyColor text-base">
-      Posted on
+      Posted on {' '}
       {post.created_at.substring(0, 10)}
       {' '}
       by
@@ -49,9 +48,18 @@ const Posts = () => {
     && <User data={user} />}
         { likes && <Like data={likes} postId={id} /> }
       </div>
-      <div>
+
+      { comments && (
+      <div className="mt-8 ml-4">
+        <h2 className="text-lg">Comments({comments.length})</h2>
         
-      </div>
+        {
+          comments.map((item) => (
+            <Comment data={item} />
+          ))
+        }
+       
+      </div> )}
     </div>
 
   );
