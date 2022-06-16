@@ -21,11 +21,13 @@ const CommentForm = (props) => {
     setFieldsNotice(false);
     dispatch(createCommentApi({ post_id: parseInt(postId, 10), author: name, text }));
 
+    setName('');
+    setText('');
+    setSuccessNotice(true);
+
     setTimeout(() => {
-      setName('');
-      setText('');
-      setSuccessNotice(true);
-    }, 2000);
+      setSuccessNotice(false);
+    }, 5000);
   };
 
   return (
