@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 
-const serviceId = process.env.REACT_APP_SERVICE_ID
-const templateId = process.env.REACT_APP_TEMPLATE_ID
-const userId = process.env.REACT_APP_USER_ID
+const serviceId = process.env.REACT_APP_SERVICE_ID;
+const templateId = process.env.REACT_APP_TEMPLATE_ID;
+const userId = process.env.REACT_APP_USER_ID;
 
 const ContactForm = () => {
   const [name, setName] = useState('');
