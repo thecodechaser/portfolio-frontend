@@ -5,11 +5,10 @@ import projectsReducer from './projects/projects';
 import postsReducer from './blogs/posts';
 import commentsReducer from './blogs/comments';
 import usersReducer from './blogs/users';
-import repliesReducer from './blogs/replies';
 import likesReducer from './blogs/likes';
 
 const reducer = combineReducers({
-  projectsReducer, postsReducer, commentsReducer, repliesReducer, likesReducer, usersReducer,
+  projectsReducer, postsReducer, commentsReducer, likesReducer, usersReducer,
 });
 
 const store = createStore(
