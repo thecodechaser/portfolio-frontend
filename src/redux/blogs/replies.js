@@ -13,6 +13,17 @@ const fetchReplies = (payload) => ({
 // initial-state
 const initialState = [];
 
+// API-functions
+export const fetchRepliesApi = (data) => async (dispatch) => {
+  const returnValue = await Axios.post(`${REPLY_URL}/load`, data, {
+    headers: {
+      Authorization: API_TOKEN,
+    },
+  });
+  const { replies } = returnValue.data.data;
+  dispatch(fetchReplies(replies));
+};
+
 // reducer
 const repliesReducer = (state = initialState, action) => {
   switch (action.type) {
