@@ -1,8 +1,14 @@
 import { useEffect } from 'react';
-import Blog from '../components/Blog/Blog';
+import { useDispatch, useSelector } from 'react-redux';
+import BlogCard from '../components/Blogs/BlogCard';
+import { fetchPostsApi } from '../redux/blogs/posts';
 
 const Blogs = () => {
+  const posts = useSelector((state) => state.postsReducer);
+  const dispatch = useDispatch();
+
   useEffect(() => {
+    dispatch(fetchPostsApi());
     window.scrollTo({
       top: 0,
     });
@@ -15,7 +21,11 @@ const Blogs = () => {
         <div className="border-b-2 mb-3 border-secondaryColor hr-blog" />
       </div>
       {/* blog-section */}
-      <Blog />
+      {
+      posts.map((data) => (
+        <BlogCard key={data.id} data={data} />
+      ))
+    }
     </div>
   );
 };

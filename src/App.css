@@ -66,6 +66,10 @@
   .code-snippet {
     width: 40%;
   }
+
+  .post-img {
+    width: 150%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
