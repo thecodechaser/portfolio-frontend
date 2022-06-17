@@ -4,6 +4,7 @@ import { API_TOKEN, LIKE_URL } from '../../helpers/api/endPoints';
 // constants
 const FETCH_LIKES = 'PORTFOLIO/BLOGS/LIKES/LOAD';
 const CREATE_LIKES = 'PORTFOLIO/BLOGS/LIKES/CREATE';
+const DELETE_LIKES = 'PORTFOLIO/BLOGS/LIKES/DELETE';
 
 // actions
 const fetchLikes = (payload) => ({
@@ -13,6 +14,11 @@ const fetchLikes = (payload) => ({
 
 const createLikes = (payload) => ({
   type: CREATE_LIKES,
+  payload,
+});
+
+const deleteLikes = (payload) => ({
+  type: DELETE_LIKES,
   payload,
 });
 
