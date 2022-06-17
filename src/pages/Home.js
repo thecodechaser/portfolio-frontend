@@ -11,7 +11,7 @@ const Home = () => {
   const blogs = useSelector((state) => state.postsReducer);
   const portfolio = useSelector((state) => state.projectsReducer);
   const projects = portfolio.slice(0, 3);
-  const posts = blogs.slice(0,3);
+  const posts = blogs.slice(0, 3);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -63,16 +63,16 @@ const Home = () => {
 
       {/* blogs-section */}
       <div className="mt-20 md:mt-28">
-      <div className="flex gap-3 ml-5 md:ml-0 mb-6">
-        <h2 className="text-2xl md:text-4xl">Latest Blogs</h2>
-        <div className="border-b-2 mb-3 border-secondaryColor hr-blog" />
-      </div>
-      {
+        <div className="flex gap-3 ml-5 md:ml-0 mb-6">
+          <h2 className="text-2xl md:text-4xl">Latest Blogs</h2>
+          <div className="border-b-2 mb-3 border-secondaryColor hr-blog" />
+        </div>
+        {
       posts.map((data) => (
         <BlogCard key={data.id} data={data} />
       ))
     }
-    <Link to="/blogs">
+        <Link to="/blogs">
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-8 py-2
@@ -81,7 +81,7 @@ const Home = () => {
             See All
           </button>
         </Link>
-    </div>
+      </div>
     </>
   );
 };
