@@ -62,8 +62,8 @@ export const deleteLikeApi = (data) => async (dispatch) => {
   //     source: source
   //   }
   // });
-  const { like } = returnValue.data.data;
-  dispatch(deleteLikes(like.id));
+  // const { like } = returnValue.data.data;
+  dispatch(deleteLikes(data.id));
 };
 
 // reducer

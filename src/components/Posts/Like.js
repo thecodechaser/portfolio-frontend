@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createLikeApi } from '../../redux/blogs/likes';
+import { createLikeApi, deleteLikeApi } from '../../redux/blogs/likes';
 
 const Like = (props) => {
-  const [destroy, setDestroy] = useState(true);
+  const [destroy, setDestroy] = useState(false);
   const { data, postId } = props;
   const dispatch = useDispatch();
 
   const submission = () => {
-    
-    dispatch(createLikeApi({ post_id: parseInt(postId, 10) }));
+    if(!destroy) {
+      dispatch(createLikeApi({ post_id: parseInt(postId, 10) }));
+    } else {
+      dispatch(deleteLikeApi({id: parseInt(data[data.length-1].id, 10)}))
+    }
     setDestroy(!destroy)
   };
 
