@@ -7,15 +7,15 @@ import { API_TOKEN, COMMENT_URL } from '../../helpers/api/endPoints';
 const FETCH_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/LOAD';
 const CREATE_COMMENTS = 'PORTFOLIO/BLOGS/COMMENTS/CREATE';
 const avatars = [
-  "https://thecodechaser.com/blogs/comments/avatar-one.png",
-  "https://thecodechaser.com/blogs/comments/avatar-two.png",
-  "https://thecodechaser.com/blogs/comments/avatar-three.png",
-  "https://thecodechaser.com/blogs/comments/avatar-four.png",
-  "https://thecodechaser.com/blogs/comments/avatar-five.png",
-  "https://thecodechaser.com/blogs/comments/avatar-six.png",
-  "https://thecodechaser.com/blogs/comments/avatar-seven.png",
-  "https://thecodechaser.com/blogs/comments/avatar-eight.png",
-]
+  'https://thecodechaser.com/blogs/comments/avatar-one.png',
+  'https://thecodechaser.com/blogs/comments/avatar-two.png',
+  'https://thecodechaser.com/blogs/comments/avatar-three.png',
+  'https://thecodechaser.com/blogs/comments/avatar-four.png',
+  'https://thecodechaser.com/blogs/comments/avatar-five.png',
+  'https://thecodechaser.com/blogs/comments/avatar-six.png',
+  'https://thecodechaser.com/blogs/comments/avatar-seven.png',
+  'https://thecodechaser.com/blogs/comments/avatar-eight.png',
+];
 // actions
 const fetchComments = (payload) => ({
   type: FETCH_COMMENTS,
