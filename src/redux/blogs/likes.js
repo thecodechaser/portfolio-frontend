@@ -53,17 +53,8 @@ export const deleteLikeApi = (data) => async (dispatch) => {
     },
     data,
   });
-
-  // axios.delete(URL, {
-  //   headers: {
-  //     Authorization: authorizationToken
-  //   },
-  //   data: {
-  //     source: source
-  //   }
-  // });
-  // const { like } = returnValue.data.data;
-  dispatch(deleteLikes(data.id));
+  const { like } = returnValue.data.data;
+  dispatch(deleteLikes(like.id));
 };
 
 // reducer
