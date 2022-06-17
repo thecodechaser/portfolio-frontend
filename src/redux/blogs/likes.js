@@ -73,6 +73,8 @@ const likesReducer = (state = initialState, action) => {
       return action.payload;
     case CREATE_LIKES:
       return [...state, action.payload];
+      case DELETE_LIKES:
+      return state.filter((like) => like.id !== action.payload);
     default:
       return state;
   }
