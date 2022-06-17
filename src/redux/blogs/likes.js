@@ -47,22 +47,23 @@ export const createLikeApi = (data) => async (dispatch) => {
 };
 
 export const deleteLikeApi = (data) => async (dispatch) => {
-  const returnValue = await Axios.delete(`${LIKE_URL}/delete`, data, {
+  const returnValue = await Axios.delete(`${LIKE_URL}/delete`, {
     headers: {
       Authorization: API_TOKEN,
     },
+    data,
   });
 
-  axios.delete(URL, {
-    headers: {
-      Authorization: authorizationToken
-    },
-    data: {
-      source: source
-    }
-  });
+  // axios.delete(URL, {
+  //   headers: {
+  //     Authorization: authorizationToken
+  //   },
+  //   data: {
+  //     source: source
+  //   }
+  // });
   const { like } = returnValue.data.data;
-  dispatch(createLikes(like));
+  dispatch(deleteLikes(like.id));
 };
 
 // reducer
