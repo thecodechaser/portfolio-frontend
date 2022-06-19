@@ -72,7 +72,7 @@ const Home = () => {
         <BlogCard key={data.id} data={data} />
       ))
     }
-        <Link to="/blogs">
+        <Link to="/blog">
           <button
             type="button"
             className="bg-lightBlueColor mt-10 rounded px-8 py-2

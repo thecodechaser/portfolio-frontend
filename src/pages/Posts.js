@@ -46,7 +46,7 @@ const Posts = () => {
       by
     </p>
     ) }
-      <div className="flex gap-20 md:gap-96">
+      <div className="flex gap-12 md:gap-96">
         { user
     && <User data={user} />}
         { likes && <Like data={likes} postId={id} /> }
@@ -55,7 +55,7 @@ const Posts = () => {
       { comments && (
       <div className="mt-8 ml-4">
         <h2 className="text-lg">
-          Comments(
+          Comments (
           {comments.length}
           )
         </h2>

@@ -11,7 +11,7 @@ const menuItems = [
   { name: 'About', path: '/about', current: false },
   { name: 'Portfolio', path: '/portfolio', current: false },
   { name: 'Contact', path: '/contact', current: false },
-  { name: 'Blog', path: '/blogs', current: false },
+  { name: 'Blog', path: '/blog', current: false },
 ];
 
 const Header = () => {

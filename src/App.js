@@ -39,11 +39,11 @@ function App() {
             element={(<Contact />)}
           />
           <Route
-            path="/blogs"
+            path="/blog"
             element={(<Blogs />)}
           />
           <Route
-            path="/blogs/:id/:title"
+            path="/blog/:id/:title"
             element={(<Posts />)}
           />
           <Route

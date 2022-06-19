@@ -15,7 +15,7 @@ const BlogCard = (props) => {
       className={`md:flex project-card ${data.id == 1 ? 'mt-16' : 'mt-32'} mx-2 ml-4 md:ml-0 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}
     >
       <div className="w-11/12 post-img">
-        <Link to={`/blogs/${data.id}/${data.title.replace(/\s+/g, '-')}`}>
+        <Link to={`/blog/${data.id}/${data.title.replace(/\s+/g, '-')}`}>
           <img
             src={data.photo_one}
             alt="project preview"
@@ -24,7 +24,7 @@ const BlogCard = (props) => {
         </Link>
       </div>
       <div>
-        <Link to={`/blogs/${data.id}/${data.title.replace(/\s+/g, '-')}`}><h3 className="text-skyColor mt-3 md:mt-0 mb-4 text-xl md:text-2xl ml-2 md:ml-0">{data.title}</h3></Link>
+        <Link to={`/blog/${data.id}/${data.title.replace(/\s+/g, '-')}`}><h3 className="text-skyColor mt-3 md:mt-0 mb-4 text-xl md:text-2xl ml-2 md:ml-0">{data.title}</h3></Link>
         <p className="bg-lightBlueColor text-skyColor text-base font-medium p-5 rounded mr-6 ml-2 md:ml-0 md:mr-0">
           {data.p_one.substring(0, 200)}
           ....
@@ -42,7 +42,7 @@ const BlogCard = (props) => {
               Comments
             </p>
           </div>
-          <Link to={`/blogs/${data.id}/${data.title.replace(/\s+/g, '-')}`}>
+          <Link to={`/blog/${data.id}/${data.title.replace(/\s+/g, '-')}`}>
             <button type="button" className="bg-lightBlueColor mr-8 md:mr-0 rounded px-3 py-2 text-md text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor">
               Read More
               <ArrowRightIcon className="h-4 inline ml-1" />
