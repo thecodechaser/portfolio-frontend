@@ -2,11 +2,11 @@
 
 # Portfolio Frontend
 
-> Portfolio Frontend is a React application for my Portfolio website. It gives a brief description of myself and showcases some of my works and my past experiences.
+> Portfolio Frontend is a React application for my Portfolio website. It gives a brief description of myself and showcases some of my works and my past experiences. It also shows my publications where users can drop likes and comments.
 
 ## Link to the backend
 
-[Portfolio Backend]()
+[Portfolio Backend](https://github.com/thecodechaser/portfolio-backend)
 
 ## Preview:
 
