@@ -6,11 +6,23 @@ import bootCamp from '../../assets/images/projects/bootcamp.png';
 import recipeApp from '../../assets/images/projects/recipe-app.png';
 import bookStore from '../../assets/images/projects/book-store.png';
 import budgetTracker from '../../assets/images/projects/budget-tracker.png';
+import trendify from '../../assets/images/projects/trendify.png';
 
 // initial-state
 const initialState = [
   {
     id: 0,
+    title: 'Trendify',
+    image: trendify,
+    details: 'Trendify is a React-based e-commerce application designed for seamless online shopping. It offers a wide range of products across categories such as clothing, shoes, and home appliances. Users can browse products, add items to their cart or wishlist, and complete their purchase effortlessly through a streamlined checkout process.',
+    live: 'https://trendify-codechaser.netlify.app/',
+    github: 'https://github.com/thecodechaser/trendify',
+    tech: [
+      'JavaScript', 'TypeScript', 'React', 'Tailwind',
+    ],
+  },
+  {
+    id: 1,
     title: 'Book Appoinments',
     image: bookAppoinments,
     details: 'Book Appointments is an application to book doctors appointments. This application is responsive and users can load, create, and delete doctors and reservations. Users need to sign up or sign in to access the application.',
@@ -21,7 +33,7 @@ const initialState = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: 'Covid19 Metrics',
     image: covid19Metrics,
     details: 'Covid19 Metrics is a web application that fetches covid data from API. It shows all countries with the confirmed covid cases on the homepage, users can select any country and go to the details page. The details page shows other details for that specific country like recovered cases, confirmed cases, and deaths.',
@@ -32,7 +44,7 @@ const initialState = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Disney Characters',
     image: disneyCharacters,
     details: 'Disney Character is a web application that shows data of Disney characters from the Disney API. Users can like the character and users can also leave comments on any character on the comment popup. It shows the comments left by other people and gives an idea of what people think about Disney characters.',
@@ -43,7 +55,7 @@ const initialState = [
     ],
   },
   {
-    index: 3,
+    index: 4,
     title: 'Space Travelers',
     image: spaceTravelers,
     details: 'Space Travelers Hub is a React web application that fetches rockets, and missions from the SpaceX API. Users can book and cancel their reservations for rockets and missions. The application has three pages Rockets/Missions/MY Profile, My Profile page shows the list of reserved rockets and missions.',
@@ -54,7 +66,7 @@ const initialState = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Thecodechaser BootCamp',
     image: bootCamp,
     details: 'ThecodeChaser Bootcamp is a web development boot camp website, responsive for desktop and mobile screens. It delivers all related information and user can submit their query and questions using the mentioned form.',
@@ -65,7 +77,7 @@ const initialState = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Recipe App',
     image: recipeApp,
     details: 'The Recipe app is a classic example of a recipe website. Its a functional website that shows the list of foods and recipes and empowers readers to interact with them by adding new foods and recipes. Users can access the services of the application by creating a new account or by login in if they already have an account.',
@@ -76,7 +88,7 @@ const initialState = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Book Store',
     image: bookStore,
     details: 'Book Store is a web application to add favorite books by the user, users can add and remove books, This website is built using REACT and JavaScript libraries.',
@@ -87,7 +99,7 @@ const initialState = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Budget Tracker',
     image: budgetTracker,
     details: 'The Budget tracker app is a full-stack application. Its a functional website that shows the list of categories and transactions and empowers readers to interact with them by adding new categories and transactions. Users can access the services of the application by creating a new account or by login in if they already have an account.',
