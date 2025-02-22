@@ -11,9 +11,9 @@ const Portfolio = () => {
   }, []);
   return (
     <div className="mt-28 md:mt-40">
-      <div className="flex gap-3 ml-3 md:ml-0 mb-6">
+      <div className="flex gap-3 mb-6 ml-3 md:ml-0">
         <h2 className="text-2xl md:text-4xl">Portfolio</h2>
-        <div className="border-b-2 w-4/6 mb-3 border-secondaryColor hr-portfolio" />
+        <div className="w-4/6 border-b-2 border-secondaryColor hr-portfolio" />
       </div>
       {
       projects.map((data) => (

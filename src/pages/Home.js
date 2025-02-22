@@ -31,8 +31,7 @@ const Home = () => {
         <Link to="/about">
           <button
             type="button"
-            className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-skyColor font-medium ml-4 md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
+            className="px-6 py-2 mt-10 ml-4 text-lg font-medium rounded bg-lightBlueColor w-50 text-skyColor md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
           >
             Know more
           </button>
@@ -41,9 +40,9 @@ const Home = () => {
 
       {/* project-section */}
       <div className="mt-14 md:mt-24">
-        <div className="flex gap-3 ml-3 md:ml-0 mb-6">
+        <div className="flex gap-3 mb-6 ml-3 md:ml-0">
           <h2 className="text-2xl md:text-4xl">Portfolio</h2>
-          <div className="border-b-2 w-4/6 mb-3 border-secondaryColor hr-portfolio" />
+          <div className="w-4/6 mb-3 border-b-2 border-secondaryColor hr-portfolio" />
         </div>
         {
       projects.map((data) => (
@@ -53,8 +52,7 @@ const Home = () => {
         <Link to="/portfolio">
           <button
             type="button"
-            className="bg-lightBlueColor mt-10 rounded px-8 py-2
-      text-lg text-skyColor font-medium ml-4 md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
+            className="px-8 py-2 mt-10 ml-4 text-lg font-medium rounded bg-lightBlueColor text-skyColor md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
           >
             See All
           </button>
@@ -63,20 +61,22 @@ const Home = () => {
 
       {/* blogs-section */}
       <div className="mt-20 md:mt-28">
-        <div className="flex gap-3 ml-5 md:ml-0 mb-6">
+        <div className="flex gap-3 mb-6 ml-5 md:ml-0">
           <h2 className="text-2xl md:text-4xl">Latest Blogs</h2>
-          <div className="border-b-2 mb-3 border-secondaryColor hr-blog" />
+          <div className="w-3/6 mb-3 border-b-2 border-secondaryColor hr-blog" />
         </div>
-        {
-      posts.map((data) => (
-        <BlogCard key={data.id} data={data} />
-      ))
-    }
+        {posts.length === 0 ? (
+          <div className="ml-5 text-base md:ml-0 text-skyColor">
+            Unable to load posts due to a server issue.
+            Please contact the administrator for assistance.
+            <a href="/contact" className="text-secondaryColor"> Send Message </a>
+          </div>
+        )
+          : posts.map((data) => <BlogCard key={data.id} data={data} />)}
         <Link to="/blog">
           <button
             type="button"
-            className="bg-lightBlueColor mt-10 rounded px-8 py-2
-      text-lg text-skyColor font-medium ml-4 md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
+            className="px-8 py-2 mt-10 ml-4 text-lg font-medium rounded bg-lightBlueColor text-skyColor md:ml-1 hover:bg-secondaryColor hover:text-primaryColor"
           >
             See All
           </button>

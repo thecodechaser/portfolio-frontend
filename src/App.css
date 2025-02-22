@@ -10,10 +10,6 @@
   height: 600px;
 }
 
-.hr-blog {
-  width: 62%;
-}
-
 @media screen and (min-width: 768px) {
   .inner-body {
     padding-left: 80px;
@@ -28,15 +24,15 @@
   }
 
   .hr-about {
-    width: 60%;
+    width: 65%;
   }
 
   .hr-portfolio {
-    width: 63%;
+    width: 66%;
   }
 
   .about-hr {
-    width: 372px;
+    width: 30%;
   }
 
   .about-text {
@@ -56,7 +52,7 @@
   }
 
   .hr-blog {
-    width: 58%;
+    width: 62%;
   }
 
   .card-img {

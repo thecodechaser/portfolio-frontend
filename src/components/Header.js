@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -16,19 +16,8 @@ const menuItems = [
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [status, setStatus] = useState(true);
 
-  const changeCurrentStatus = (name) => {
-    for (let i = 0; i < menuItems.length; i += 1) {
-      if (menuItems[i].name === name) {
-        menuItems[i].current = true;
-      } else {
-        menuItems[i].current = false;
-      }
-    }
-    setStatus(!status);
-    setMobileMenu(false);
-  };
+  const location = useLocation();
 
   return (
     <header
@@ -53,16 +42,16 @@ const Header = () => {
           </button>
         </div>
         <div className={classNames(mobileMenu ? 'block' : 'hidden', 'md:block')}>
-          <ul className="flex flex-col gap-8 items-center mt-24 md:flex-row md:mt-1">
+          <ul className="flex flex-col items-center gap-8 mt-24 md:flex-row md:mt-1">
             {
               menuItems.map((item) => (
                 <li key={item.name}>
                   <Link to={item.path}>
                     <a
-                      onClick={() => changeCurrentStatus(item.name)}
+                      onClick={() => setMobileMenu(false)}
                       href={item.path}
                       className={classNames(
-                        item.current
+                        item.path === location.pathname
                           ? 'border-b-2 border-secondaryColor text-secondaryColor'
                           : 'text-skyColor',
                         'pb-1 text-lg hover:text-secondaryColor',

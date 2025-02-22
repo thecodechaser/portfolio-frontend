@@ -24,9 +24,9 @@ const AboutMe = () => (
   >
     <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">About Me</h2>
-      <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
+      <div className="w-3/5 mb-3 border-b-2 border-secondaryColor hr-about" />
     </div>
-    <div className="flex flex-col md:flex-row mt-5 ml-4 mr-5 gap-5 text-base text-skyColor md:ml-1 about-text">
+    <div className="flex flex-col gap-5 mt-5 ml-4 mr-5 text-base md:flex-row text-skyColor md:ml-1 about-text">
       <div className="flex flex-col gap-5 md:mt-3">
         <p>
           Hi there! I&apos;m Ranjeet Singh, but you might know me as
@@ -55,21 +55,21 @@ const AboutMe = () => (
         transition={{ delay: 0.1, duration: 0.8 }}
         src={codeSnipped}
         alt="code-snippet"
-        className="code-snippet rounded-md"
+        className="rounded-md code-snippet"
       />
     </div>
-    <h3 className="text-lg text-secondaryColor mt-5 ml-4 font-bold md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
+    <h3 className="mt-5 ml-4 text-lg font-bold text-secondaryColor md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.8 }}
-      className="flex flex-col ml-4 gap-4 mt-2 md:flex-row md:gap-56 md:ml-2"
+      className="flex flex-col gap-4 mt-2 ml-4 md:flex-row md:gap-56 md:ml-2"
     >
       { stacks.map((stack) => (
         <div key={stack.name}>
           <h3 className="text-lg font-medium">{stack.name}</h3>
           {stack.values.map((value) => (
-            <div key={value} className="flex text-base gap-2 text-skyColor mt-2">
+            <div key={value} className="flex gap-2 mt-2 text-base text-skyColor">
               <ChevronRightIcon className="h-6" />
               <p>{value}</p>
             </div>

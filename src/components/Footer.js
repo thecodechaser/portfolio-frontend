@@ -19,13 +19,12 @@ const Footer = () => (
         type="button"
         onClick={goToTop}
         aria-label="Save"
-        className="bg-lightBlueColor rounded
-    px-4 my-10 py-2 text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
+        className="px-4 py-2 my-10 font-medium rounded bg-lightBlueColor text-skyColor hover:bg-secondaryColor hover:text-primaryColor"
       >
         <i className="las la-angle-up" />
       </button>
       <p className="text-md">
-        Copyright © 2024
+        Copyright © 2025
         <a href="https://github.com/thecodechaser" className="text-secondaryColor"> Ranjeet Singh </a>
         All Rights Reserved
       </p>

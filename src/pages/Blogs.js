@@ -16,16 +16,19 @@ const Blogs = () => {
 
   return (
     <div className="mt-32 md:mt-40">
-      <div className="flex gap-3 ml-5 md:ml-0 mb-6">
+      <div className="flex gap-3 mb-6 ml-5 md:ml-0">
         <h2 className="text-2xl md:text-4xl">Latest Blogs</h2>
-        <div className="border-b-2 mb-3 border-secondaryColor hr-blog" />
+        <div className="w-3/6 mb-3 border-b-2 border-secondaryColor hr-blog" />
       </div>
       {/* blog-section */}
-      {
-      posts.map((data) => (
-        <BlogCard key={data.id} data={data} />
-      ))
-    }
+      {posts.length === 0 ? (
+        <div className="ml-5 text-base md:ml-0 text-skyColor">
+          Unable to load posts due to a server issue.
+          Please contact the administrator for assistance.
+          <a href="/contact" className="text-secondaryColor"> Send Message </a>
+        </div>
+      )
+        : posts.map((data) => <BlogCard key={data.id} data={data} />)}
     </div>
   );
 };
