@@ -13,14 +13,45 @@ const Education = () => (
   >
     <div className="flex gap-3 ml-3 md:ml-0">
       <h2 className="text-2xl md:text-4xl">Education</h2>
-      <div className="border-b-2 w-3/5 mb-3 border-secondaryColor hr-about" />
+      <div className="w-3/5 mb-3 border-b-2 border-secondaryColor hr-exprience" />
+    </div>
+
+    <div className="mt-8 ml-2 md:ml-2">
+      <div className="flex flex-col gap-5 mt-4 ml-3 text-lg text-secondaryColor edu-bhag md:flex-row md:ml-0">
+        <h3>
+          Bachlor of computer science
+          <span className="block ml-1 text-sm text-skyColor">July 2019 – June 2022</span>
+        </h3>
+        <p>
+          <img src={kalingaLogo} alt="microverse-logo" className="inline w-8" />
+          {' '}
+          Kalinga University
+          <span className="block text-sm text-skyColor">Regular</span>
+        </p>
+      </div>
+      <ul className="ml-4 md:ml-0">
+        <li className="flex gap-2 mt-4 text-base text-skyColor md:w-9/12">
+          <ChevronRightIcon className="h-6" />
+          <p>
+            Developed a BloodBank application using Java,
+            JavaScript, and MySQL as a capstone project.
+          </p>
+        </li>
+        <li className="flex gap-2 mt-2 text-base text-skyColor md:w-9/12">
+          <ChevronRightIcon className="h-6" />
+          <p>
+            Gained expertise in software development,
+            database management, and system design.
+          </p>
+        </li>
+      </ul>
     </div>
 
     <div className="mt-8 md:ml-2">
-      <div className="flex mt-4 text-lg text-secondaryColor ml-4 gap-5 md:gap-52 md:ml-0">
+      <div className="flex flex-col gap-5 mt-4 ml-4 text-lg md:flex-row text-secondaryColor edu-microverse md:ml-0">
         <h3>
-          Full-stack Web Development Program, Full Time
-          <span className="block text-sm ml-1 text-skyColor">October 2021 – May 2022</span>
+          Full-stack Web Development Program
+          <span className="block ml-1 text-sm text-skyColor">October 2021 – May 2022</span>
         </h3>
         <p>
           <img src={microverseLogo} alt="microverse-logo" className="inline w-8" />
@@ -30,54 +61,28 @@ const Education = () => (
         </p>
       </div>
       <ul className="ml-4 md:ml-0">
-        <li className="flex text-base gap-2 text-skyColor mt-4 md:w-9/12">
+        <li className="flex gap-2 mt-4 text-base text-skyColor md:w-9/12">
           <ChevronRightIcon className="h-6" />
           <p>
-            Spent 1300+ hours mastering algorithms, data structures, and
-            full-stack development while simultaneously developing projects
-            with Ruby, Rails, JavaScript, React, and Redux.
+            Completed 1,300+ hours mastering React, Redux, Rails,
+            and JavaScript through hands-on coding.
           </p>
         </li>
-        <li className="flex text-base gap-2 text-skyColor mt-2 md:w-9/12">
+        <li className="flex gap-2 mt-2 text-base text-skyColor md:w-9/12">
           <ChevronRightIcon className="h-6" />
           <p>
-            Developed skills in remote pair-programming using GitHub,
-            industry-standard git-flow, and daily standups to communicate
-            and collaborate with international remote developers.
-          </p>
-        </li>
-      </ul>
-    </div>
-
-    <div className="mt-8 ml-2 md:ml-4">
-      <div className="flex mt-4 text-lg text-secondaryColor ml-3 gap-5 edu-bhag edu-tmu md:ml-0">
-        <h3>
-          Bachlor of computer science
-          <span className="block text-sm ml-1 text-skyColor">July 2019 – June 2023</span>
-        </h3>
-        <p>
-          <img src={kalingaLogo} alt="microverse-logo" className="inline w-8" />
-          {' '}
-          Kalinga University
-          <span className="block text-sm text-skyColor">Part-Time</span>
-        </p>
-      </div>
-      <ul className="ml-4 md:ml-0">
-        <li className="flex text-base gap-2 text-skyColor mt-4 md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Studied Computer science engineering for 3 years and learned
-            about computer fundamentals and software development lifecycle.
+            Built real-world projects in a remote,
+            collaborative environment using GitHub & Agile.
           </p>
         </li>
       </ul>
     </div>
 
     <div className="mt-8 ml-1 md:ml-3">
-      <div className="flex mt-4 text-lg text-secondaryColor ml-3 gap-5 edu-tmu md:ml-0">
+      <div className="flex flex-col gap-5 mt-4 ml-3 text-lg md:flex-row text-secondaryColor edu-tmu md:ml-0">
         <h3>
-          Diploma Polytechnic, Full-Time
-          <span className="block text-sm ml-1 text-skyColor">July 2016 – June 2019</span>
+          Diploma in Computer Science
+          <span className="block ml-1 text-sm text-skyColor">July 2016 – June 2019</span>
         </h3>
         <p>
           <img src={tmuLogo} alt="microverse-logo" className="inline w-8" />
@@ -87,17 +92,16 @@ const Education = () => (
         </p>
       </div>
       <ul className="ml-4 md:ml-0">
-        <li className="flex text-base gap-2 text-skyColor mt-4 md:w-9/12">
+        <li className="flex gap-2 mt-4 text-base text-skyColor md:w-9/12">
           <ChevronRightIcon className="h-6" />
           <p>
-            Studied Computer science engineering for 3 years and learned about computer fundamentals
-            and software development lifecycle.
+            Completed a Java-based CMS software during a 3-month university internship.
           </p>
         </li>
-        <li className="flex text-base gap-2 text-skyColor mt-2 md:w-9/12">
+        <li className="flex gap-2 mt-2 text-base text-skyColor md:w-9/12">
           <ChevronRightIcon className="h-6" />
           <p>
-            Worked as a back-end Java developer for 3 months for the university internship.
+            Studied computer fundamentals, software development, and algorithms.
           </p>
         </li>
       </ul>
