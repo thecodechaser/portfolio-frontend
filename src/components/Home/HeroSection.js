@@ -10,14 +10,14 @@ const HeroSection = () => (
     initial={{ x: '-100vw' }}
     animate={{ x: -0 }}
     transition={{ duration: 1 }}
-    className="flex flex-col items-center gap-10 md:flex-row md:gap-60"
+    className="flex flex-col items-center gap-10 md:ml-4 md:flex-row md:gap-96"
   >
     <div className="md:order-1">
-      <img src={profilePicture} alt="profile" className="h-64 md:h-80 rounded-full" />
+      <img src={profilePicture} alt="profile" className="h-64 rounded-full md:h-80" />
     </div>
     <div className="text-skyColor">
       <p className="text-base text-secondaryColor">Hello!</p>
-      <h1 className="text-secondaryColor text-4xl md:text-5xl">I&apos;m Ranjeet Singh</h1>
+      <h1 className="text-4xl text-secondaryColor md:text-5xl">I&apos;m Ranjeet Singh</h1>
       {
           fields.map((field) => (
             <div key={field} className="flex gap-4 mt-3">
@@ -29,8 +29,7 @@ const HeroSection = () => (
       <Link to="/contact">
         <button
           type="button"
-          className="bg-lightBlueColor mt-10 rounded px-6 py-2 w-50
-      text-lg text-skyColor font-medium hover:bg-secondaryColor hover:text-primaryColor"
+          className="px-6 py-2 mt-10 text-lg font-medium rounded bg-lightBlueColor w-50 text-skyColor hover:bg-secondaryColor hover:text-primaryColor"
         >
           Get in Touch
         </button>
