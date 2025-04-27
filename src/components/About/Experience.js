@@ -15,11 +15,48 @@ const Experience = () => (
       <h2 className="text-2xl md:text-4xl">Experience</h2>
       <div className="w-3/5 mb-3 border-b-2 border-secondaryColor hr-exprience" />
     </div>
+
     <div className="mt-8 md:ml-1">
-      <div className="flex flex-col gap-5 mt-4 ml-4 text-lg md:flex-row text-secondaryColor md:gap-[448px] md:ml-0">
+      <div className="flex flex-col gap-5 mt-4 ml-4 text-lg md:flex-row text-secondaryColor md:gap-[445px] md:ml-0">
+        <h3>
+          Front-End Developer
+          <span className="block ml-1 text-sm text-skyColor">February 2025 – Present</span>
+        </h3>
+        <p className="md:mr-3">
+          <img src={freelanceLogo} alt="microverse-logo" className="inline w-8" />
+          {' '}
+          Novel Aquatech
+          <span className="block text-sm text-skyColor">Remote</span>
+        </p>
+      </div>
+      <ul className="ml-4 md:ml-0">
+        <li className="flex gap-2 mt-4 text-base text-skyColor">
+          <ChevronRightIcon className="h-6" />
+          <p>
+            Enhanced and maintained a client portal, adding features, bug fixes, and testing.
+          </p>
+        </li>
+        <li className="flex gap-2 mt-2 text-base text-skyColor">
+          <ChevronRightIcon className="h-6" />
+          <p>
+            Built an admin portal from scratch for efficient user, device, and configuration
+            management.
+          </p>
+        </li>
+        <li className="flex gap-2 mt-2 text-base text-skyColor">
+          <ChevronRightIcon className="h-6" />
+          <p>
+            Collaborated with the team to optimize UI/UX, performance, and deliver features under
+            tight deadlines.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div className="mt-8 md:ml-1">
+      <div className="flex flex-col gap-5 mt-4 ml-4 text-lg md:flex-row text-secondaryColor md:gap-[418px] md:ml-0">
         <h3>
           Full-Stack Developer
-          <span className="block ml-1 text-sm text-skyColor">October 2022 – Present</span>
+          <span className="block ml-1 text-sm text-skyColor">October 2022 – February 2025</span>
         </h3>
         <p className="md:mr-3">
           <img src={kwanzooLogo} alt="microverse-logo" className="inline w-8" />
@@ -86,35 +123,6 @@ const Experience = () => (
           <ChevronRightIcon className="h-6" />
           <p>
             Assisted developers in debugging, refactoring, and writing clean, maintainable code.
-          </p>
-        </li>
-      </ul>
-    </div>
-
-    <div className="mt-8">
-      <div className="flex flex-col gap-5 mt-4 ml-4 text-lg md:flex-row text-secondaryColor md:gap-[395px] md:ml-1">
-        <h3>
-          Mentor (Volunteer)
-          <span className="block ml-1 text-sm text-skyColor">November 2021 – December 2021</span>
-        </h3>
-        <p>
-          <img src={microverseLogo} alt="microverse-logo" className="inline w-8" />
-          {' '}
-          Microverse
-          {' '}
-          <span className="block text-sm text-skyColor">Remote</span>
-        </p>
-      </div>
-      <ul className="ml-4 md:ml-1">
-        <li className="flex gap-2 mt-4 text-base text-skyColor">
-          <ChevronRightIcon className="h-6" />
-          <p>Mentored junior web developers, providing technical support through code reviews.</p>
-        </li>
-        <li className="flex gap-2 mt-2 text-base text-skyColor">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Provided advice and tips on how to maintain motivation to maintain longevity
-            in the program.
           </p>
         </li>
       </ul>
