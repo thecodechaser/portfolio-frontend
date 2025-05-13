@@ -4,7 +4,7 @@ const ResumePDF = () => (
   <div>
     <object aria-label="resume-pdF" data={ranjeetPDF} type="application/pdf" className="w-full pdf" />
     <button
-      onClick={() => window.open('https://drive.google.com/file/d/1qh4_I2DAwlRto0hnAA-Bjim__iNCtTw4/view?usp=sharing', '_blank')}
+      onClick={() => window.open('https://drive.google.com/file/d/1DG_9WxaGaNy79K0FkAxMZzhjvwjXbIRF/view?usp=sharing', '_blank')}
       type="submit"
       className="px-4 py-3 mt-5 ml-2 text-lg font-medium rounded bg-lightBlueColor text-skyColor hover:bg-secondaryColor hover:text-primaryColor"
     >
