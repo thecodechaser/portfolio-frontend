@@ -9,11 +9,23 @@ import budgetTracker from '../../assets/images/projects/budget-tracker.png';
 import trendify from '../../assets/images/projects/trendify.png';
 import taskMaster from '../../assets/images/projects/task-master.png';
 import formBuilder from '../../assets/images/projects/smart-form-builder.png';
+import pipelineFlow from '../../assets/images/projects/pipeline-flow.png';
+import chatbotFlow from '../../assets/images/projects/chatbot-flow.png';
 
 // initial-state
 const initialState = [
   {
     id: 0,
+    title: 'Pipeline Flow Builder',
+    image: pipelineFlow,
+    details:
+      'Pipeline Flow Builder is a visual editor that allows users to construct custom data processing pipelines with drag-and-drop simplicity. Each node, such as Input, Math, Delay, or Output, represents a specific function and can be connected to define the flow of logic. Users can configure each node’s parameters and visualize how data moves through the system.',
+    live: 'https://pipeline-flow.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/pipeline-flow-builder',
+    tech: ['JavaScript', 'React', 'ReactFlow', 'Tailwind'],
+  },
+  {
+    id: 1,
     title: 'Smart Form Builder',
     image: formBuilder,
     details:
@@ -23,7 +35,17 @@ const initialState = [
     tech: ['JavaScript', 'React', 'Redux', 'Tailwind'],
   },
   {
-    id: 1,
+    id: 2,
+    title: 'Chatbot Flow Builder',
+    image: chatbotFlow,
+    details:
+      'Chatbot flow Builder is a visual conversation design tool that empowers users to create custom chatbot flows with ease. Users can add message nodes manually or via drag-and-drop, each with configurable inputs and connections. Nodes can have follow-up branches, enabling deeply nested, conditional conversations.',
+    live: 'https://chatbot-flow.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/chatbot-flow-builder',
+    tech: ['TypeScript', 'React', 'ReactFlow', 'Tailwind'],
+  },
+  {
+    id: 3,
     title: 'Trendify',
     image: trendify,
     details:
@@ -33,7 +55,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 2,
+    id: 4,
     title: 'Task Master',
     image: taskMaster,
     details:
@@ -43,7 +65,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 3,
+    id: 5,
     title: 'Book Appoinments',
     image: bookAppoinments,
     details:
@@ -53,7 +75,7 @@ const initialState = [
     tech: ['Rails', 'React', 'Tailwind'],
   },
   {
-    id: 4,
+    id: 6,
     title: 'Covid19 Metrics',
     image: covid19Metrics,
     details:
@@ -63,7 +85,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 5,
+    id: 7,
     title: 'Disney Characters',
     image: disneyCharacters,
     details:
@@ -73,7 +95,7 @@ const initialState = [
     tech: ['JavaScript', 'HTML & CSS'],
   },
   {
-    index: 6,
+    index: 8,
     title: 'Space Travelers',
     image: spaceTravelers,
     details:
@@ -83,7 +105,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 7,
+    id: 9,
     title: 'Thecodechaser BootCamp',
     image: bootCamp,
     details:
@@ -93,7 +115,7 @@ const initialState = [
     tech: ['HTML', 'CSS'],
   },
   {
-    id: 8,
+    id: 10,
     title: 'Recipe App',
     image: recipeApp,
     details:
@@ -103,7 +125,7 @@ const initialState = [
     tech: ['Rails', 'Ruby', 'Tailwind'],
   },
   {
-    id: 9,
+    id: 11,
     title: 'Book Store',
     image: bookStore,
     details:
@@ -113,7 +135,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 10,
+    id: 12,
     title: 'Budget Tracker',
     image: budgetTracker,
     details:

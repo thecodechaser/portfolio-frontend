@@ -10,7 +10,7 @@ import BlogCard from '../components/Blogs/BlogCard';
 const Home = () => {
   const blogs = useSelector((state) => state.postsReducer);
   const portfolio = useSelector((state) => state.projectsReducer);
-  const projects = portfolio.slice(0, 3);
+  const projects = portfolio.slice(0, 5);
   const posts = blogs.slice(0, 3);
 
   const dispatch = useDispatch();
