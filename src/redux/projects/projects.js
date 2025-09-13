@@ -11,11 +11,34 @@ import taskMaster from '../../assets/images/projects/task-master.png';
 import formBuilder from '../../assets/images/projects/smart-form-builder.png';
 import pipelineFlow from '../../assets/images/projects/pipeline-flow.png';
 import chatbotFlow from '../../assets/images/projects/chatbot-flow.png';
+import marketSeasonality from '../../assets/images/projects/market-seasonality-explorer.png';
+import aiImageStudio from '../../assets/images/projects/ai-image-studio.png';
+import customDataGrid from '../../assets/images/projects/custom-data-grid.png';
 
 // initial-state
 const initialState = [
   {
     id: 0,
+    title: 'Market Seasonality Explorer',
+    image: marketSeasonality,
+    details:
+      'Market Seasonality Explorer is a responsive, real-time crypto analytics dashboard that visualizes market performance through a dynamic calendar interface. Each calendar cell represents a day/week/month and provides detailed insights such as volume, performance, volatility, and other technical metrics. Users can click on any day to access a comprehensive drill-down report with historical trends, comparative analysis, and visual breakdowns.',
+    live: 'https://market-explorer.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/market-seasonality-explorer',
+    tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
+  },
+  {
+    id: 1,
+    title: 'AI Image Studio',
+    image: aiImageStudio,
+    details:
+      'AI Image Studio is a lightweight React app for rapid image-ideation. Upload a PNG/JPG (auto-downscaled if large), enter a prompt, choose a style, and see a live summary before generating. A mocked API simulates latency, errors, retries with backoff, and aborts, while the last five results persist as a clickable history. Built with TypeScript and Tailwind, it’s fast, accessible, and keyboard-friendly—perfect for testing AI-studio flows without backend complexity.',
+    live: 'https://ai-image.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/ai-image-studio',
+    tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
+  },
+  {
+    id: 2,
     title: 'Pipeline Flow Builder',
     image: pipelineFlow,
     details:
@@ -25,7 +48,7 @@ const initialState = [
     tech: ['JavaScript', 'React', 'ReactFlow', 'Tailwind'],
   },
   {
-    id: 1,
+    id: 3,
     title: 'Smart Form Builder',
     image: formBuilder,
     details:
@@ -35,17 +58,7 @@ const initialState = [
     tech: ['JavaScript', 'React', 'Redux', 'Tailwind'],
   },
   {
-    id: 2,
-    title: 'Chatbot Flow Builder',
-    image: chatbotFlow,
-    details:
-      'Chatbot flow Builder is a visual conversation design tool that empowers users to create custom chatbot flows with ease. Users can add message nodes manually or via drag-and-drop, each with configurable inputs and connections. Nodes can have follow-up branches, enabling deeply nested, conditional conversations.',
-    live: 'https://chatbot-flow.thecodechaser.com',
-    github: 'https://github.com/thecodechaser/chatbot-flow-builder',
-    tech: ['TypeScript', 'React', 'ReactFlow', 'Tailwind'],
-  },
-  {
-    id: 3,
+    id: 4,
     title: 'Trendify',
     image: trendify,
     details:
@@ -55,7 +68,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Task Master',
     image: taskMaster,
     details:
@@ -65,7 +78,27 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 5,
+    id: 6,
+    title: 'Chatbot Flow Builder',
+    image: chatbotFlow,
+    details:
+      'Chatbot flow Builder is a visual conversation design tool that empowers users to create custom chatbot flows with ease. Users can add message nodes manually or via drag-and-drop, each with configurable inputs and connections. Nodes can have follow-up branches, enabling deeply nested, conditional conversations.',
+    live: 'https://chatbot-flow.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/chatbot-flow-builder',
+    tech: ['TypeScript', 'React', 'ReactFlow', 'Tailwind'],
+  },
+  {
+    id: 7,
+    title: 'Custom Data Grid',
+    image: customDataGrid,
+    details:
+      'Custom Data Grid is a high-performance, feature-rich custom table component build from scratch without any additional library. It supports dynamic column rendering, row virtualization, and multi-column sorting. Users can search, filter, paginate, and export data with ease. Advanced tools include column pinning, resizing, reordering, and grouping. With inline editing, bulk actions, and customizable cell types.',
+    live: 'https://data-grid.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/custom-data-grid',
+    tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
+  },
+  {
+    id: 8,
     title: 'Book Appoinments',
     image: bookAppoinments,
     details:
@@ -75,7 +108,7 @@ const initialState = [
     tech: ['Rails', 'React', 'Tailwind'],
   },
   {
-    id: 6,
+    id: 9,
     title: 'Covid19 Metrics',
     image: covid19Metrics,
     details:
@@ -85,7 +118,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 7,
+    id: 10,
     title: 'Disney Characters',
     image: disneyCharacters,
     details:
@@ -95,7 +128,7 @@ const initialState = [
     tech: ['JavaScript', 'HTML & CSS'],
   },
   {
-    index: 8,
+    index: 11,
     title: 'Space Travelers',
     image: spaceTravelers,
     details:
@@ -105,7 +138,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 9,
+    id: 12,
     title: 'Thecodechaser BootCamp',
     image: bootCamp,
     details:
@@ -115,7 +148,7 @@ const initialState = [
     tech: ['HTML', 'CSS'],
   },
   {
-    id: 10,
+    id: 13,
     title: 'Recipe App',
     image: recipeApp,
     details:
@@ -125,7 +158,7 @@ const initialState = [
     tech: ['Rails', 'Ruby', 'Tailwind'],
   },
   {
-    id: 11,
+    id: 14,
     title: 'Book Store',
     image: bookStore,
     details:
@@ -135,7 +168,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 12,
+    id: 15,
     title: 'Budget Tracker',
     image: budgetTracker,
     details:
