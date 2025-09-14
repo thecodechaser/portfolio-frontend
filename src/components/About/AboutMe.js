@@ -5,13 +5,13 @@ import codeSnipped from '../../assets/images/code-snippet.png';
 
 const stacks = [
   {
-    name: 'Front end development', values: ['React JS', 'Vue Js', 'JavaScript', 'HTML & CSS', 'Tailwind'],
+    name: 'Front end development', values: ['React JS', 'Vue JS', 'Next JS', 'JavaScript', 'TypeScript', 'HTML & CSS', 'Tailwind'],
   },
   {
-    name: 'Back end development', values: ['Ruby On Rails', 'Ruby', 'Java', 'Spring', 'SQL'],
+    name: 'Back end development', values: ['Ruby On Rails', 'Ruby', 'Java', 'Spring', 'SQL', 'ElasticSearch'],
   },
   {
-    name: 'Tools', values: ['Wordpress', 'Netlify', 'Github & Git', 'Postman', 'VS Code'],
+    name: 'Tools', values: ['AWS', 'Netlify', 'Wordpress', 'Github & Git', 'Postman', 'VS Code'],
   },
 ];
 

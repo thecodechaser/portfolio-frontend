@@ -14,6 +14,7 @@ import chatbotFlow from '../../assets/images/projects/chatbot-flow.png';
 import marketSeasonality from '../../assets/images/projects/market-seasonality-explorer.png';
 import aiImageStudio from '../../assets/images/projects/ai-image-studio.png';
 import customDataGrid from '../../assets/images/projects/custom-data-grid.png';
+import aiFormPilot from '../../assets/images/projects/ai-form-pilot.png';
 
 // initial-state
 const initialState = [
@@ -29,6 +30,16 @@ const initialState = [
   },
   {
     id: 1,
+    title: 'AI Form Pilot',
+    image: aiFormPilot,
+    details:
+      'AI Form Pilot is a lightweight Next app for guided form-filling. Instead of overwhelming users with fields, it asks questions one by one—like name, email, or phone—then auto-fills the form with real-time responses from the Gemini API. Users get a smooth guided flow instead of static fields, with the interactive responses from AI. Built with TypeScript and Tailwind, it’s fast, accessible, and keyboard-friendly—perfect for exploring AI-driven form experiences without extra complexity',
+    live: 'https://ai-form.thecodechaser.com',
+    github: 'https://github.com/thecodechaser/ai-form-pilot',
+    tech: ['Gemini API', 'TypeScript', 'Next', 'Tailwind'],
+  },
+  {
+    id: 2,
     title: 'AI Image Studio',
     image: aiImageStudio,
     details:
@@ -38,7 +49,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Pipeline Flow Builder',
     image: pipelineFlow,
     details:
@@ -48,7 +59,7 @@ const initialState = [
     tech: ['JavaScript', 'React', 'ReactFlow', 'Tailwind'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Smart Form Builder',
     image: formBuilder,
     details:
@@ -58,7 +69,7 @@ const initialState = [
     tech: ['JavaScript', 'React', 'Redux', 'Tailwind'],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Trendify',
     image: trendify,
     details:
@@ -68,7 +79,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Task Master',
     image: taskMaster,
     details:
@@ -78,7 +89,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Chatbot Flow Builder',
     image: chatbotFlow,
     details:
@@ -88,7 +99,7 @@ const initialState = [
     tech: ['TypeScript', 'React', 'ReactFlow', 'Tailwind'],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Custom Data Grid',
     image: customDataGrid,
     details:
@@ -98,7 +109,7 @@ const initialState = [
     tech: ['JavaScript', 'TypeScript', 'React', 'Tailwind'],
   },
   {
-    id: 8,
+    id: 9,
     title: 'Book Appoinments',
     image: bookAppoinments,
     details:
@@ -108,7 +119,7 @@ const initialState = [
     tech: ['Rails', 'React', 'Tailwind'],
   },
   {
-    id: 9,
+    id: 10,
     title: 'Covid19 Metrics',
     image: covid19Metrics,
     details:
@@ -118,7 +129,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 10,
+    id: 11,
     title: 'Disney Characters',
     image: disneyCharacters,
     details:
@@ -128,7 +139,7 @@ const initialState = [
     tech: ['JavaScript', 'HTML & CSS'],
   },
   {
-    index: 11,
+    index: 12,
     title: 'Space Travelers',
     image: spaceTravelers,
     details:
@@ -138,7 +149,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 12,
+    id: 13,
     title: 'Thecodechaser BootCamp',
     image: bootCamp,
     details:
@@ -148,7 +159,7 @@ const initialState = [
     tech: ['HTML', 'CSS'],
   },
   {
-    id: 13,
+    id: 14,
     title: 'Recipe App',
     image: recipeApp,
     details:
@@ -158,7 +169,7 @@ const initialState = [
     tech: ['Rails', 'Ruby', 'Tailwind'],
   },
   {
-    id: 14,
+    id: 15,
     title: 'Book Store',
     image: bookStore,
     details:
@@ -168,7 +179,7 @@ const initialState = [
     tech: ['React', 'Redux', 'HTML & CSS'],
   },
   {
-    id: 15,
+    id: 16,
     title: 'Budget Tracker',
     image: budgetTracker,
     details:
