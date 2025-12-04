@@ -1,7 +1,7 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import profilePicture1 from '../../assets/images/profilePicture1.png';
+import profilePicture from '../../assets/images/profilePicture2.jpg';
 
 const fields = ['Full Stack web developer', 'Love for clean code', 'Remote work aficionado', 'Amateur astronomer'];
 
@@ -13,7 +13,7 @@ const HeroSection = () => (
     className="flex flex-col items-center gap-10 md:ml-4 md:flex-row md:gap-96"
   >
     <div className="md:order-1">
-      <img src={profilePicture1} alt="profile" className="h-64 rounded-full md:h-96" />
+      <img src={profilePicture} alt="profile" className="h-64 rounded-full md:h-96" />
     </div>
     <div className="text-skyColor">
       <p className="text-base text-secondaryColor">Hello!</p>

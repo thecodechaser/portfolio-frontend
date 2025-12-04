@@ -32,9 +32,10 @@ const AboutMe = () => (
           Hi there! I&apos;m Ranjeet Singh, but you might know me as
           {' '}
           <span className="text-secondaryColor">thecodechaser</span>
-          . Right now, I&apos;m a freelance Software Engineer at&nbsp;
-          <a href="https://novelaquatech.com" target="_blank" className="text-secondaryColor" rel="noreferrer">Novel Aquatech</a>
-          . I enjoy creating web applications using a mix of technologies like React, Vue,&nbsp;
+          . Right now, I&apos;m a Software Engineer at&nbsp;
+          <a href="https://modelia.ai" target="_blank" className="text-secondaryColor" rel="noreferrer">Modelia AI</a>
+          . I have 3+ years of experience working as Software Developer. 
+          I enjoy creating web applications using a mix of technologies like React, Vue,&nbsp;
           JavaScript, Rails, and Java. Before I got into web development, I spent two years
           as a freelance developer, where I worked on desktop apps and built websites with
           Wordpress and Shopify for my clients. I look forward to sharing more about my&nbsp;
