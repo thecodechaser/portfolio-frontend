@@ -1,84 +1,123 @@
-import { ChevronRightIcon } from '@heroicons/react/solid';
+/* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import personJuggling from '../../assets/images/person_juggling.gif';
 import codeSnipped from '../../assets/images/code-snippet.png';
 
 const stacks = [
   {
-    name: 'Front end development', values: ['React JS', 'Vue JS', 'Next JS', 'JavaScript', 'TypeScript', 'HTML & CSS', 'Tailwind'],
+    name: 'Frontend',
+    values: ['React', 'Vue', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind', 'HTML & CSS'],
   },
   {
-    name: 'Back end development', values: ['Ruby On Rails', 'Ruby', 'Java', 'Spring', 'SQL', 'ElasticSearch'],
+    name: 'Backend',
+    values: ['Ruby on Rails', 'Ruby', 'Java', 'Spring', 'SQL', 'ElasticSearch'],
   },
   {
-    name: 'Tools', values: ['AWS', 'Netlify', 'Wordpress', 'Github & Git', 'Postman', 'VS Code'],
+    name: 'Tooling',
+    values: ['AWS', 'Netlify', 'Git & GitHub', 'Postman', 'VS Code', 'WordPress'],
   },
 ];
 
+const SectionHeading = ({ label, title, kicker }) => (
+  <div className="flex items-baseline gap-3">
+    {label && (
+      <span className="mono text-xs text-faint">{label}</span>
+    )}
+    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
+    {kicker && (
+      <span className="ml-auto mono text-xs text-faint hidden md:inline">{kicker}</span>
+    )}
+  </div>
+);
+
 const AboutMe = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.1, duration: 0.8 }}
-    className="mt-14 md:mt-24"
+  <motion.section
+    initial={{ opacity: 0, y: 8 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-80px' }}
+    transition={{ duration: 0.5 }}
+    className="mt-20 md:mt-28"
   >
-    <div className="flex gap-3 ml-3 md:ml-0">
-      <h2 className="text-2xl md:text-4xl">About Me</h2>
-      <div className="w-3/5 mb-3 border-b-2 border-secondaryColor hr-about" />
-    </div>
-    <div className="flex flex-col gap-5 mt-5 ml-4 mr-5 text-base md:flex-row text-skyColor md:ml-1 about-text">
-      <div className="flex flex-col gap-5 md:mt-3">
+    <SectionHeading label="01 /" title="About" kicker="who, what, why" />
+    <div className="mt-3 h-px bg-hairline" />
+
+    <div className="mt-8 grid md:grid-cols-[1.3fr_1fr] gap-8 md:gap-12 items-start">
+      <div className="space-y-5 text-base text-subtle leading-relaxed">
         <p>
-          Hi there! I&apos;m Ranjeet Singh, but you might know me as
+          Hi — I&apos;m Ranjeet, also known online as
           {' '}
-          <span className="text-secondaryColor">thecodechaser</span>
-          . Right now, I&apos;m a Software Engineer at&nbsp;
-          <a href="https://modelia.ai" target="_blank" className="text-secondaryColor" rel="noreferrer">Modelia AI</a>
-          . I have 3+ years of experience working as Software Developer.
-          I enjoy creating web applications using a mix of technologies like React, Vue,&nbsp;
-          JavaScript, Rails, and Java. Before I got into web development, I spent two years
-          as a freelance developer, where I worked on desktop apps and built websites with
-          Wordpress and Shopify for my clients. I look forward to sharing more about my&nbsp;
-          journey and projects with you!
+          <span className="text-accent">thecodechaser</span>
+          . I&apos;m a Software Engineer at
+          {' '}
+          <a
+            href="https://modelia.ai"
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline decoration-accent decoration-2 underline-offset-4 hover:text-accent transition-colors"
+          >
+            Modelia AI
+          </a>
+          {' '}
+          with 3+ years of experience shipping web applications across React,
+          Vue, Rails, and Java. Before that I spent two years freelancing —
+          building desktop apps and crafting WordPress and Shopify sites for
+          clients.
         </p>
         <p>
-          I enjoy tackling challenging coding problems because they keep things interesting,
-          which makes me a pretty good problem solver. When I have some free time, I usually
-          have a hard time deciding between solving algorithms or learning about astronomy—but
-          somehow I manage to do a bit of both.
-          {' '}
-          <img src={personJuggling} alt="person-juggling" className="w-16 mt-4" />
+          I like the kind of problems where the answer isn&apos;t obvious until
+          you&apos;ve sketched it three different ways. When I&apos;m off the
+          clock, I&apos;m usually torn between solving algorithm puzzles and
+          reading about astronomy — somehow I manage to do a bit of both.
         </p>
       </div>
-      <motion.img
+
+      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.1, duration: 0.8 }}
-        src={codeSnipped}
-        alt="code-snippet"
-        className="rounded-md code-snippet"
-      />
-    </div>
-    <h3 className="mt-5 ml-4 text-lg font-bold text-secondaryColor md:ml-1">Here are few of my stacks I&apos;ve been working with recently:</h3>
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.1, duration: 0.8 }}
-      className="flex flex-col gap-4 mt-2 ml-4 md:flex-row md:gap-56 md:ml-2"
-    >
-      { stacks.map((stack) => (
-        <div key={stack.name}>
-          <h3 className="text-lg font-medium">{stack.name}</h3>
-          {stack.values.map((value) => (
-            <div key={value} className="flex gap-2 mt-2 text-base text-skyColor">
-              <ChevronRightIcon className="h-6" />
-              <p>{value}</p>
-            </div>
-          ))}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="relative rounded-xl border border-border bg-surface overflow-hidden shadow-card"
+      >
+        <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-hairline bg-elevated">
+          <span className="w-2.5 h-2.5 rounded-full bg-mute" />
+          <span className="w-2.5 h-2.5 rounded-full bg-mute" />
+          <span className="w-2.5 h-2.5 rounded-full bg-mute" />
+          <span className="ml-2 mono text-[11px] text-faint">~/ranjeet/about.tsx</span>
         </div>
-      ))}
-    </motion.div>
-  </motion.div>
+        <img src={codeSnipped} alt="code snippet" className="w-full h-auto" />
+      </motion.div>
+    </div>
+
+    <div className="mt-12">
+      <h3 className="mono text-sm text-faint uppercase tracking-widest">
+        Stack I&apos;ve been working with lately
+      </h3>
+      <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {stacks.map((stack) => (
+          <div
+            key={stack.name}
+            className="rounded-xl border border-border bg-surface p-5 hover:border-accent-ring transition-colors"
+          >
+            <div className="flex items-center justify-between">
+              <h4 className="text-base font-medium text-fg">{stack.name}</h4>
+              <span className="mono text-[11px] text-faint">
+                {String(stack.values.length).padStart(2, '0')}
+              </span>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {stack.values.map((value) => (
+                <span
+                  key={value}
+                  className="mono text-xs px-2 py-1 rounded-md border border-hairline bg-elevated text-subtle"
+                >
+                  {value}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </motion.section>
 );
 
 export default AboutMe;

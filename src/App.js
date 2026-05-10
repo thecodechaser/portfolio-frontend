@@ -17,62 +17,26 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-bg text-fg">
       <Header />
-      <div className="inner-body">
+      <main className="container-page flex-1 w-full">
         <Routes>
-          <Route
-            path="*"
-            element={(<NotFound />)}
-          />
-          <Route
-            path="/"
-            element={(<Home />)}
-          />
-          <Route
-            path="/about"
-            element={(<About />)}
-          />
-          <Route
-            path="/portfolio"
-            element={(<Portfolio />)}
-          />
-          <Route
-            path="/contact"
-            element={(<Contact />)}
-          />
-          <Route
-            path="/blog"
-            element={(<Blogs />)}
-          />
-          <Route
-            path="/blog/:id/:title"
-            element={(<Posts />)}
-          />
-          <Route
-            path="/resume"
-            element={(<Resume />)}
-          />
-          <Route
-            path="/messageSent"
-            element={(<SuccessNotice />)}
-          />
-          <Route
-            path="/course-sneakpeak"
-            element={(<OnlineCourseWaitlist />)}
-          />
-          <Route
-            path="/signup-waitlist"
-            element={(<SignUpWaitList />)}
-          />
-          <Route
-            path="/signup-successfull"
-            element={(<SignUpSucessNotice />)}
-          />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blogs />} />
+          <Route path="/blog/:id/:title" element={<Posts />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/messageSent" element={<SuccessNotice />} />
+          <Route path="/course-sneakpeak" element={<OnlineCourseWaitlist />} />
+          <Route path="/signup-waitlist" element={<SignUpWaitList />} />
+          <Route path="/signup-successfull" element={<SignUpSucessNotice />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

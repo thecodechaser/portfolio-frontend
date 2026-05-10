@@ -1,87 +1,30 @@
-/* styles for App */
+/* App-level styles */
 
-.mobile-btns {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.container-page {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
 }
 
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 48px;
+  }
+}
+
+/* Resume PDF viewer preserves intrinsic sizing */
 .pdf {
-  height: 600px;
-}
-
-@media screen and (min-width: 768px) {
-  .inner-body {
-    padding-left: 80px;
-  }
-
-  .contact-info {
-    padding-left: 80px;
-  }
-
-  .pdf {
-    width: 64%;
-  }
-
-  .hr-about {
-    width: 65%;
-  }
-
-  .hr-exprience {
-    width: 64%;
-  }
-
-  .hr-portfolio {
-    width: 66%;
-  }
-
-  .about-hr {
-    width: 30%;
-  }
-
-  .about-text {
-    width: 75%;
-  }
-
-  .project-card {
-    width: 75%;
-  }
-
-  .edu-tmu {
-    gap: 362px;
-  }
-
-  .edu-bhag {
-    gap: 375px;
-  }
-
-  .edu-microverse {
-    gap: 298px;
-  }
-
-  .hr-blog {
-    width: 62%;
-  }
-
-  .card-img {
-    width: 50%;
-  }
-
-  .code-snippet {
-    width: 40%;
-  }
-
-  .post-img {
-    width: 150%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .inner-body {
-    padding-left: 200px;
-  }
-
-  .contact-info {
-    padding-left: 200px;
-  }
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  border-radius: 12px;
+  border: 1px solid #26262b;
+  background: #111114;
 }

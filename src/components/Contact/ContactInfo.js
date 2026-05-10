@@ -1,63 +1,93 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRightIcon } from '@heroicons/react/solid';
+
+const socials = [
+  { name: 'GitHub', icon: 'lab la-github', href: 'https://github.com/thecodechaser' },
+  { name: 'LinkedIn', icon: 'lab la-linkedin', href: 'https://www.linkedin.com/in/thecodechaser/' },
+  { name: 'Twitter', icon: 'lab la-twitter', href: 'https://twitter.com/thecodechaser' },
+  { name: 'Medium', icon: 'lab la-medium', href: 'https://medium.com/@thecodechaser' },
+  { name: 'AngelList', icon: 'lab la-angellist', href: 'https://angel.co/u/thecodechaser' },
+  { name: 'Instagram', icon: 'lab la-instagram', href: 'https://www.instagram.com/the_code_chaser/' },
+];
+
+const emails = [
+  'ranjeetbuk96@gmail.com',
+  'contact@thecodechaser.com',
+  'admin@thecodechaser.com',
+];
 
 const ContactInfo = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.2, duration: 0.8 }}
-    className="flex flex-col mt-20 md:ml-1 contact-info"
+  <motion.section
+    initial={{ opacity: 0, y: 12 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-80px' }}
+    transition={{ duration: 0.5 }}
+    className="container-page mt-24 md:mt-32"
   >
-    <div className="flex w-full ml-3 md:ml-0">
-      <div className="w-1/4 mb-3 mr-3 border-b-2 about-hr md:mr-5 border-secondaryColor" />
-      <h3 className="text-2xl md:text-4xl">Get in touch</h3>
-      <div className="w-1/4 mb-3 ml-3 border-b-2 about-hr md:ml-5 border-secondaryColor" />
+    <div className="flex items-center gap-3">
+      <span className="mono text-xs text-faint">/get-in-touch</span>
+      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+        Let&apos;s build something
+      </h2>
     </div>
-    <div className="mt-8 ml-4 md:flex md:gap-12 md:ml-1">
-      <p className="text-base md:w-1/3 text-skyColor">
-        {' '}
-        If you have an app idea you&apos;d like to develop, a feature that
-        needs building, or a project that requires coding, I&apos;m here to help.
-        Let&apos;s bring your vision to life!
-        <br />
-        <br />
-        I really enjoy collaborating with other developers. If you&apos;re seeking a
-        project partner, let&apos;s grab a coffee and chat about what we can create together.
-      </p>
-      <div className="mt-4 md:w-1/5 md:mt-0">
-        <h4 className="mb-4 text-2xl">Contacts</h4>
-        <a href="mailto: contact@thecodechaser.com" className="text-base text-skyColor hover:text-secondaryColor">ranjeetbuk96@gmail.com</a>
-        <a href="mailto: contact@thecodechaser.com" className="block mt-3 text-base text-skyColor hover:text-secondaryColor">contact@thecodechaser.com</a>
-        <a href="mailto: contact@thecodechaser.com" className="block mt-3 text-base text-skyColor hover:text-secondaryColor">admin@thecodechaser.com</a>
-      </div>
-      <div className="mt-4 md:w-1/5 md:mt-0">
-        <h4 className="mb-4 text-2xl">Social Media</h4>
-        <div className="flex gap-5">
-          <a aria-label="Save" target="_blank" href="https://github.com/thecodechaser" rel="noreferrer"><i className="text-3xl lab la-github text-skyColor hover:text-secondaryColor" /></a>
-          <a aria-label="Save" target="_blank" href="https://twitter.com/thecodechaser" rel="noreferrer"><i className="text-3xl lab la-twitter text-skyColor hover:text-secondaryColor" /></a>
-          <a aria-label="Save" target="_blank" href="https://www.linkedin.com/in/thecodechaser/" rel="noreferrer"><i className="text-3xl lab la-linkedin text-skyColor hover:text-secondaryColor" /></a>
-        </div>
-        <div className="flex gap-5 mt-4">
-          <a aria-label="Save" target="_blank" href="https://medium.com/@thecodechaser" rel="noreferrer"><i className="text-3xl lab la-medium text-skyColor hover:text-secondaryColor" /></a>
-          <a aria-label="Save" target="_blank" href="https://angel.co/u/thecodechaser" rel="noreferrer"><i className="text-3xl lab la-angellist text-skyColor hover:text-secondaryColor" /></a>
-          <a aria-label="Save" target="_blank" href="https://www.instagram.com/the_code_chaser/" rel="noreferrer"><i className="text-3xl lab la-instagram text-skyColor hover:text-secondaryColor" /></a>
-        </div>
-      </div>
-    </div>
+    <div className="mt-3 h-px bg-hairline" />
 
-    <div className="flex flex-col items-center md:mr-48">
-      <Link to="/contact">
-        {' '}
-        <button
-          type="button"
-          className="px-6 py-3 mt-10 ml-4 text-lg border-2 rounded border-secondaryColor md:ml-0 text-secondaryColor hover:text-skyColor hover:border-skyColor"
+    <div className="mt-8 grid md:grid-cols-3 gap-6 md:gap-8 items-start">
+      <div className="md:col-span-1">
+        <p className="text-base text-subtle leading-relaxed">
+          Got an app idea, a feature to build, or just want to grab a coffee
+          and talk shop? I&apos;m always up for a good conversation about
+          code, architecture, or what to ship next.
+        </p>
+        <Link
+          to="/contact"
+          className="mt-6 inline-flex items-center gap-2 h-11 px-5 rounded-md bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
         >
-          Send Me Message
-        </button>
-      </Link>
+          Send a message
+          <ArrowRightIcon className="h-4 w-4" />
+        </Link>
+      </div>
+
+      <div className="rounded-xl border border-border bg-surface p-6">
+        <h3 className="mono text-xs text-faint uppercase tracking-widest">Contact</h3>
+        <ul className="mt-4 space-y-3">
+          {emails.map((e) => (
+            <li key={e}>
+              <a
+                href={`mailto:${e}`}
+                className="text-sm text-fg hover:text-accent transition-colors break-all"
+              >
+                {e}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="rounded-xl border border-border bg-surface p-6">
+        <h3 className="mono text-xs text-faint uppercase tracking-widest">Around the web</h3>
+        <ul className="mt-4 grid grid-cols-3 gap-2">
+          {socials.map((s) => (
+            <li key={s.name}>
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={s.name}
+                title={s.name}
+                className="flex flex-col items-center justify-center gap-1 py-3 rounded-md border border-hairline bg-elevated text-subtle hover:text-accent hover:border-accent-ring transition-colors"
+              >
+                <i className={`${s.icon} text-xl`} aria-hidden />
+                <span className="mono text-[10px]">{s.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-  </motion.div>
+  </motion.section>
 );
 
 export default ContactInfo;

@@ -1,82 +1,121 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { Link, useLocation } from 'react-router-dom';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-
 const menuItems = [
-  { name: 'Home', path: '/', current: true },
-  { name: 'About', path: '/about', current: false },
-  { name: 'Portfolio', path: '/portfolio', current: false },
-  { name: 'Contact', path: '/contact', current: false },
-  { name: 'Blog', path: '/blog', current: false },
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'Contact', path: '/contact' },
 ];
 
 const Header = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
 
-  const location = useLocation();
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => setOpen(false), [pathname]);
 
   return (
     <header
-      className={`flex flex-col z-10  bg-primaryColor px-8 py-7 ${mobileMenu ? 'h-screen' : 'h-fit'} fixed top-0 w-full shadow-xl md:flex-row md:justify-between md:px-20 md:h-fit`}
+      className={`sticky top-0 z-50 w-full border-b transition-colors ${
+        scrolled
+          ? 'border-hairline bg-bg/75 backdrop-blur-md'
+          : 'border-transparent bg-bg/40 backdrop-blur'
+      }`}
     >
-      <a href="/" className="text-xl">
-        <span className="text-secondaryColor">the</span>
-        <span>code</span>
-        <span className="text-secondaryColor">chaser</span>
-      </a>
-      <nav>
-        <div className="text-secondaryColor md:hidden mobile-btns">
-          <button
-            type="button"
-            className={classNames(!mobileMenu ? 'block' : 'hidden')}
-            onClick={() => setMobileMenu(true)}
+      <div className="container-page flex items-center justify-between h-16">
+        <Link to="/" className="flex items-center gap-2 group" aria-label="thecodechaser home">
+          <span
+            className="inline-flex items-center justify-center w-8 h-8 rounded-md border border-border bg-elevated text-accent font-mono text-sm group-hover:border-accent-ring transition-colors"
+            aria-hidden
           >
-            <MenuIcon className="h-8 mr-2" />
-          </button>
-          <button type="button" className={classNames(mobileMenu ? 'block' : 'hidden')} onClick={() => setMobileMenu(false)}>
-            <XIcon className="h-8 mr-2" />
-          </button>
+            ~/
+          </span>
+          <span className="text-[15px] font-medium tracking-tight">
+            <span className="text-subtle">the</span>
+            <span className="text-fg">code</span>
+            <span className="text-subtle">chaser</span>
+          </span>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-1">
+          {menuItems.map((item) => {
+            const active = item.path === pathname;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
+                  active
+                    ? 'text-fg bg-muted'
+                    : 'text-subtle hover:text-fg hover:bg-muted/60'
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className="hidden md:block">
+          <Link
+            to="/resume"
+            className="inline-flex items-center gap-2 h-9 px-4 rounded-md bg-accent text-bg text-sm font-medium hover:bg-accent-hover transition-colors"
+          >
+            Resume
+            <span aria-hidden>→</span>
+          </Link>
         </div>
-        <div className={classNames(mobileMenu ? 'block' : 'hidden', 'md:block')}>
-          <ul className="flex flex-col items-center gap-8 mt-24 md:flex-row md:mt-1">
-            {
-              menuItems.map((item) => (
-                <li key={item.name}>
-                  <Link to={item.path}>
-                    <a
-                      onClick={() => setMobileMenu(false)}
-                      href={item.path}
-                      className={classNames(
-                        item.path === location.pathname
-                          ? 'border-b-2 border-secondaryColor text-secondaryColor'
-                          : 'text-skyColor',
-                        'pb-1 text-lg hover:text-secondaryColor',
-                      )}
-                      aria-current={item.current ? 'page' : undefined}
-                    >
-                      {item.name}
-                    </a>
-                  </Link>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      </nav>
-      <Link to="/resume" className={`self-center ${mobileMenu ? 'block' : 'hidden'} md:block`}>
+
         <button
-          onClick={() => setMobileMenu(false)}
           type="button"
-          className={`border-2 border-secondaryColor mt-24 rounded px-4 py-1 w-32 
-      text-secondaryColor hover:text-skyColor hover:border-skyColor md:mt-0`}
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-border text-fg hover:border-accent-ring transition-colors"
+          aria-label={open ? 'Close menu' : 'Open menu'}
         >
-          Resume
+          {open ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
         </button>
-      </Link>
+      </div>
+
+      {/* Mobile drawer */}
+      <div
+        className={`md:hidden overflow-hidden border-t border-hairline bg-bg/95 backdrop-blur-md transition-[max-height,opacity] duration-300 ${
+          open ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="container-page py-4 flex flex-col gap-1">
+          {menuItems.map((item) => {
+            const active = item.path === pathname;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`px-3 py-2.5 rounded-md text-base transition-colors ${
+                  active ? 'text-fg bg-muted' : 'text-subtle hover:text-fg hover:bg-muted/60'
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+          <Link
+            to="/resume"
+            className="mt-2 inline-flex items-center justify-center gap-2 h-10 rounded-md bg-accent text-bg text-sm font-medium hover:bg-accent-hover"
+          >
+            Resume
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </div>
     </header>
   );
 };

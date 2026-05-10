@@ -1,113 +1,109 @@
-import { ChevronRightIcon } from '@heroicons/react/solid';
+/* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 import microverseLogo from '../../assets/images/microverse_logo.png';
 import tmuLogo from '../../assets/images/tmu-logo.png';
 import kalingaLogo from '../../assets/images/kalinga-logo.png';
 
-const Education = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.2, duration: 0.8 }}
-    className="mt-14 md:mt-24 md:ml-3"
+const items = [
+  {
+    title: 'Bachelor of Computer Science',
+    school: 'Kalinga University',
+    period: 'July 2019 – June 2022',
+    location: 'Regular',
+    logo: kalingaLogo,
+    bullets: [
+      'Developed a BloodBank application using Java, JavaScript, and MySQL as a capstone project.',
+      'Gained expertise in software development, database management, and system design.',
+    ],
+  },
+  {
+    title: 'Full-Stack Web Development Program',
+    school: 'Microverse',
+    period: 'October 2021 – May 2022',
+    location: 'Remote',
+    logo: microverseLogo,
+    bullets: [
+      'Completed 1,300+ hours mastering React, Redux, Rails, and JavaScript through hands-on coding.',
+      'Built real-world projects in a remote, collaborative environment using GitHub & Agile.',
+    ],
+  },
+  {
+    title: 'Diploma in Computer Science',
+    school: 'Teerthanker Mahaveer University',
+    period: 'July 2016 – June 2019',
+    location: 'Regular',
+    logo: tmuLogo,
+    bullets: [
+      'Completed a Java-based CMS software during a 3-month university internship.',
+      'Studied computer fundamentals, software development, and algorithms.',
+    ],
+  },
+];
+
+const EduItem = ({ item, isLast }) => (
+  <motion.li
+    initial={{ opacity: 0, y: 8 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-60px' }}
+    transition={{ duration: 0.45 }}
+    className="relative pl-10 md:pl-12"
   >
-    <div className="flex gap-3 ml-3 md:ml-0">
-      <h2 className="text-2xl md:text-4xl">Education</h2>
-      <div className="w-3/5 mb-3 border-b-2 border-secondaryColor hr-exprience" />
-    </div>
+    {!isLast && (
+      <span
+        className="absolute left-[15px] md:left-[19px] top-7 bottom-[-1.5rem] w-px bg-hairline"
+        aria-hidden
+      />
+    )}
+    <span className="absolute left-0 top-1 inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border border-border bg-surface overflow-hidden">
+      <img src={item.logo} alt={`${item.school} logo`} className="w-full h-full object-contain p-1" />
+    </span>
 
-    <div className="mt-8 ml-2 md:ml-2">
-      <div className="flex flex-col gap-5 mt-4 ml-3 text-lg text-secondaryColor edu-bhag md:flex-row md:ml-0">
-        <h3>
-          Bachlor of computer science
-          <span className="block ml-1 text-sm text-skyColor">July 2019 – June 2022</span>
+    <div className="rounded-xl border border-border bg-surface p-5 hover:border-accent-ring transition-colors">
+      <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
+        <h3 className="text-base md:text-lg font-semibold text-fg">
+          {item.title}
+          <span className="text-subtle font-normal">
+            {' · '}
+            {item.school}
+          </span>
         </h3>
-        <p>
-          <img src={kalingaLogo} alt="microverse-logo" className="inline w-8" />
-          {' '}
-          Kalinga University
-          <span className="block text-sm text-skyColor">Regular</span>
-        </p>
+        <div className="mono text-xs text-faint">
+          {item.period}
+          {' · '}
+          {item.location}
+        </div>
       </div>
-      <ul className="ml-4 md:ml-0">
-        <li className="flex gap-2 mt-4 text-base text-skyColor md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Developed a BloodBank application using Java,
-            JavaScript, and MySQL as a capstone project.
-          </p>
-        </li>
-        <li className="flex gap-2 mt-2 text-base text-skyColor md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Gained expertise in software development,
-            database management, and system design.
-          </p>
-        </li>
+      <ul className="mt-4 space-y-2">
+        {item.bullets.map((b) => (
+          <li key={b} className="flex gap-3 text-sm text-subtle leading-relaxed">
+            <span className="mt-2 h-1 w-1 rounded-full bg-accent shrink-0" aria-hidden />
+            <span>{b}</span>
+          </li>
+        ))}
       </ul>
     </div>
+  </motion.li>
+);
 
-    <div className="mt-8 md:ml-2">
-      <div className="flex flex-col gap-5 mt-4 ml-4 text-lg md:flex-row text-secondaryColor edu-microverse md:ml-0">
-        <h3>
-          Full-stack Web Development Program
-          <span className="block ml-1 text-sm text-skyColor">October 2021 – May 2022</span>
-        </h3>
-        <p>
-          <img src={microverseLogo} alt="microverse-logo" className="inline w-8" />
-          {' '}
-          Microverse
-          <span className="block text-sm text-skyColor">Remote</span>
-        </p>
-      </div>
-      <ul className="ml-4 md:ml-0">
-        <li className="flex gap-2 mt-4 text-base text-skyColor md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Completed 1,300+ hours mastering React, Redux, Rails,
-            and JavaScript through hands-on coding.
-          </p>
-        </li>
-        <li className="flex gap-2 mt-2 text-base text-skyColor md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Built real-world projects in a remote,
-            collaborative environment using GitHub & Agile.
-          </p>
-        </li>
-      </ul>
+const Education = () => (
+  <section className="mt-20 md:mt-28">
+    <div className="flex items-center gap-3">
+      <span className="mono text-xs text-faint">03 /</span>
+      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Education</h2>
+      <span className="mono text-xs text-faint hidden md:inline ml-auto">
+        {String(items.length).padStart(2, '0')}
+        {' '}
+        programs
+      </span>
     </div>
+    <div className="mt-3 h-px bg-hairline" />
 
-    <div className="mt-8 ml-1 md:ml-3">
-      <div className="flex flex-col gap-5 mt-4 ml-3 text-lg md:flex-row text-secondaryColor edu-tmu md:ml-0">
-        <h3>
-          Diploma in Computer Science
-          <span className="block ml-1 text-sm text-skyColor">July 2016 – June 2019</span>
-        </h3>
-        <p>
-          <img src={tmuLogo} alt="microverse-logo" className="inline w-8" />
-          {' '}
-          Teerthanker Mahaveer University
-          <span className="block text-sm text-skyColor">Regular</span>
-        </p>
-      </div>
-      <ul className="ml-4 md:ml-0">
-        <li className="flex gap-2 mt-4 text-base text-skyColor md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Completed a Java-based CMS software during a 3-month university internship.
-          </p>
-        </li>
-        <li className="flex gap-2 mt-2 text-base text-skyColor md:w-9/12">
-          <ChevronRightIcon className="h-6" />
-          <p>
-            Studied computer fundamentals, software development, and algorithms.
-          </p>
-        </li>
-      </ul>
-    </div>
-
-  </motion.div>
+    <ol className="mt-10 flex flex-col gap-8">
+      {items.map((item, i) => (
+        <EduItem key={`${item.school}-${item.period}`} item={item} isLast={i === items.length - 1} />
+      ))}
+    </ol>
+  </section>
 );
 
 export default Education;

@@ -1,54 +1,89 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import serverLogo from '../../assets/images/server-solid.svg';
+import { ExternalLinkIcon } from '@heroicons/react/solid';
 import githubLogo from '../../assets/images/github-logo.svg';
 
-const Project = (props) => {
+const Project = ({ data }) => {
   const {
-    data: {
-      id, image, title, details, tech, live, github,
-    },
-  } = props;
-  let odd;
-  if (id === 0 || id % 2 === 0) {
-    odd = false;
-  } else {
-    odd = true;
-  }
+    image, title, details, tech, live, github,
+  } = data;
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.1, duration: 0.8 }}
-      className={`md:flex project-card ${id === 5 ? 'mt-16' : 'mt-24'} mx-2 ml-4 md:ml-0 md:mx-0 p-3 rounded-md shadow shadow-lightBlueColor md:gap-5`}
+    <motion.article
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5 }}
+      className="group relative flex flex-col rounded-xl border border-border bg-surface overflow-hidden hover:border-accent-ring transition-colors shadow-card"
     >
-      <img
-        src={image}
-        alt="project preview"
-        className={`w-11/12 ml-2 ${odd ? 'md:order-1' : 'md:order-0'} rounded-md card-img md:ml-0 `}
-      />
-      <div>
-        <h3 className={`text-skyColor ${odd ? 'md:text-left' : 'md:text-right'} mt-3 md:mt-0 mb-4 text-2xl ml-2 md:ml-0`}>{title}</h3>
-        <p className="p-5 ml-2 mr-6 text-base font-medium rounded bg-lightBlueColor text-skyColor md:ml-0 md:mr-0">
+      <a
+        href={live}
+        target="_blank"
+        rel="noreferrer"
+        className="block aspect-[16/10] overflow-hidden bg-elevated relative"
+        aria-label={`${title} preview`}
+      >
+        <img
+          src={image}
+          alt={`${title} preview`}
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          loading="lazy"
+        />
+        <span className="absolute inset-0 bg-gradient-to-t from-bg/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      </a>
+
+      <div className="flex flex-col flex-1 p-5 gap-4">
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-lg font-semibold text-fg leading-snug">{title}</h3>
+          <a
+            href={live}
+            target="_blank"
+            rel="noreferrer"
+            className="text-subtle hover:text-accent transition-colors shrink-0"
+            aria-label={`Open ${title} live site`}
+          >
+            <ExternalLinkIcon className="h-4 w-4" />
+          </a>
+        </div>
+
+        <p className="text-sm text-subtle leading-relaxed line-clamp-4">
           {details}
         </p>
-        <div className={`flex ${odd ? 'md:justify-start' : 'md:justify-end'} gap-2 text-skyColor mt-5 ml-2 md:ml-0`}>
+
+        <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
           {tech.map((item) => (
-            <p key={item} className="px-2 py-1 border rounded border-lightBlueColor text-skyColor">{item}</p>
+            <span
+              key={item}
+              className="mono text-[11px] px-2 py-1 rounded-md border border-hairline bg-elevated text-subtle"
+            >
+              {item}
+            </span>
           ))}
         </div>
-        <div className={`flex ${odd ? 'md:justify-start' : 'md:justify-end'} gap-5 text-skyColor mt-5 ml-2 md:ml-0`}>
-          <a target="_blank" href={live} className="px-5 py-2 font-medium rounded bg-lightBlueColor text-md text-skyColor hover:bg-secondaryColor hover:text-primaryColor" rel="noreferrer">
-            See Live
-            <img src={serverLogo} className="inline w-5 mb-1 ml-2" alt="server-icon" />
+
+        <div className="flex items-center gap-2 pt-3 mt-1 border-t border-hairline">
+          <a
+            href={live}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm text-fg hover:text-accent transition-colors"
+          >
+            Live
+            <ExternalLinkIcon className="h-3.5 w-3.5" />
           </a>
-          <a target="_blank" href={github} className="px-5 py-2 font-medium rounded bg-lightBlueColor text-md text-skyColor hover:bg-secondaryColor hover:text-primaryColor" rel="noreferrer">
-            See Source
-            <img src={githubLogo} className="inline w-5 mb-1 ml-2" alt="github-icon" />
+          <span className="text-faint" aria-hidden>·</span>
+          <a
+            href={github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm text-subtle hover:text-fg transition-colors"
+          >
+            <img src={githubLogo} alt="" className="w-3.5 h-3.5 invert opacity-80" />
+            Source
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 
