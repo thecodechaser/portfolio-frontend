@@ -89,7 +89,7 @@ const RoleItem = ({ role, isLast }) => (
       <img src={role.logo} alt={`${role.company} logo`} className="w-full h-full object-cover" />
     </span>
 
-    <div className="rounded-xl border border-border bg-surface p-5 hover:border-accent-ring transition-colors">
+    <div className="border border-border bg-surface p-5 hover:border-accent-ring transition-colors">
       <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
         <div>
           <h3 className="text-base md:text-lg font-semibold text-fg">

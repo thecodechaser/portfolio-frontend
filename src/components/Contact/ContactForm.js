@@ -38,7 +38,7 @@ const ContactForm = () => {
     setTimeout(() => navigate('../messageSent'), 2000);
   };
 
-  const inputCls = 'w-full px-4 py-3 rounded-md bg-surface border border-border text-fg placeholder:text-faint focus:outline-none focus:border-accent-ring focus:ring-2 focus:ring-accent-ring/30 transition-colors';
+  const inputCls = 'w-full px-4 py-3 bg-surface border border-border text-fg placeholder:text-faint focus:outline-none focus:border-accent-ring focus:ring-2 focus:ring-accent-ring/30 transition-colors';
 
   return (
     <section className="pt-12 md:pt-16">
@@ -75,7 +75,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
+        <div className="border border-border bg-surface p-6 md:p-8">
           <div className="flex flex-col gap-4">
             <label htmlFor="cf-name" className="block">
               <span className="mono text-xs text-faint block">name</span>
@@ -137,7 +137,7 @@ const ContactForm = () => {
               <button
                 type="button"
                 onClick={submission}
-                className="inline-flex items-center gap-2 h-11 px-5 rounded-md bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
+                className="inline-flex items-center gap-2 h-11 px-5 bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
               >
                 Send message
                 <ArrowRightIcon className="h-4 w-4" />

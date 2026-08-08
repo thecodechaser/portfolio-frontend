@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import profilePicture from '../../assets/images/profilePicture2.jpg';
-import ParticleField from '../common/ParticleField';
 import OrbitRings from './OrbitRings';
 
 const traits = [
@@ -17,15 +16,6 @@ const HeroSection = () => (
   <section className="relative isolate pt-16 md:pt-24 pb-12 md:pb-20">
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden>
       <div className="absolute inset-0 bg-grid" />
-      <ParticleField
-        className="absolute inset-0 w-full h-full opacity-60 mask-hero"
-        density={0.00012}
-        maxNodes={72}
-        linkDistance={165}
-        speed={0.1}
-        accentEvery={7}
-        interactive={false}
-      />
     </div>
 
     <div className="grid md:grid-cols-[1.25fr_1fr] xl:grid-cols-[1.15fr_1fr] gap-12 md:gap-16 xl:gap-20 items-center">
@@ -34,7 +24,7 @@ const HeroSection = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-elevated">
+        <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-elevated">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
@@ -75,14 +65,14 @@ const HeroSection = () => (
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 h-11 px-5 rounded-md bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center gap-2 h-11 px-5 bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
           >
             Get in touch
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 h-11 px-5 rounded-md border border-border text-fg text-sm font-medium hover:border-accent-ring hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 h-11 px-5 border border-border text-fg text-sm font-medium hover:border-accent-ring hover:text-accent transition-colors"
           >
             View work
           </Link>
@@ -92,7 +82,7 @@ const HeroSection = () => (
           {traits.map((t) => (
             <span
               key={t}
-              className="mono text-xs text-subtle px-2.5 py-1 rounded-md border border-hairline bg-surface"
+              className="mono text-xs text-subtle px-2.5 py-1 border border-hairline bg-surface"
             >
               {t}
             </span>
@@ -120,7 +110,7 @@ const HeroSection = () => (
             />
           </div>
           <div
-            className="absolute bottom-[7%] right-[1%] mono text-[11px] uppercase tracking-widest text-faint px-2.5 py-1 rounded-md border border-border bg-surface"
+            className="absolute bottom-[7%] right-[1%] mono text-[11px] uppercase tracking-widest text-faint px-2.5 py-1 border border-border bg-surface"
             aria-hidden
           >
             @thecodechaser

@@ -76,7 +76,7 @@ const Home = () => {
         <div className="mt-3 h-px bg-hairline" />
         <div className="mt-8 flex flex-col gap-5">
           {posts.length === 0 ? (
-            <div className="rounded-xl border border-border bg-surface p-6 text-subtle text-sm">
+            <div className="border border-border bg-surface p-6 text-subtle text-sm">
               Unable to load posts due to a server issue. Please contact the
               administrator for assistance.
               {' '}

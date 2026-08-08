@@ -57,7 +57,7 @@ const SignUpForm = () => {
       transition={{ duration: 1 }}
       className="flex flex-col mt-10 items-center md:mr-52"
     >
-      <h3 className="text-lg font-bold text-skyColor  mb-4">Sign Up now and secure your place today!</h3>
+      <h3 className="text-lg font-bold text-skyColor mb-4">Sign Up now and secure your place today!</h3>
       <div className="flex flex-col gap-4">
         <input
           type="text"
@@ -67,7 +67,7 @@ const SignUpForm = () => {
           onChange={(e) => setName(e.target.value)}
           maxLength="30"
           placeholder="Name *"
-          className="w-72 md:w-80 p-2 rounded text-primaryColor
+          className="w-72 md:w-80 p-2 text-primaryColor
       focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
         <input
@@ -77,7 +77,7 @@ const SignUpForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email *"
-          className="w-72 md:w-80 p-2 rounded text-primaryColor
+          className="w-72 md:w-80 p-2 text-primaryColor
         focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
         <input
@@ -87,7 +87,7 @@ const SignUpForm = () => {
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
           placeholder="Mobile *"
-          className="w-72 md:w-80 p-2 rounded text-primaryColor
+          className="w-72 md:w-80 p-2 text-primaryColor
         focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
         <textarea
@@ -98,7 +98,7 @@ const SignUpForm = () => {
           onChange={(e) => setMessage(e.target.value)}
           maxLength="500"
           placeholder="Have any thoughts ? you can share here!"
-          className="w-72 md:w-80 p-2 rounded text-primaryColor
+          className="w-72 md:w-80 p-2 text-primaryColor
           focus:border-2 focus:border-secondaryColor focus:outline-none"
         />
         {
@@ -116,7 +116,7 @@ const SignUpForm = () => {
           <span className="text-skyColor text-center text-base">Sending message...</span>
         )
       }
-        <button onClick={submission} type="button" className="bg-lightBlueColor ml-24 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
+        <button onClick={submission} type="button" className="bg-lightBlueColor ml-24 mt-6 w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
       </div>
     </motion.div>
   );

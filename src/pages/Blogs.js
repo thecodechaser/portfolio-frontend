@@ -32,7 +32,7 @@ const Blogs = () => {
 
       <div className="mt-10 flex flex-col gap-5">
         {posts.length === 0 ? (
-          <div className="rounded-xl border border-border bg-surface p-6 text-subtle text-sm">
+          <div className="border border-border bg-surface p-6 text-subtle text-sm">
             Unable to load posts due to a server issue. Please contact the
             administrator for assistance.
             {' '}
