@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import codeSnipped from '../../assets/images/code-snippet.png';
+import ParticleField from '../common/ParticleField';
 
 const stacks = [
   {
@@ -12,8 +12,12 @@ const stacks = [
     values: ['Ruby on Rails', 'Ruby', 'Java', 'Spring', 'SQL', 'ElasticSearch'],
   },
   {
+    name: 'AI',
+    values: ['LLM APIs', 'Prompt engineering', 'RAG', 'Vector search', 'Streaming UIs'],
+  },
+  {
     name: 'Tooling',
-    values: ['AWS', 'Netlify', 'Git & GitHub', 'Postman', 'VS Code', 'WordPress'],
+    values: ['AWS', 'Vercel', 'Netlify', 'Git & GitHub', 'Postman', 'VS Code'],
   },
 ];
 
@@ -57,16 +61,19 @@ const AboutMe = () => (
             Modelia AI
           </a>
           {' '}
-          with 3+ years of experience shipping web applications across React,
-          Vue, Rails, and Java. Before that I spent two years freelancing —
-          building desktop apps and crafting WordPress and Shopify sites for
-          clients.
+          with 4+ years of experience shipping web applications. These days most
+          of that work is AI-facing — building the product layer around
+          generative models in React, Next.js, and TypeScript. Earlier roles
+          were closer to classic full-stack: Vue, Rails, and Java. Before that I
+          spent two years freelancing — building desktop apps and crafting
+          WordPress and Shopify sites for clients.
         </p>
         <p>
           I like the kind of problems where the answer isn&apos;t obvious until
-          you&apos;ve sketched it three different ways. When I&apos;m off the
-          clock, I&apos;m usually torn between solving algorithm puzzles and
-          reading about astronomy — somehow I manage to do a bit of both.
+          you&apos;ve sketched it three different ways — which is most of them
+          once a model is involved. When I&apos;m off the clock, I&apos;m
+          usually torn between solving algorithm puzzles and reading about
+          astronomy — somehow I manage to do a bit of both.
         </p>
       </div>
 
@@ -81,9 +88,31 @@ const AboutMe = () => (
           <span className="w-2.5 h-2.5 rounded-full bg-mute" />
           <span className="w-2.5 h-2.5 rounded-full bg-mute" />
           <span className="w-2.5 h-2.5 rounded-full bg-mute" />
-          <span className="ml-2 mono text-[11px] text-faint">~/ranjeet/about.tsx</span>
+          <span className="ml-2 mono text-[11px] text-faint">~/ranjeet/latent-space</span>
+          <span className="ml-auto mono text-[10px] text-accent">live</span>
         </div>
-        <img src={codeSnipped} alt="code snippet" className="w-full h-auto" />
+
+        <div className="relative h-[300px] md:h-[380px] bg-bg">
+          <ParticleField
+            className="absolute inset-0 w-full h-full"
+            density={0.00013}
+            maxNodes={48}
+            linkDistance={112}
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(130% 100% at 50% 50%, transparent 62%, rgba(10,10,11,0.6) 100%)',
+            }}
+            aria-hidden
+          />
+        </div>
+
+        <div className="flex items-center justify-between px-4 py-2.5 border-t border-hairline bg-elevated">
+          <span className="mono text-[10px] text-faint">move your cursor</span>
+          <span className="mono text-[10px] text-faint">nodes · links · noise</span>
+        </div>
       </motion.div>
     </div>
 
@@ -91,7 +120,7 @@ const AboutMe = () => (
       <h3 className="mono text-sm text-faint uppercase tracking-widest">
         Stack I&apos;ve been working with lately
       </h3>
-      <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stacks.map((stack) => (
           <div
             key={stack.name}

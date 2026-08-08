@@ -102,3 +102,13 @@ h1 {
   background-size: 32px 32px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }
+
+/* Fades a decorative layer out towards the bottom edge */
+.mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 45%, transparent 96%);
+}
+
+/* Keeps the hero node field in the open space to the right of the headline */
+.mask-hero {
+  mask-image: radial-gradient(ellipse 62% 78% at 72% 46%, black 8%, transparent 76%);
+}

@@ -2,20 +2,26 @@
 
 .container-page {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1560px;
   margin-inline: auto;
   padding-inline: 20px;
 }
 
 @media (min-width: 768px) {
   .container-page {
-    padding-inline: 32px;
+    padding-inline: 28px;
   }
 }
 
 @media (min-width: 1024px) {
   .container-page {
-    padding-inline: 48px;
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container-page {
+    padding-inline: 56px;
   }
 }
 

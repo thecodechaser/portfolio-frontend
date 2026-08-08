@@ -26,7 +26,6 @@ const Footer = () => (
           <span className="mono text-faint">All rights reserved</span>
         </p>
         <div className="flex items-center gap-3">
-          <span className="mono text-xs text-faint hidden sm:inline">Built with React + Tailwind</span>
           <button
             type="button"
             onClick={goToTop}

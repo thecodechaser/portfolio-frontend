@@ -7,7 +7,7 @@ const NotFound = () => (
     initial={{ opacity: 0, y: 12 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="relative min-h-[70vh] flex flex-col items-center justify-center text-center pt-16 pb-24"
+    className="relative isolate min-h-[70vh] flex flex-col items-center justify-center text-center pt-16 pb-24"
   >
     <div className="absolute inset-0 -z-10 bg-grid pointer-events-none" aria-hidden />
 

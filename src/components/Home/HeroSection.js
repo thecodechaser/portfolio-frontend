@@ -2,19 +2,33 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import profilePicture from '../../assets/images/profilePicture2.jpg';
+import ParticleField from '../common/ParticleField';
+import OrbitRings from './OrbitRings';
 
 const traits = [
   'Full-stack engineer',
+  'AI product work',
   'Clean-code obsessive',
   'Remote-first',
   'Amateur astronomer',
 ];
 
 const HeroSection = () => (
-  <section className="relative pt-16 md:pt-24 pb-12 md:pb-20">
-    <div className="absolute inset-0 -z-10 bg-grid pointer-events-none" aria-hidden />
+  <section className="relative isolate pt-16 md:pt-24 pb-12 md:pb-20">
+    <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden>
+      <div className="absolute inset-0 bg-grid" />
+      <ParticleField
+        className="absolute inset-0 w-full h-full opacity-60 mask-hero"
+        density={0.00012}
+        maxNodes={72}
+        linkDistance={165}
+        speed={0.1}
+        accentEvery={7}
+        interactive={false}
+      />
+    </div>
 
-    <div className="grid md:grid-cols-[1.4fr_1fr] gap-12 md:gap-16 items-center">
+    <div className="grid md:grid-cols-[1.25fr_1fr] xl:grid-cols-[1.15fr_1fr] gap-12 md:gap-16 xl:gap-20 items-center">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -30,15 +44,15 @@ const HeroSection = () => (
           </span>
         </div>
 
-        <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tightest leading-[1.05]">
+        <h1 className="mt-6 text-4xl md:text-6xl xl:text-7xl font-semibold tracking-tightest leading-[1.05]">
           Software engineer
           <br />
-          building thoughtful
+          building AI products
           <br />
-          <span className="text-subtle">web experiences.</span>
+          <span className="text-subtle">for the web.</span>
         </h1>
 
-        <p className="mt-6 max-w-xl text-base md:text-lg text-subtle leading-relaxed">
+        <p className="mt-6 max-w-xl xl:max-w-2xl text-base md:text-lg text-subtle leading-relaxed">
           I&apos;m
           {' '}
           <span className="text-fg">Ranjeet Singh</span>
@@ -53,8 +67,9 @@ const HeroSection = () => (
           >
             Modelia AI
           </a>
-          . 3+ years writing React, Vue, Rails, and the occasional bit of Java —
-          with a soft spot for performance, type safety, and clean APIs.
+          , where I build product surfaces on top of generative-AI models. 4+
+          years writing React, Next.js, TypeScript, and Rails — with a soft spot
+          for performance, type safety, and clean APIs.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -91,19 +106,25 @@ const HeroSection = () => (
         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
         className="relative justify-self-center md:justify-self-end"
       >
-        <div className="absolute -inset-6 rounded-full bg-accent-soft blur-3xl" aria-hidden />
-        <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full border border-border bg-elevated overflow-hidden shadow-card">
-          <img
-            src={profilePicture}
-            alt="Ranjeet Singh"
-            className="w-full h-full object-cover"
+        <div className="relative w-[320px] h-[320px] md:w-[420px] md:h-[420px] xl:w-[480px] xl:h-[480px] flex items-center justify-center">
+          <div
+            className="absolute w-56 h-56 md:w-72 md:h-72 rounded-full bg-accent-soft blur-3xl"
+            aria-hidden
           />
-        </div>
-        <div
-          className="absolute -bottom-3 -right-3 mono text-[11px] uppercase tracking-widest text-faint px-2.5 py-1 rounded-md border border-border bg-surface"
-          aria-hidden
-        >
-          @thecodechaser
+          <OrbitRings className="absolute inset-0 w-full h-full" />
+          <div className="relative w-48 h-48 md:w-[272px] md:h-[272px] xl:w-[310px] xl:h-[310px] rounded-full border border-border bg-elevated overflow-hidden shadow-card">
+            <img
+              src={profilePicture}
+              alt="Ranjeet Singh"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            className="absolute bottom-[7%] right-[1%] mono text-[11px] uppercase tracking-widest text-faint px-2.5 py-1 rounded-md border border-border bg-surface"
+            aria-hidden
+          >
+            @thecodechaser
+          </div>
         </div>
       </motion.div>
     </div>

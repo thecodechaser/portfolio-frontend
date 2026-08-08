@@ -23,10 +23,21 @@ module.exports = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.35' },
         },
+        orbit: {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
+        'orbit-rev': {
+          from: { transform: 'rotate(360deg)' },
+          to: { transform: 'rotate(0deg)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out both',
         'pulse-dot': 'pulse-dot 2s ease-in-out infinite',
+        orbit: 'orbit 44s linear infinite',
+        'orbit-fast': 'orbit 26s linear infinite',
+        'orbit-rev': 'orbit-rev 34s linear infinite',
       },
     },
     colors: {
