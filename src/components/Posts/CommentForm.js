@@ -41,7 +41,7 @@ const CommentForm = (props) => {
         onChange={(e) => setName(e.target.value)}
         maxLength="30"
         placeholder="Name"
-        className="w-64 md:w-72 p-2 rounded text-primaryColor
+        className="w-64 md:w-72 p-2 text-primaryColor
       focus:border-2 focus:border-secondaryColor focus:outline-none"
       />
       <textarea
@@ -52,7 +52,7 @@ const CommentForm = (props) => {
         onChange={(e) => setText(e.target.value)}
         maxLength="500"
         placeholder="Write your comment here"
-        className="w-64 md:w-72 p-2 rounded text-primaryColor
+        className="w-64 md:w-72 p-2 text-primaryColor
           focus:border-2 focus:border-secondaryColor focus:outline-none"
       />
       {
@@ -65,7 +65,7 @@ const CommentForm = (props) => {
           <span className="text-skyColor ml-10 text-base">Thanks for your comment!</span>
         )
       }
-      <button onClick={submission} type="button" className="bg-lightBlueColor ml-20 mt-6 rounded w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
+      <button onClick={submission} type="button" className="bg-lightBlueColor ml-20 mt-6 w-28 px-4 py-2 text-base text-skyColor font-medium">Submit</button>
     </div>
   );
 };

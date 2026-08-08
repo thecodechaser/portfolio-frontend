@@ -43,14 +43,14 @@ const ContactInfo = () => (
         </p>
         <Link
           to="/contact"
-          className="mt-6 inline-flex items-center gap-2 h-11 px-5 rounded-md bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
+          className="mt-6 inline-flex items-center gap-2 h-11 px-5 bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
         >
           Send a message
           <ArrowRightIcon className="h-4 w-4" />
         </Link>
       </div>
 
-      <div className="rounded-xl border border-border bg-surface p-6">
+      <div className="border border-border bg-surface p-6">
         <h3 className="mono text-xs text-faint uppercase tracking-widest">Contact</h3>
         <ul className="mt-4 space-y-3">
           {emails.map((e) => (
@@ -66,7 +66,7 @@ const ContactInfo = () => (
         </ul>
       </div>
 
-      <div className="rounded-xl border border-border bg-surface p-6">
+      <div className="border border-border bg-surface p-6">
         <h3 className="mono text-xs text-faint uppercase tracking-widest">Around the web</h3>
         <ul className="mt-4 grid grid-cols-3 gap-2">
           {socials.map((s) => (
@@ -77,7 +77,7 @@ const ContactInfo = () => (
                 rel="noreferrer"
                 aria-label={s.name}
                 title={s.name}
-                className="flex flex-col items-center justify-center gap-1 py-3 rounded-md border border-hairline bg-elevated text-subtle hover:text-accent hover:border-accent-ring transition-colors"
+                className="flex flex-col items-center justify-center gap-1 py-3 border border-hairline bg-elevated text-subtle hover:text-accent hover:border-accent-ring transition-colors"
               >
                 <i className={`${s.icon} text-xl`} aria-hidden />
                 <span className="mono text-[10px]">{s.name}</span>

@@ -58,7 +58,7 @@ const EduItem = ({ item, isLast }) => (
       <img src={item.logo} alt={`${item.school} logo`} className="w-full h-full object-contain p-1" />
     </span>
 
-    <div className="rounded-xl border border-border bg-surface p-5 hover:border-accent-ring transition-colors">
+    <div className="border border-border bg-surface p-5 hover:border-accent-ring transition-colors">
       <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
         <h3 className="text-base md:text-lg font-semibold text-fg">
           {item.title}

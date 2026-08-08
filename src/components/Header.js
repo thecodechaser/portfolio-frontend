@@ -35,7 +35,7 @@ const Header = () => {
       <div className="container-page flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 group" aria-label="thecodechaser home">
           <span
-            className="inline-flex items-center justify-center w-8 h-8 rounded-md border border-border bg-elevated text-accent font-mono text-sm group-hover:border-accent-ring transition-colors"
+            className="inline-flex items-center justify-center w-8 h-8 border border-border bg-elevated text-accent font-mono text-sm group-hover:border-accent-ring transition-colors"
             aria-hidden
           >
             ~/
@@ -54,7 +54,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
+                className={`px-3 py-1.5 text-sm transition-colors ${
                   active
                     ? 'text-fg bg-muted'
                     : 'text-subtle hover:text-fg hover:bg-muted/60'
@@ -69,7 +69,7 @@ const Header = () => {
         <div className="hidden md:block">
           <Link
             to="/resume"
-            className="inline-flex items-center gap-2 h-9 px-4 rounded-md bg-accent text-bg text-sm font-medium hover:bg-accent-hover transition-colors"
+            className="inline-flex items-center gap-2 h-9 px-4 bg-accent text-bg text-sm font-medium hover:bg-accent-hover transition-colors"
           >
             Resume
             <span aria-hidden>→</span>
@@ -79,7 +79,7 @@ const Header = () => {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-border text-fg hover:border-accent-ring transition-colors"
+          className="md:hidden inline-flex items-center justify-center w-10 h-10 border border-border text-fg hover:border-accent-ring transition-colors"
           aria-label={open ? 'Close menu' : 'Open menu'}
         >
           {open ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
@@ -99,7 +99,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2.5 rounded-md text-base transition-colors ${
+                className={`px-3 py-2.5 text-base transition-colors ${
                   active ? 'text-fg bg-muted' : 'text-subtle hover:text-fg hover:bg-muted/60'
                 }`}
               >
@@ -109,7 +109,7 @@ const Header = () => {
           })}
           <Link
             to="/resume"
-            className="mt-2 inline-flex items-center justify-center gap-2 h-10 rounded-md bg-accent text-bg text-sm font-medium hover:bg-accent-hover"
+            className="mt-2 inline-flex items-center justify-center gap-2 h-10 bg-accent text-bg text-sm font-medium hover:bg-accent-hover"
           >
             Resume
             <span aria-hidden>→</span>

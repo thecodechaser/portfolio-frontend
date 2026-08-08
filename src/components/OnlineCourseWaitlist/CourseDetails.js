@@ -179,7 +179,7 @@ const CourseDetails = () => (
       <Link to="/signup-waitlist">
         <button
           type="button"
-          className="border-2 border-secondaryColor mt-2 ml-4 md:ml-0 rounded px-6 py-3
+          className="border-2 border-secondaryColor mt-2 ml-4 md:ml-0 px-6 py-3
       text-lg text-secondaryColor hover:text-skyColor hover:border-skyColor"
         >
           Sign Up

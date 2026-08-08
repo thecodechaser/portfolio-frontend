@@ -82,7 +82,7 @@ const AboutMe = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="relative rounded-xl border border-border bg-surface overflow-hidden shadow-card"
+        className="relative border border-border bg-surface overflow-hidden shadow-card"
       >
         <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-hairline bg-elevated">
           <span className="w-2.5 h-2.5 rounded-full bg-mute" />
@@ -124,7 +124,7 @@ const AboutMe = () => (
         {stacks.map((stack) => (
           <div
             key={stack.name}
-            className="rounded-xl border border-border bg-surface p-5 hover:border-accent-ring transition-colors"
+            className="border border-border bg-surface p-5 hover:border-accent-ring transition-colors"
           >
             <div className="flex items-center justify-between">
               <h4 className="text-base font-medium text-fg">{stack.name}</h4>
@@ -136,7 +136,7 @@ const AboutMe = () => (
               {stack.values.map((value) => (
                 <span
                   key={value}
-                  className="mono text-xs px-2 py-1 rounded-md border border-hairline bg-elevated text-subtle"
+                  className="mono text-xs px-2 py-1 border border-hairline bg-elevated text-subtle"
                 >
                   {value}
                 </span>

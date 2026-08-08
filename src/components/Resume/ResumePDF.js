@@ -13,7 +13,7 @@ const ResumePDF = () => (
       <button
         type="button"
         onClick={() => window.open('https://drive.google.com/file/d/13Cya4tB72htNZgjOYzz31DTGm37V1TKE/view?usp=sharing', '_blank')}
-        className="inline-flex items-center gap-2 h-11 px-5 rounded-md bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
+        className="inline-flex items-center gap-2 h-11 px-5 bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
       >
         <DownloadIcon className="h-4 w-4" />
         Download resume

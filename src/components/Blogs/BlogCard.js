@@ -14,7 +14,7 @@ const BlogCard = ({ data }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5 }}
-      className="group rounded-xl border border-border bg-surface overflow-hidden hover:border-accent-ring transition-colors shadow-card"
+      className="group border border-border bg-surface overflow-hidden hover:border-accent-ring transition-colors shadow-card"
     >
       <div className="grid md:grid-cols-[1fr_1.4fr] gap-0">
         <Link to={href} className="block aspect-[16/10] md:aspect-auto md:h-full overflow-hidden bg-elevated">

@@ -23,14 +23,14 @@ const NotFound = () => (
     <div className="mt-8 flex items-center gap-3">
       <Link
         to="/"
-        className="inline-flex items-center gap-2 h-11 px-5 rounded-md bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
+        className="inline-flex items-center gap-2 h-11 px-5 bg-accent text-bg text-sm font-semibold hover:bg-accent-hover transition-colors"
       >
         Go home
         <ArrowRightIcon className="h-4 w-4" />
       </Link>
       <Link
         to="/contact"
-        className="inline-flex items-center gap-2 h-11 px-5 rounded-md border border-border text-fg text-sm font-medium hover:border-accent-ring hover:text-accent transition-colors"
+        className="inline-flex items-center gap-2 h-11 px-5 border border-border text-fg text-sm font-medium hover:border-accent-ring hover:text-accent transition-colors"
       >
         Report an issue
       </Link>

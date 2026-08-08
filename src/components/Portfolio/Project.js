@@ -14,7 +14,7 @@ const Project = ({ data }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5 }}
-      className="group relative flex flex-col rounded-xl border border-border bg-surface overflow-hidden hover:border-accent-ring transition-colors shadow-card"
+      className="group relative flex flex-col border border-border bg-surface overflow-hidden hover:border-accent-ring transition-colors shadow-card"
     >
       <a
         href={live}
@@ -54,7 +54,7 @@ const Project = ({ data }) => {
           {tech.map((item) => (
             <span
               key={item}
-              className="mono text-[11px] px-2 py-1 rounded-md border border-hairline bg-elevated text-subtle"
+              className="mono text-[11px] px-2 py-1 border border-hairline bg-elevated text-subtle"
             >
               {item}
             </span>
