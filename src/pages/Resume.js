@@ -1,16 +1,21 @@
+import { useEffect } from 'react';
 import ResumePDF from '../components/Resume/ResumePDF';
 
-const Resume = () => (
-  <div className="mt-32">
-    <div className="flex gap-3 ml-3 md:ml-0 mb-6">
-      <h2 className="text-2xl md:text-4xl">Resume</h2>
-      <div className="border-b-2 w-4/6 mb-3 border-secondaryColor hr-portfolio" />
-    </div>
+const Resume = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
 
-    {/* resume-pdf-section */}
-    <ResumePDF />
-  </div>
-
-);
+  return (
+    <section className="pt-12 md:pt-16">
+      <div className="flex items-center gap-3">
+        <span className="mono text-xs text-faint">/resume</span>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">Resume</h1>
+      </div>
+      <div className="mt-3 h-px bg-hairline" />
+      <ResumePDF />
+    </section>
+  );
+};
 
 export default Resume;

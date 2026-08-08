@@ -3,17 +3,10 @@ import ContactForm from '../components/Contact/ContactForm';
 
 const Contact = () => {
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
+    window.scrollTo({ top: 0 });
   }, []);
 
-  return (
-    <div className="mt-32">
-      {/* contact-form */}
-      <ContactForm />
-    </div>
-  );
+  return <ContactForm />;
 };
 
 export default Contact;
